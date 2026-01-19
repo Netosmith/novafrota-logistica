@@ -357,3 +357,51 @@ footer{
     top: 0;
   }
 }
+/* ===== PAINEL DE INFORMAÇÕES – TAMANHO MAIOR ===== */
+
+/* Aumenta a coluna do painel */
+.layout-home{
+  grid-template-columns: 1.4fr 1.2fr;
+}
+
+/* Painel lateral maior e mais “banner-friendly” */
+.side-box{
+  min-height: 520px;
+  padding: 22px;
+}
+
+/* Espaçamento interno maior para imagens */
+.side-item{
+  padding: 16px;
+}
+
+/* Área reservada para imagem/banner (uso futuro) */
+.side-banner{
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(11,60,93,.08),
+    rgba(27,143,58,.12)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul);
+  font-weight: 900;
+  margin-bottom: 16px;
+  border: 1px dashed rgba(11,60,93,.25);
+}
+
+/* Responsivo: painel volta ao tamanho normal no mobile */
+@media (max-width: 900px){
+  .layout-home{
+    grid-template-columns: 1fr;
+  }
+
+  .side-box{
+    min-height: auto;
+  }
+}
+
