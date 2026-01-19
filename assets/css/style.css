@@ -526,3 +526,33 @@ footer{
     display:none;
   }
 }
+/* ==== FIX DEFINITIVO: LOGO GVA TAMANHO CERTO ==== */
+.logo-gva{
+  flex: 0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.logo-gva img,
+.gva-logo{
+  height: 72px !important;     /* ajuste aqui */
+  width: auto !important;
+  max-width: none !important;  /* evita limitar */
+  display:block;
+}
+
+/* se estiver “espremendo” no desktop, dá mais espaço pra ela */
+@media (min-width: 769px){
+  .logo-gva{
+    min-width: 180px;
+  }
+}
+
+/* no tablet pode reduzir um pouco */
+@media (max-width: 768px){
+  .logo-gva img,
+  .gva-logo{
+    height: 56px !important;
+  }
+}
