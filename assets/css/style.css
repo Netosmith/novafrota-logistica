@@ -137,23 +137,26 @@ header::after{
 }
 
 /* =========================
-   LOGO GVA – AJUSTE VISUAL FINAL
+   LOGO GVA – DESTAQUE CORRETO
    ========================= */
-
 .logo-gva{
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  margin-left: 10px; /* respiro do menu */
+  justify-content: center;
+
+  /* garante espaço visual próprio */
+  margin-left: 14px;
+  padding-left: 14px;
 }
 
 .logo-gva img{
-  height: 72px;        /* ajuste ideal visual */
+  height: 92px;        /* 🔥 tamanho ideal final */
   width: auto;
   display: block;
 
   /* mesmo peso visual da NOVA FROTA */
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
 }
 
 /* =========================
