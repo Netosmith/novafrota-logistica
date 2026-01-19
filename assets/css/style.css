@@ -16,10 +16,12 @@ body{
 }
 
 header{
-  background:var(--azul);
+  background:
+    linear-gradient(135deg, #082b44 0%, #0b3c5d 50%, #0e527a 100%);
   color:#fff;
-  padding:28px 18px;
-  text-align:center;
+  padding:60px 18px;
+  position:relative;
+  overflow:hidden;
 }
 
 header h1{
@@ -30,6 +32,22 @@ header h1{
 header p{
   margin:0 0 14px 0;
   opacity:.95;
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  left:-20%;
+  top:50%;
+  width:140%;
+  height:2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0,255,150,.4),
+    transparent
+  );
+  box-shadow: 0 0 20px rgba(0,255,150,.6);
 }
 
 nav{
