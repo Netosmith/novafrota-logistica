@@ -149,7 +149,7 @@ header::after{
 }
 
 .gva-logo{
-  height: 46px;            /* 🔥 ajuste fino aqui */
+  height: 46px;
   width: auto;
   display: block;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
@@ -286,19 +286,16 @@ a:hover{ text-decoration:underline; }
 
 /* =========================
    VIDEO INSTITUCIONAL (Sobre / A Nova Frota)
-   - NÃO ACHATA (mantém 16:9)
-   - ~20% menor no desktop
    ========================= */
 
 .video-wrapper{
   position: relative;
-  width: 80%;              /* ~20% menor */
-  max-width: 900px;        /* evita ficar gigante em telas grandes */
-  margin: 16px auto;       /* centraliza */
-  aspect-ratio: 16 / 9;    /* proporção correta */
+  width: 80%;
+  max-width: 900px;
+  margin: 16px auto;
+  aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
-
   box-shadow: 0 18px 50px rgba(0,0,0,.25);
 }
 
@@ -340,10 +337,6 @@ footer{
   gap:16px;
 }
 
-.hero-mini h2{
-  margin:0 0 8px 0;
-}
-
 /* Quadro lateral */
 .side-box{
   position: sticky;
@@ -357,57 +350,6 @@ footer{
 
   min-width:0;
   overflow-wrap:anywhere;
-}
-
-.side-box h3{
-  margin:0 0 6px 0;
-  color: var(--azul);
-}
-
-.side-sub{
-  margin:0 0 14px 0;
-  color: rgba(28,28,28,.75);
-  font-weight:700;
-  font-size:13px;
-}
-
-.side-item{
-  border:1px solid #eef1f4;
-  border-radius:14px;
-  padding:16px;
-  margin-bottom:12px;
-  background: #fbfcfd;
-}
-
-.side-tag{
-  display:inline-block;
-  font-size:11px;
-  font-weight:900;
-  padding:6px 10px;
-  border-radius:999px;
-  background: rgba(11,60,93,.08);
-  color: var(--azul);
-  border:1px solid rgba(11,60,93,.12);
-  margin-bottom:8px;
-}
-
-/* Área reservada para imagem/banner (uso futuro) */
-.side-banner{
-  width: 100%;
-  height: 180px;
-  border-radius: 14px;
-  background: linear-gradient(
-    135deg,
-    rgba(11,60,93,.08),
-    rgba(27,143,58,.12)
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--azul);
-  font-weight: 900;
-  margin-bottom: 16px;
-  border: 1px dashed rgba(11,60,93,.25);
 }
 
 /* =========================
@@ -426,7 +368,6 @@ footer{
     min-height: auto;
   }
 
-  /* vídeo ocupa mais espaço em telas menores */
   .video-wrapper{
     width: 100%;
     max-width: 100%;
@@ -449,13 +390,14 @@ footer{
   .menu-area h1{ font-size:30px; }
 
   /* GVA pode aparecer menor em tablet */
-  .logo-gva img{
+  .gva-logo{
     height: 40px;
   }
 }
 
 /* =========================
    DESKTOP: NAV EM UMA LINHA (ALINHAR TUDO)
+   + AJUSTE 3 (GVA MAIOR NO DESKTOP)
    ========================= */
 @media (min-width: 769px){
 
@@ -466,11 +408,6 @@ footer{
 
   .logo{
     height: 48px;
-  }
-
-  .menu-area{
-    flex: 1;
-    min-width: 0;
   }
 
   nav{
@@ -485,9 +422,9 @@ footer{
     white-space: nowrap;
   }
 
-  /* GVA alinhada e proporcional no desktop */
-  .logo-gva img{
-    height: 44px;
+  /* ✅ AJUSTE 3: GVA maior no desktop */
+  .gva-logo{
+    height: 50px;
   }
 }
 
@@ -497,7 +434,6 @@ footer{
 
 @media (max-width: 600px){
 
-  /* Conteúdo */
   section{
     padding: 16px 12px;
   }
@@ -506,20 +442,17 @@ footer{
   .card{ padding: 14px; border-radius: 16px; }
   .btn{ padding: 10px 14px; border-radius: 12px; font-size: 14px; }
 
-  /* Header: remove recorte e deixa compacto */
   header{
     padding: 14px 12px 18px 12px;
     border-radius: 0;
     overflow: visible;
   }
 
-  /* Feixe mais discreto no mobile */
   header::after{
     top: 82%;
     opacity: .25;
   }
 
-  /* O “vidro” vira transparente no mobile */
   .header-container{
     max-width: 100%;
     margin: 0;
@@ -537,12 +470,6 @@ footer{
     text-align: center;
   }
 
-  .logo-area{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
   .logo{
     height: auto;
     width: 100%;
@@ -558,7 +485,6 @@ footer{
     margin: 0 0 8px 0;
   }
 
-  /* Menu em uma linha com scroll horizontal */
   nav{
     width: 100%;
     flex-wrap: nowrap;
@@ -572,8 +498,6 @@ footer{
 
     border-radius: 14px;
     background: rgba(255,255,255,.06);
-
-    /* evita “puxar” a página junto */
     overscroll-behavior-x: contain;
   }
 
@@ -586,20 +510,18 @@ footer{
     border-radius: 12px;
   }
 
-  /* Vídeo no mobile: 100% largura (sem achatar) */
   .video-wrapper{
     width: 100%;
     max-width: 100%;
     margin: 12px 0;
   }
 
-  /* painel lateral não “cola” no mobile */
   .side-box{
     position: relative;
     top: 0;
   }
 
-  /* Esconde a logo GVA no celular (evita poluir e quebrar o header) */
+  /* Esconde a logo GVA no celular */
   .logo-gva{
     display:none;
   }
