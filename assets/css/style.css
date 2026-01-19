@@ -137,6 +137,26 @@ header::after{
 }
 
 /* =========================
+   LOGO GVA (lado direito do header)
+   Use no HTML: <div class="logo-gva"><img ...></div>
+   ========================= */
+
+.logo-gva{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  min-width:0;
+}
+
+.logo-gva img{
+  height:46px;
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
+}
+
+/* =========================
    NAV FUTURISTA
    ========================= */
 
@@ -428,6 +448,11 @@ footer{
   nav{ justify-content:center; }
 
   .menu-area h1{ font-size:30px; }
+
+  /* GVA pode aparecer menor em tablet */
+  .logo-gva img{
+    height: 40px;
+  }
 }
 
 /* =========================
@@ -459,6 +484,11 @@ footer{
     font-size: 12.5px;
     padding: 7px 11px;
     white-space: nowrap;
+  }
+
+  /* GVA alinhada e proporcional no desktop */
+  .logo-gva img{
+    height: 44px;
   }
 }
 
@@ -568,5 +598,10 @@ footer{
   .side-box{
     position: relative;
     top: 0;
+  }
+
+  /* Esconde a logo GVA no celular (evita poluir e quebrar o header) */
+  .logo-gva{
+    display:none;
   }
 }
