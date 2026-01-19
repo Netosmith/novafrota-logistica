@@ -137,22 +137,20 @@ header::after{
 }
 
 /* =========================
-   LOGO GVA (lado direito do header)
-   Use no HTML: <div class="logo-gva"><img ...></div>
+   LOGO GVA (direita do header)
+   - mesmo tamanho da NOVA FROTA
    ========================= */
 
 .logo-gva{
-  flex:0 0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  min-width:0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .logo-gva img{
-  height:46px;
-  width:auto;
-  display:block;
+  height: 56px;        /* MESMO tamanho da logo NOVA FROTA */
+  width: auto;         /* mantém proporção */
+  display: block;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
 
