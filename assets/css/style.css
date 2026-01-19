@@ -33,7 +33,6 @@ header{
   overflow:hidden;
   color:#fff;
 
-  /* Fundo com profundidade */
   background:
     radial-gradient(1200px 600px at 15% 15%, rgba(32,192,90,.22), transparent 60%),
     radial-gradient(900px 500px at 85% 20%, rgba(14,82,122,.38), transparent 55%),
@@ -43,20 +42,17 @@ header{
   padding:58px 18px 42px 18px;
 }
 
-/* textura sutil (granulado) */
 header::before{
   content:"";
   position:absolute;
   inset:0;
   pointer-events:none;
-  background-image:
-    radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
   background-size: 4px 4px;
   opacity:.35;
   mix-blend-mode: overlay;
 }
 
-/* feixe de luz animado */
 header::after{
   content:"";
   position:absolute;
@@ -84,7 +80,7 @@ header::after{
   100% { transform: translateX(12%) skewY(-2deg); opacity:.65; }
 }
 
-/* Container vidro (glassmorphism) */
+/* Container vidro */
 .header-container{
   max-width:1200px;
   margin:0 auto;
@@ -258,38 +254,13 @@ footer{
 }
 
 /* =========================
-   RESPONSIVO
+   LAYOUT HOME: conteúdo + quadro lateral
    ========================= */
 
-@media (max-width: 900px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px){
-  header{ padding:44px 14px 34px 14px; }
-
-  .header-container{
-    flex-direction:column;
-    text-align:center;
-    padding:22px 16px;
-  }
-
-  .menu-area{ text-align:center; }
-
-  nav{ justify-content:center; }
-
-  .menu-area h1{ font-size:30px; }
-}
-
-@media (max-width: 600px){
-  .grid{ grid-template-columns: 1fr; }
-  section h2{ font-size:26px; }
-}
-
-/* Layout Home: conteúdo + quadro lateral */
+/* Painel maior (versão final) */
 .layout-home{
   display:grid;
-  grid-template-columns: 1.7fr 1fr;
+  grid-template-columns: 1.4fr 1.2fr;
   gap:18px;
   align-items:start;
 }
@@ -310,9 +281,10 @@ footer{
   top: 16px;
   border:1px solid #e8eaee;
   border-radius:16px;
-  padding:16px;
+  padding:22px;
   background:#fff;
   box-shadow: var(--sombra);
+  min-height: 520px;
 }
 
 .side-box h3{
@@ -330,7 +302,7 @@ footer{
 .side-item{
   border:1px solid #eef1f4;
   border-radius:14px;
-  padding:12px;
+  padding:16px;
   margin-bottom:12px;
   background: #fbfcfd;
 }
@@ -345,34 +317,6 @@ footer{
   color: var(--azul);
   border:1px solid rgba(11,60,93,.12);
   margin-bottom:8px;
-}
-
-/* Responsivo */
-@media (max-width: 900px){
-  .layout-home{
-    grid-template-columns: 1fr;
-  }
-  .side-box{
-    position: relative;
-    top: 0;
-  }
-}
-/* ===== PAINEL DE INFORMAÇÕES – TAMANHO MAIOR ===== */
-
-/* Aumenta a coluna do painel */
-.layout-home{
-  grid-template-columns: 1.4fr 1.2fr;
-}
-
-/* Painel lateral maior e mais “banner-friendly” */
-.side-box{
-  min-height: 520px;
-  padding: 22px;
-}
-
-/* Espaçamento interno maior para imagens */
-.side-item{
-  padding: 16px;
 }
 
 /* Área reservada para imagem/banner (uso futuro) */
@@ -394,97 +338,83 @@ footer{
   border: 1px dashed rgba(11,60,93,.25);
 }
 
-/* Responsivo: painel volta ao tamanho normal no mobile */
+/* =========================
+   RESPONSIVO (tablet)
+   ========================= */
+
 @media (max-width: 900px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+
   .layout-home{
     grid-template-columns: 1fr;
   }
-
-  .side-box{
-    min-height: auto;
-  }
-}
-/* ===== MOBILE (celular) ===== */
-@media (max-width: 600px){
-
-  /* Header mais compacto */
-  header{
-    padding: 18px 12px;
-  }
-
-  header h1{
-    font-size: 22px;
-  }
-
-  header p{
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-
-  /* Menu em UMA LINHA com scroll horizontal */
-  nav{
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 8px;
-    padding: 6px 2px;
-  }
-
-  /* remove barra feia no mobile */
-  nav::-webkit-scrollbar{
-    height: 0;
-  }
-
-  /* botões do menu menores */
-  nav a{
-    white-space: nowrap;
-    padding: 8px 10px;
-    border-radius: 12px;
-    font-size: 13px;
-  }
-
-  /* Página mais “enquadrada” */
-  section{
-    padding: 18px 12px;
-  }
-
-  .card{
-    padding: 14px;
-    border-radius: 16px;
-  }
-
-  section h2{
-    font-size: 22px;
-  }
-
-  /* Botões gerais um pouco menores */
-  .btn{
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 14px;
-  }
-
-  /* Home: painel lateral deixa de “sticky” no celular */
   .side-box{
     position: relative;
     top: 0;
+    min-height: auto;
   }
 }
-/* ===== MOBILE FIX (celular) ===== */
-@media (max-width: 600px){
 
-  /* Header mais baixo e bem encaixado */
-  header{
-    padding: 14px 12px !important;
+@media (max-width: 768px){
+  header{ padding:44px 14px 34px 14px; }
+
+  .header-container{
+    flex-direction:column;
+    text-align:center;
+    padding:22px 16px;
   }
 
-  /* Container do header sempre em coluna e centralizado */
+  .menu-area{ text-align:center; }
+
+  nav{ justify-content:center; }
+
+  .menu-area h1{ font-size:30px; }
+}
+
+/* =========================
+   MOBILE FINAL (celular) – SEM “CARD” NO TOPO
+   ========================= */
+
+@media (max-width: 600px){
+
+  /* Conteúdo */
+  section{
+    padding: 16px 12px;
+  }
+  .grid{ grid-template-columns: 1fr; }
+  section h2{ font-size: 24px; }
+  .card{ padding: 14px; border-radius: 16px; }
+  .btn{ padding: 10px 14px; border-radius: 12px; font-size: 14px; }
+
+  /* Header: remove recorte e deixa compacto */
+  header{
+    padding: 14px 12px 18px 12px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  /* Feixe mais discreto no mobile */
+  header::after{
+    top: 82%;
+    opacity: .25;
+  }
+
+  /* O “vidro” vira transparente no mobile (acaba o card recortado) */
   .header-container{
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-align: center !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
   }
 
   .logo-area{
@@ -493,74 +423,49 @@ footer{
     justify-content: center;
   }
 
-  /* Logo menor no celular */
   .logo{
-    max-width: 180px;
-    width: 100%;
     height: auto;
-    display: block;
+    width: 100%;
+    max-width: 160px;
   }
 
-  /* Texto do header mais compacto */
+  .menu-area{
+    width: 100%;
+  }
+
   .menu-area p{
-    font-size: 12.5px !important;
-    margin: 0 0 8px 0 !important;
+    font-size: 12px;
+    margin: 0 0 8px 0;
   }
 
-  /* Menu em uma linha, com scroll horizontal */
+  /* Menu em uma linha com scroll horizontal */
   nav{
     width: 100%;
-    justify-content: flex-start !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    gap: 8px !important;
-    padding: 6px 2px !important;
-    margin: 0 auto !important;
+
+    gap: 8px;
+    padding: 6px 8px;
+
+    border-radius: 14px;
+    background: rgba(255,255,255,.06);
   }
 
-  nav::-webkit-scrollbar{
-    height: 0;
-  }
+  nav::-webkit-scrollbar{ height: 0; }
 
   nav a{
     white-space: nowrap;
-    padding: 8px 10px !important;
-    border-radius: 12px !important;
-    font-size: 12.5px !important;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 12px;
   }
 
-  /* Linha “neon” do header não atrapalhar no mobile */
-  header::after{
-    top: 70% !important;
-    opacity: .35 !important;
-  }
-
-  /* Página mais enquadrada */
-  section{
-    padding: 16px 12px !important;
-  }
-
-  .card{
-    padding: 14px !important;
-    border-radius: 16px !important;
-  }
-
-  section h2{
-    font-size: 22px !important;
-  }
-
-  /* Botões (onde existirem) mais compactos */
-  .btn{
-    padding: 10px 14px !important;
-    border-radius: 12px !important;
-    font-size: 14px !important;
-  }
-
-  /* Se o painel lateral estiver sticky, desliga no mobile */
+  /* painel lateral não “cola” no mobile */
   .side-box{
-    position: relative !important;
-    top: 0 !important;
+    position: relative;
+    top: 0;
   }
 }
-
