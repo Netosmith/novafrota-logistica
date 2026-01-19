@@ -138,7 +138,7 @@ header::after{
 
 /* =========================
    LOGO GVA (direita do header)
-   - mesmo tamanho da NOVA FROTA
+   - ajuste visual (não fica pequena)
    ========================= */
 
 .logo-gva{
@@ -148,8 +148,8 @@ header::after{
 }
 
 .logo-gva img{
-  height: 56px;        /* MESMO tamanho da logo NOVA FROTA */
-  width: auto;         /* mantém proporção */
+  height: 64px;        /* ligeiramente maior que a NOVA FROTA */
+  width: auto;
   display: block;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
