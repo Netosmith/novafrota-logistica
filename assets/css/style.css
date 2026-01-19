@@ -141,18 +141,34 @@ header::after{
    ========================= */
 
 .logo-gva{
-  flex: 0 0 auto;          /* impede o flex de esmagar */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 120px;        /* garante espaço mínimo */
+  flex: 0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
+.logo-gva img,
 .gva-logo{
-  height: 78px;
-  width: auto;
-  display: block;
+  height: 72px !important;     /* ajuste aqui */
+  width: auto !important;
+  max-width: none !important;
+  display:block;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
+}
+
+/* se estiver “espremendo” no desktop, dá mais espaço pra ela */
+@media (min-width: 769px){
+  .logo-gva{
+    min-width: 180px;
+  }
+}
+
+/* no tablet pode reduzir um pouco */
+@media (max-width: 768px){
+  .logo-gva img,
+  .gva-logo{
+    height: 56px !important;
+  }
 }
 
 /* =========================
@@ -337,19 +353,153 @@ footer{
   gap:16px;
 }
 
-/* Quadro lateral */
+/* =========================
+   PAINEL DE INFORMAÇÕES – FUTURISTA (side-box)
+   (incluído aqui conforme seu pedido)
+   ========================= */
+
 .side-box{
   position: sticky;
   top: 16px;
-  border:1px solid #e8eaee;
-  border-radius:16px;
-  padding:22px;
-  background:#fff;
-  box-shadow: var(--sombra);
+
+  border-radius: 18px;
+  padding: 22px;
+
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(11,60,93,.16);
+
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.18),
+    0 0 0 1px rgba(255,255,255,.35) inset;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
   min-height: 520px;
 
   min-width:0;
+  overflow: hidden;
   overflow-wrap:anywhere;
+}
+
+/* moldura neon */
+.side-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius: 18px;
+  padding: 1px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(32,192,90,.35),
+    rgba(14,82,122,.35),
+    rgba(32,192,90,.25)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: .85;
+}
+
+.side-box h3{
+  margin: 0 0 6px 0;
+  color: var(--azul);
+  font-size: 18px;
+  letter-spacing: .2px;
+  position: relative;
+  z-index: 1;
+}
+
+.side-sub{
+  margin: 0 0 14px 0;
+  color: rgba(28,28,28,.72);
+  font-weight: 700;
+  font-size: 13px;
+  position: relative;
+  z-index: 1;
+}
+
+.side-item{
+  position: relative;
+  z-index: 1;
+
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(11,60,93,.12);
+
+  box-shadow: 0 12px 28px rgba(10,30,60,.08);
+  overflow: hidden;
+}
+
+/* brilho lateral sutil */
+.side-item::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:4px;
+  background: linear-gradient(
+    180deg,
+    rgba(32,192,90,.85),
+    rgba(14,82,122,.55)
+  );
+  opacity:.75;
+}
+
+.side-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .4px;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  color: #fff;
+  background: linear-gradient(135deg, rgba(11,60,93,.95), rgba(14,82,122,.90));
+  border: 1px solid rgba(255,255,255,.22);
+
+  box-shadow: 0 10px 22px rgba(11,60,93,.18);
+  margin-bottom: 10px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.side-item p{
+  margin: 0;
+  color: rgba(28,28,28,.86);
+  line-height: 1.45;
+  position: relative;
+  z-index: 1;
+}
+
+.side-item p strong{
+  color: rgba(28,28,28,.95);
+}
+
+/* botão do painel mais futurista */
+.side-box .btn{
+  width: 100%;
+  text-align: center;
+  border-radius: 14px;
+
+  box-shadow:
+    0 18px 42px rgba(32,192,90,.28),
+    0 0 0 1px rgba(255,255,255,.18) inset;
 }
 
 /* =========================
@@ -388,16 +538,10 @@ footer{
   nav{ justify-content:center; }
 
   .menu-area h1{ font-size:30px; }
-
-  /* GVA pode aparecer menor em tablet */
-  .gva-logo{
-    height: 40px;
-  }
 }
 
 /* =========================
    DESKTOP: NAV EM UMA LINHA (ALINHAR TUDO)
-   + AJUSTE 3 (GVA MAIOR NO DESKTOP)
    ========================= */
 @media (min-width: 769px){
 
@@ -420,11 +564,6 @@ footer{
     font-size: 12.5px;
     padding: 7px 11px;
     white-space: nowrap;
-  }
-
-  /* ✅ AJUSTE 3: GVA maior no desktop */
-  .gva-logo{
-    height: 50px;
   }
 }
 
@@ -519,40 +658,12 @@ footer{
   .side-box{
     position: relative;
     top: 0;
+    min-height: auto;
+    padding: 18px;
   }
 
   /* Esconde a logo GVA no celular */
   .logo-gva{
     display:none;
-  }
-}
-/* ==== FIX DEFINITIVO: LOGO GVA TAMANHO CERTO ==== */
-.logo-gva{
-  flex: 0 0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.logo-gva img,
-.gva-logo{
-  height: 72px !important;     /* ajuste aqui */
-  width: auto !important;
-  max-width: none !important;  /* evita limitar */
-  display:block;
-}
-
-/* se estiver “espremendo” no desktop, dá mais espaço pra ela */
-@media (min-width: 769px){
-  .logo-gva{
-    min-width: 180px;
-  }
-}
-
-/* no tablet pode reduzir um pouco */
-@media (max-width: 768px){
-  .logo-gva img,
-  .gva-logo{
-    height: 56px !important;
   }
 }
