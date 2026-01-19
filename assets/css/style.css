@@ -471,4 +471,96 @@ footer{
     top: 0;
   }
 }
+/* ===== MOBILE FIX (celular) ===== */
+@media (max-width: 600px){
+
+  /* Header mais baixo e bem encaixado */
+  header{
+    padding: 14px 12px !important;
+  }
+
+  /* Container do header sempre em coluna e centralizado */
+  .header-container{
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+
+  .logo-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Logo menor no celular */
+  .logo{
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Texto do header mais compacto */
+  .menu-area p{
+    font-size: 12.5px !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  /* Menu em uma linha, com scroll horizontal */
+  nav{
+    width: 100%;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px !important;
+    padding: 6px 2px !important;
+    margin: 0 auto !important;
+  }
+
+  nav::-webkit-scrollbar{
+    height: 0;
+  }
+
+  nav a{
+    white-space: nowrap;
+    padding: 8px 10px !important;
+    border-radius: 12px !important;
+    font-size: 12.5px !important;
+  }
+
+  /* Linha “neon” do header não atrapalhar no mobile */
+  header::after{
+    top: 70% !important;
+    opacity: .35 !important;
+  }
+
+  /* Página mais enquadrada */
+  section{
+    padding: 16px 12px !important;
+  }
+
+  .card{
+    padding: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  section h2{
+    font-size: 22px !important;
+  }
+
+  /* Botões (onde existirem) mais compactos */
+  .btn{
+    padding: 10px 14px !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Se o painel lateral estiver sticky, desliga no mobile */
+  .side-box{
+    position: relative !important;
+    top: 0 !important;
+  }
+}
 
