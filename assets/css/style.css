@@ -137,20 +137,22 @@ header::after{
 }
 
 /* =========================
-   LOGO GVA (direita do header)
-   - ajuste visual (não fica pequena)
+   LOGO GVA – AJUSTE VISUAL FINAL
    ========================= */
 
 .logo-gva{
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+  margin-left: 10px; /* respiro do menu */
 }
 
 .logo-gva img{
-  height: 64px;        /* ligeiramente maior que a NOVA FROTA */
+  height: 72px;        /* ajuste ideal visual */
   width: auto;
   display: block;
+
+  /* mesmo peso visual da NOVA FROTA */
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
 
