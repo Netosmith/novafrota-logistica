@@ -257,7 +257,6 @@ footer{
    LAYOUT HOME: conteúdo + quadro lateral
    ========================= */
 
-/* Painel maior (versão final) */
 .layout-home{
   display:grid;
   grid-template-columns: 1.4fr 1.2fr;
@@ -372,6 +371,38 @@ footer{
 }
 
 /* =========================
+   DESKTOP: NAV EM UMA LINHA (ALINHAR TUDO)
+   ========================= */
+@media (min-width: 769px){
+
+  .header-container{
+    gap: 16px;
+    padding: 22px 20px;
+  }
+
+  .logo{
+    height: 48px;
+  }
+
+  .menu-area{
+    flex: 1;
+    min-width: 0;
+  }
+
+  nav{
+    flex-wrap: nowrap;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+
+  nav a{
+    font-size: 12.5px;
+    padding: 7px 11px;
+    white-space: nowrap;
+  }
+}
+
+/* =========================
    MOBILE FINAL (celular) – SEM “CARD” NO TOPO
    ========================= */
 
@@ -468,20 +499,4 @@ footer{
     position: relative;
     top: 0;
   }
-/* =========================
-   DESKTOP: NAV EM UMA LINHA
-   ========================= */
-@media (min-width: 769px){
-  nav{
-    flex-wrap: nowrap;         /* não quebra linha */
-    gap: 8px;                  /* menor espaçamento */
-    justify-content: flex-start;
-  }
-
-  nav a{
-    font-size: 13px;           /* texto menor */
-    padding: 8px 12px;         /* botão menor */
-    white-space: nowrap;       /* nunca quebra */
-  }
 }
-
