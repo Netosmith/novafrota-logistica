@@ -38,7 +38,6 @@ img, iframe, video{
 
 /* =========================================================
    SPLASH / INTRO (somente index.html)
-   - funciona com o HTML que você já colocou (#splash)
    ========================================================= */
 
 .splash{
@@ -72,7 +71,6 @@ img, iframe, video{
   100% { transform: scale(1.06); }
 }
 
-/* scanline no splash */
 .splash::after{
   content:"";
   position:absolute;
@@ -131,14 +129,6 @@ img, iframe, video{
   filter: drop-shadow(0 12px 26px rgba(0,0,0,.35));
 }
 
-.splash-sub{
-  color: rgba(255,255,255,.92);
-  font-weight: 800;
-  letter-spacing: .4px;
-  font-size: 13px;
-  margin-bottom: 14px;
-}
-
 .splash-loader{
   display:flex;
   justify-content:center;
@@ -162,7 +152,6 @@ img, iframe, video{
   50%      { transform: translateY(-6px); opacity: 1; }
 }
 
-/* sumiço suave */
 .splash.splash-hide{
   animation: splashFadeOut .65s ease forwards;
 }
@@ -171,7 +160,6 @@ img, iframe, video{
   to{ opacity: 0; visibility: hidden; }
 }
 
-/* acessibilidade: reduz movimento */
 @media (prefers-reduced-motion: reduce){
   .splash-bg,
   .splash::after,
@@ -237,7 +225,6 @@ header::after{
   100% { transform: translateX(12%) skewY(-2deg); opacity:.65; }
 }
 
-/* Container vidro */
 .header-container{
   max-width:1200px;
   margin:0 auto;
@@ -253,11 +240,9 @@ header::after{
   box-shadow: var(--sombra);
   backdrop-filter: blur(10px);
 
-  /* evita estouro por conteúdo longo */
   min-width:0;
 }
 
-/* Logo */
 .logo-area{ flex:0 0 auto; }
 
 .logo{
@@ -267,24 +252,14 @@ header::after{
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
 
-/* Texto do header */
 .menu-area{ flex:1; text-align:left; min-width:0; }
-
-.menu-area h1{
-  margin:0 0 6px 0;
-  font-size:34px;
-  letter-spacing:.2px;
-}
 
 .menu-area p{
   margin:0 0 14px 0;
   opacity:.95;
 }
 
-/* =========================
-   LOGO GVA (direita do header)
-   ========================= */
-
+/* LOGO GVA */
 .logo-gva{
   flex: 0 0 auto;
   display:flex;
@@ -294,39 +269,28 @@ header::after{
 
 .logo-gva img,
 .gva-logo{
-  height: 72px !important;     /* ajuste aqui */
+  height: 72px !important;
   width: auto !important;
   max-width: none !important;
   display:block;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
 }
 
-/* se estiver “espremendo” no desktop, dá mais espaço pra ela */
 @media (min-width: 769px){
-  .logo-gva{
-    min-width: 180px;
-  }
+  .logo-gva{ min-width: 180px; }
 }
 
-/* no tablet pode reduzir um pouco */
 @media (max-width: 768px){
   .logo-gva img,
-  .gva-logo{
-    height: 56px !important;
-  }
+  .gva-logo{ height: 56px !important; }
 }
 
-/* =========================
-   NAV FUTURISTA
-   ========================= */
-
+/* NAV */
 nav{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   justify-content:flex-start;
-
-  /* evita empurrar a página no mobile/desktop */
   min-width:0;
 }
 
@@ -380,10 +344,7 @@ a{
 
 a:hover{ text-decoration:underline; }
 
-/* =========================
-   GRID + CARDS PREMIUM
-   ========================= */
-
+/* GRID + CARDS */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -400,7 +361,6 @@ a:hover{ text-decoration:underline; }
   box-shadow: 0 14px 30px rgba(10,30,60,.06);
   transition: transform .12s ease, box-shadow .12s ease;
 
-  /* evita estouro por textos/links grandes */
   min-width:0;
   overflow-wrap:anywhere;
   word-break:break-word;
@@ -419,10 +379,7 @@ a:hover{ text-decoration:underline; }
 
 .card p{ margin: 8px 0; }
 
-/* =========================
-   BOTÕES COM “GLOW”
-   ========================= */
-
+/* BOTÕES */
 .btn{
   display:inline-block;
   background: linear-gradient(135deg, var(--verde) 0%, var(--verde2) 100%);
@@ -445,10 +402,7 @@ a:hover{ text-decoration:underline; }
   box-shadow: 0 18px 42px rgba(32,192,90,.32);
 }
 
-/* =========================
-   VIDEO INSTITUCIONAL (Sobre / A Nova Frota)
-   ========================= */
-
+/* VIDEO */
 .video-wrapper{
   position: relative;
   width: 80%;
@@ -468,10 +422,7 @@ a:hover{ text-decoration:underline; }
   border: 0;
 }
 
-/* =========================
-   RODAPÉ
-   ========================= */
-
+/* RODAPÉ */
 footer{
   background: linear-gradient(180deg, #f6f7f9 0%, #eef1f4 100%);
   text-align:center;
@@ -481,10 +432,7 @@ footer{
   border-top:1px solid #e7e9ee;
 }
 
-/* =========================
-   LAYOUT HOME: conteúdo + quadro lateral
-   ========================= */
-
+/* LAYOUT HOME */
 .layout-home{
   display:grid;
   grid-template-columns: 1.4fr 1.2fr;
@@ -526,7 +474,6 @@ footer{
   overflow-wrap:anywhere;
 }
 
-/* moldura neon */
 .side-box::before{
   content:"";
   position:absolute;
@@ -584,7 +531,6 @@ footer{
   overflow: hidden;
 }
 
-/* brilho lateral sutil */
 .side-item::before{
   content:"";
   position:absolute;
@@ -635,7 +581,6 @@ footer{
   color: rgba(28,28,28,.95);
 }
 
-/* botão do painel mais futurista */
 .side-box .btn{
   width: 100%;
   text-align: center;
@@ -647,173 +592,7 @@ footer{
 }
 
 /* =========================
-   RESPONSIVO (tablet)
-   ========================= */
-
-@media (max-width: 900px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-
-  .layout-home{
-    grid-template-columns: 1fr;
-  }
-  .side-box{
-    position: relative;
-    top: 0;
-    min-height: auto;
-  }
-
-  .video-wrapper{
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px){
-  header{ padding:44px 14px 34px 14px; }
-
-  .header-container{
-    flex-direction:column;
-    text-align:center;
-    padding:22px 16px;
-  }
-
-  .menu-area{ text-align:center; }
-
-  nav{ justify-content:center; }
-
-  .menu-area h1{ font-size:30px; }
-}
-
-/* =========================
-   DESKTOP: NAV EM UMA LINHA (ALINHAR TUDO)
-   ========================= */
-@media (min-width: 769px){
-
-  .header-container{
-    gap: 16px;
-    padding: 22px 20px;
-  }
-
-  .logo{
-    height: 48px;
-  }
-
-  nav{
-    flex-wrap: nowrap;
-    gap: 6px;
-    justify-content: flex-start;
-  }
-
-  nav a{
-    font-size: 12.5px;
-    padding: 7px 11px;
-    white-space: nowrap;
-  }
-}
-
-/* =========================
-   MOBILE FINAL (celular)
-   ========================= */
-
-@media (max-width: 600px){
-
-  section{
-    padding: 16px 12px;
-  }
-  .grid{ grid-template-columns: 1fr; }
-  section h2{ font-size: 24px; }
-  .card{ padding: 14px; border-radius: 16px; }
-  .btn{ padding: 10px 14px; border-radius: 12px; font-size: 14px; }
-
-  header{
-    padding: 14px 12px 18px 12px;
-    border-radius: 0;
-    overflow: visible;
-  }
-
-  header::after{
-    top: 82%;
-    opacity: .25;
-  }
-
-  .header-container{
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .logo{
-    height: auto;
-    width: 100%;
-    max-width: 160px;
-  }
-
-  .menu-area{
-    width: 100%;
-  }
-
-  .menu-area p{
-    font-size: 12px;
-    margin: 0 0 8px 0;
-  }
-
-  nav{
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-
-    gap: 8px;
-    padding: 6px 8px;
-
-    border-radius: 14px;
-    background: rgba(255,255,255,.06);
-    overscroll-behavior-x: contain;
-  }
-
-  nav::-webkit-scrollbar{ height: 0; }
-
-  nav a{
-    white-space: nowrap;
-    padding: 8px 10px;
-    font-size: 12px;
-    border-radius: 12px;
-  }
-
-  .video-wrapper{
-    width: 100%;
-    max-width: 100%;
-    margin: 12px 0;
-  }
-
-  .side-box{
-    position: relative;
-    top: 0;
-    min-height: auto;
-    padding: 18px;
-  }
-
-  /* Esconde a logo GVA no celular */
-  .logo-gva{
-    display:none;
-  }
-}
-
-/* =========================
-   SLIDER DE EVENTOS – PAINEL (com legenda)
+   SLIDER DE EVENTOS – PAINEL (com legenda) ✅ FIX DEFINITIVO
    ========================= */
 
 .side-slider{
@@ -825,71 +604,6 @@ footer{
   margin-bottom: 18px;
 
   background: rgba(0,0,0,.08);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
-}
-
-.side-slider-track{
-  display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slideEventos 12s infinite ease-in-out;
-}
-
-/* cada slide agora é um "quadro" */
-.slide{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-/* imagem agora fica dentro do .slide */
-.slide img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 14px;
-}
-
-/* ✅ LEGENDA PREMIUM (texto flutuante + blur) */
-.slide-caption{
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  z-index: 2;
-
-  padding: 7px 12px;
-  border-radius: 999px;
-
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .3px;
-  color: #fff;
-
-  background: rgba(8,43,68,.45);
-  border: 1px solid rgba(255,255,255,.22);
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   box-shadow:
-    0 12px 28px rgba(0,0,0,.28),
-    0 0 0 1px rgba(255,255,255,.12) inset;
-}
-
-/* animação */
-@keyframes slideEventos{
-  0%   { transform: translateX(0%); }
-  28%  { transform: translateX(0%); }
-
-  33%  { transform: translateX(-100%); }
-  61%  { transform: translateX(-100%); }
-
-  66%  { transform: translateX(-200%); }
-  94%  { transform: translateX(-200%); }
-
-  100% { transform: translateX(0%); }
-}
-
+    inset 0 0 0 1px rgba(255,255,255,.18),
+    0 10px 28px rgba(10,30,60,.10);
