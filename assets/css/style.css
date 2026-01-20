@@ -259,8 +259,8 @@ header::after{
   min-width:0;
 }
 
+/* ====== LOGOS ====== */
 .logo-area{ flex:0 0 auto; }
-
 .logo{
   height:56px;
   width:auto;
@@ -305,6 +305,31 @@ header::after{
 @media (max-width: 768px){
   .logo-gva img,
   .gva-logo{ height: 56px !important; }
+}
+
+/* =========================
+   ✅ NOVO FIX: LOGO + REDES EM COLUNA (NOVA FROTA E GVA)
+   - ÍCONES SEMPRE ABAIXO DA LOGO
+   - tamanho e padrão iguais
+   ========================= */
+
+.logo-area,
+.logo-gva{
+  display:flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.logo-area img,
+.logo-gva img{
+  display:block !important;
+}
+
+.logo-area .social-icons,
+.logo-gva .social-icons{
+  margin-top: 4px !important;
 }
 
 /* NAV */
@@ -873,26 +898,34 @@ footer{
 }
 
 /* =========================
-   REDES SOCIAIS NO HEADER
+   REDES SOCIAIS NO HEADER (padrão + tamanho fixo)
    ========================= */
 
 .social-icons{
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  margin-top:8px;
+  line-height:0;
+  white-space:nowrap;
 }
 
 .social-icons a{
-  display: inline-flex;
-  width: 26px;
-  height: 26px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
+  width:26px;
+  height:26px;
+
+  border-radius:999px;
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.25);
+
+  overflow:hidden;
+  flex: 0 0 26px;
 
   transition: transform .15s ease, background .15s ease;
 }
@@ -902,79 +935,26 @@ footer{
   background: rgba(255,255,255,.22);
 }
 
-.social-icons img{
-  width: 14px;
-  height: 14px;
+/* força QUALQUER imagem/SVG dentro do botão ficar pequena */
+.social-icons a img,
+.social-icons a svg{
+  width:14px;
+  height:14px;
+  max-width:14px;
+  max-height:14px;
+
+  display:block;
+  object-fit:contain;
+
   filter: brightness(0) invert(1);
 }
 
-@media (max-width: 600px){
-  .social-icons{ display: none; }
-}
-/* =========================================
-   FIX DEFINITIVO: ÍCONES REDES NO HEADER
-   - evita ficar gigante
-   - alinha e padroniza tamanho
-   - mantém ordem (Whats > Insta > LinkedIn)
-   ========================================= */
-
-/* área das redes */
-header .social-icons{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:10px !important;
-
-  margin-top:8px !important;
-  line-height:0 !important;
-  white-space:nowrap !important;
-}
-
-/* cada botão */
-header .social-icons a{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-
-  width:26px !important;
-  height:26px !important;
-
-  border-radius:999px !important;
-  background: rgba(255,255,255,.12) !important;
-  border: 1px solid rgba(255,255,255,.25) !important;
-
-  overflow:hidden !important;
-  flex: 0 0 26px !important;
-}
-
-/* força QUALQUER imagem/SVG dentro do botão ficar pequena */
-header .social-icons a img,
-header .social-icons a svg{
-  width:14px !important;
-  height:14px !important;
-  max-width:14px !important;
-  max-height:14px !important;
-
-  display:block !important;
-  object-fit:contain !important;
-
-  filter: brightness(0) invert(1) !important;
-}
-
-/* garante que o link não “cresça” por fonte ou padding externo */
-header .social-icons a,
-header .social-icons a *{
-  font-size:0 !important;
-  padding:0 !important;
-  margin:0 !important;
-}
-
 /* ordem fixa (se você usar essas classes no HTML) */
-header .social-icons .wpp{ order: 1; }
-header .social-icons .insta{ order: 2; }
-header .social-icons .linkedin{ order: 3; }
+.social-icons .wpp{ order: 1; }
+.social-icons .insta{ order: 2; }
+.social-icons .linkedin{ order: 3; }
 
 /* mobile: opcional esconder (igual você já queria) */
 @media (max-width: 600px){
-  header .social-icons{ display:none !important; }
+  .social-icons{ display:none; }
 }
