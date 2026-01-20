@@ -10,6 +10,54 @@
 </head>
 <body>
 
+<!-- ✅ SPLASH / INTRO (SOMENTE NO INDEX) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash-bg"></div>
+
+  <div class="splash-content">
+    <img
+      class="splash-logo"
+      src="assets/images/logo-novafrota.png"
+      alt="NOVA FROTA"
+    >
+    <div class="splash-sub">Logística e Transportes</div>
+
+    <div class="splash-loader" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ✅ Mostra a intro só na 1ª visita ao index
+  (function () {
+    const KEY = "nf_intro_seen_v1";
+    const splash = document.getElementById("splash");
+
+    if (!splash) return;
+
+    // Se já viu, não mostra
+    if (localStorage.getItem(KEY) === "1") {
+      splash.style.display = "none";
+      return;
+    }
+
+    // Marca como visto
+    localStorage.setItem(KEY, "1");
+
+    // Tempo total da intro (ms)
+    const DURATION = 2200;
+
+    // Fecha com fade-out
+    setTimeout(() => {
+      splash.classList.add("splash-hide");
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 650);
+    }, DURATION);
+  })();
+</script>
+
 <header>
   <div class="header-container">
 
@@ -40,7 +88,6 @@
 
   </div>
 </header>
-
 
 <!-- CONTEÚDO + QUADRO LATERAL -->
 <section>
