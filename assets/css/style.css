@@ -129,6 +129,14 @@ img, iframe, video{
   filter: drop-shadow(0 12px 26px rgba(0,0,0,.35));
 }
 
+.splash-sub{
+  color: rgba(255,255,255,.92);
+  font-weight: 800;
+  letter-spacing: .4px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
 .splash-loader{
   display:flex;
   justify-content:center;
@@ -254,6 +262,12 @@ header::after{
 
 .menu-area{ flex:1; text-align:left; min-width:0; }
 
+.menu-area h1{
+  margin:0 0 6px 0;
+  font-size:34px;
+  letter-spacing:.2px;
+}
+
 .menu-area p{
   margin:0 0 14px 0;
   opacity:.95;
@@ -316,10 +330,7 @@ nav a:hover{
   transform: translateY(-1px);
 }
 
-/* =========================
-   CONTEÚDO
-   ========================= */
-
+/* CONTEÚDO */
 section{
   max-width:1100px;
   margin:0 auto;
@@ -446,10 +457,7 @@ footer{
   gap:16px;
 }
 
-/* =========================
-   PAINEL DE INFORMAÇÕES – FUTURISTA (side-box)
-   ========================= */
-
+/* PAINEL (side-box) */
 .side-box{
   position: sticky;
   top: 16px;
@@ -591,6 +599,149 @@ footer{
     0 0 0 1px rgba(255,255,255,.18) inset;
 }
 
+/* RESPONSIVO (tablet) */
+@media (max-width: 900px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+
+  .layout-home{ grid-template-columns: 1fr; }
+  .side-box{
+    position: relative;
+    top: 0;
+    min-height: auto;
+  }
+
+  .video-wrapper{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  header{ padding:44px 14px 34px 14px; }
+
+  .header-container{
+    flex-direction:column;
+    text-align:center;
+    padding:22px 16px;
+  }
+
+  .menu-area{ text-align:center; }
+  nav{ justify-content:center; }
+  .menu-area h1{ font-size:30px; }
+}
+
+@media (min-width: 769px){
+  .header-container{
+    gap: 16px;
+    padding: 22px 20px;
+  }
+
+  .logo{ height: 48px; }
+
+  nav{
+    flex-wrap: nowrap;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+
+  nav a{
+    font-size: 12.5px;
+    padding: 7px 11px;
+    white-space: nowrap;
+  }
+}
+
+/* MOBILE FINAL */
+@media (max-width: 600px){
+
+  section{ padding: 16px 12px; }
+  .grid{ grid-template-columns: 1fr; }
+  section h2{ font-size: 24px; }
+  .card{ padding: 14px; border-radius: 16px; }
+  .btn{ padding: 10px 14px; border-radius: 12px; font-size: 14px; }
+
+  header{
+    padding: 14px 12px 18px 12px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  header::after{
+    top: 82%;
+    opacity: .25;
+  }
+
+  .header-container{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo{
+    height: auto;
+    width: 100%;
+    max-width: 160px;
+  }
+
+  .menu-area{ width: 100%; }
+
+  .menu-area p{
+    font-size: 12px;
+    margin: 0 0 8px 0;
+  }
+
+  nav{
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    gap: 8px;
+    padding: 6px 8px;
+
+    border-radius: 14px;
+    background: rgba(255,255,255,.06);
+    overscroll-behavior-x: contain;
+  }
+
+  nav::-webkit-scrollbar{ height: 0; }
+
+  nav a{
+    white-space: nowrap;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+  .video-wrapper{
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0;
+  }
+
+  .side-box{
+    position: relative;
+    top: 0;
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .logo-gva{ display:none; }
+}
+
 /* =========================
    SLIDER DE EVENTOS – PAINEL (com legenda) ✅ FIX DEFINITIVO
    ========================= */
@@ -607,3 +758,84 @@ footer{
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,.18),
     0 10px 28px rgba(10,30,60,.10);
+}
+
+.side-slider-track{
+  display: flex;
+  height: 100%;
+  animation: slideEventos 12s infinite ease-in-out;
+  will-change: transform;
+}
+
+.side-slider .slide{
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.side-slider .slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+.side-slider .slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.45),
+    rgba(0,0,0,0) 55%
+  );
+  z-index: 1;
+  pointer-events:none;
+}
+
+/* ✅ LEGENDA PREMIUM */
+.slide-caption{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  z-index: 2;
+
+  padding: 8px 12px;
+  border-radius: 12px;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .25px;
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    rgba(8,43,68,.70),
+    rgba(14,82,122,.55)
+  );
+  border: 1px solid rgba(255,255,255,.22);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.28),
+    inset 0 0 0 1px rgba(255,255,255,.10);
+}
+
+@keyframes slideEventos{
+  0%   { transform: translateX(0%); }
+  28%  { transform: translateX(0%); }
+
+  33%  { transform: translateX(-100%); }
+  61%  { transform: translateX(-100%); }
+
+  66%  { transform: translateX(-200%); }
+  94%  { transform: translateX(-200%); }
+
+  100% { transform: translateX(0%); }
+}
