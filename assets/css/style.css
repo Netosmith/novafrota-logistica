@@ -911,3 +911,70 @@ footer{
 @media (max-width: 600px){
   .social-icons{ display: none; }
 }
+/* =========================================
+   FIX DEFINITIVO: ÍCONES REDES NO HEADER
+   - evita ficar gigante
+   - alinha e padroniza tamanho
+   - mantém ordem (Whats > Insta > LinkedIn)
+   ========================================= */
+
+/* área das redes */
+header .social-icons{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+
+  margin-top:8px !important;
+  line-height:0 !important;
+  white-space:nowrap !important;
+}
+
+/* cada botão */
+header .social-icons a{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  width:26px !important;
+  height:26px !important;
+
+  border-radius:999px !important;
+  background: rgba(255,255,255,.12) !important;
+  border: 1px solid rgba(255,255,255,.25) !important;
+
+  overflow:hidden !important;
+  flex: 0 0 26px !important;
+}
+
+/* força QUALQUER imagem/SVG dentro do botão ficar pequena */
+header .social-icons a img,
+header .social-icons a svg{
+  width:14px !important;
+  height:14px !important;
+  max-width:14px !important;
+  max-height:14px !important;
+
+  display:block !important;
+  object-fit:contain !important;
+
+  filter: brightness(0) invert(1) !important;
+}
+
+/* garante que o link não “cresça” por fonte ou padding externo */
+header .social-icons a,
+header .social-icons a *{
+  font-size:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+/* ordem fixa (se você usar essas classes no HTML) */
+header .social-icons .wpp{ order: 1; }
+header .social-icons .insta{ order: 2; }
+header .social-icons .linkedin{ order: 3; }
+
+/* mobile: opcional esconder (igual você já queria) */
+@media (max-width: 600px){
+  header .social-icons{ display:none !important; }
+}
