@@ -5,8 +5,8 @@
   <title>NOVA FROTA Logística e Transportes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ✅ Cache-buster (evita “não mudou nada” por cache) -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <!-- ✅ Cache-buster -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
 
@@ -15,11 +15,7 @@
   <div class="splash-bg"></div>
 
   <div class="splash-content">
-    <img
-      class="splash-logo"
-      src="assets/images/logo-novafrota.png"
-      alt="NOVA FROTA"
-    >
+    <img class="splash-logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
 
     <div class="splash-loader" aria-hidden="true">
       <span></span><span></span><span></span>
@@ -28,15 +24,12 @@
 </div>
 
 <script>
-  // ✅ Mostra SEMPRE ao carregar/recarregar a página
   window.addEventListener("load", () => {
     const splash = document.getElementById("splash");
     if (!splash) return;
 
-    // Tempo total da intro (ms)
     const DURATION = 1200;
 
-    // Fecha com fade-out
     setTimeout(() => {
       splash.classList.add("splash-hide");
       setTimeout(() => {
@@ -49,24 +42,26 @@
 <header>
   <div class="header-container">
 
-    <!-- ✅ NOVA FROTA (logo + redes abaixo) -->
-    <div class="logo-area">
-      <img class="logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
+    <!-- ✅ COLUNA ESQUERDA: NOVA FROTA + REDES (abaixo) -->
+    <div class="nf-area">
+      <div class="logo-area">
+        <img class="logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
+      </div>
 
       <div class="social-icons">
-        <a class="wpp" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/whatsapp.svg" alt="WhatsApp">
         </a>
-        <a class="insta" href="https://instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/instagram.svg" alt="Instagram">
         </a>
-        <a class="linkedin" href="https://linkedin.com/company/SUALINKEDIN" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/linkedin.svg" alt="LinkedIn">
         </a>
       </div>
     </div>
 
-    <!-- ✅ Texto + menu (centro) -->
+    <!-- ✅ CENTRO: TEXTO + MENU -->
     <div class="menu-area">
       <p>Atendimento regional com suporte direto por estado.</p>
 
@@ -81,18 +76,21 @@
       </nav>
     </div>
 
-    <!-- ✅ GVA (logo + redes abaixo) -->
-    <div class="logo-gva">
-      <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
+    <!-- ✅ COLUNA DIREITA: GVA + REDES (abaixo) -->
+    <div class="gva-area">
+      <div class="logo-gva">
+        <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
+      </div>
 
+      <!-- IMPORTANTE: fica FORA da .logo-gva para não herdar o height 72px -->
       <div class="social-icons">
-        <a class="wpp" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/whatsapp.svg" alt="WhatsApp">
         </a>
-        <a class="insta" href="https://instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/instagram.svg" alt="Instagram">
         </a>
-        <a class="linkedin" href="https://linkedin.com/company/SUALINKEDIN" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="noopener">
           <img src="assets/images/icons/linkedin.svg" alt="LinkedIn">
         </a>
       </div>
@@ -105,7 +103,6 @@
 <section>
   <div class="layout-home">
 
-    <!-- COLUNA PRINCIPAL -->
     <main class="home-main">
 
       <div class="card hero-mini">
@@ -129,17 +126,13 @@
           <li>Açúcar</li>
           <li>Cargas Industriais</li>
         </ul>
-        <p>
-          <a href="servicos.html">Ver todos os serviços</a>
-        </p>
+        <p><a href="servicos.html">Ver todos os serviços</a></p>
       </div>
 
       <div class="card">
         <h2>Atuação Regional</h2>
         <p>GO • MT • MS • MG • SP • BA • MA • TO • SC</p>
-        <p>
-          <a href="regioes.html">Ver regiões e contatos</a>
-        </p>
+        <p><a href="regioes.html">Ver regiões e contatos</a></p>
       </div>
 
       <div class="card">
@@ -148,14 +141,11 @@
           O Grupo Vale do Araguaia (GVA) é uma extensão dos serviços da NOVA FROTA,
           criado para integrar parceiros e ampliar a capacidade operacional.
         </p>
-        <p>
-          <a href="gva.html">Quero me filiar ao GVA</a>
-        </p>
+        <p><a href="gva.html">Quero me filiar ao GVA</a></p>
       </div>
 
     </main>
 
-    <!-- QUADRO LATERAL -->
     <aside class="home-side">
       <div class="side-box">
         <h3>Painel de Informações</h3>
