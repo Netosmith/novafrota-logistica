@@ -1048,3 +1048,132 @@ footer{
     display:none;
   }
 }
+/* =========================
+   CLIENTES (clientes.html)
+   ========================= */
+
+.clientes-page{
+  padding-top: 24px;
+}
+
+/* HERO */
+.clientes-hero{
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 260px;
+
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)),
+    url("assets/images/bg-estrada.jpg");
+  background-size: cover;
+  background-position: center;
+
+  box-shadow:
+    0 18px 50px rgba(10,30,60,.12),
+    0 0 0 1px rgba(255,255,255,.35) inset;
+}
+
+.clientes-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 400px at 15% 20%, rgba(32,192,90,.18), transparent 60%),
+    radial-gradient(900px 400px at 85% 20%, rgba(14,82,122,.22), transparent 55%);
+  pointer-events:none;
+}
+
+.clientes-hero-content{
+  position: relative;
+  z-index: 1;
+  padding: 30px 22px;
+  color:#fff;
+  max-width: 900px;
+}
+
+.clientes-kicker{
+  display:inline-flex;
+  font-weight: 900;
+  letter-spacing: .6px;
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 12px 26px rgba(0,0,0,.18);
+}
+
+.clientes-hero h2{
+  margin: 14px 0 6px 0;
+  font-size: 44px;
+  line-height: 1.05;
+  color:#fff;
+}
+
+.clientes-hero p{
+  margin: 0;
+  opacity: .92;
+  font-size: 16px;
+  max-width: 650px;
+}
+
+/* GRID DE LOGOS */
+.logos-grid{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.logo-tile{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(11,60,93,.10);
+
+  box-shadow:
+    0 12px 26px rgba(10,30,60,.08),
+    0 0 0 1px rgba(255,255,255,.55) inset;
+
+  transition: transform .15s ease, box-shadow .15s ease, border .15s ease, background .15s ease;
+  text-decoration: none;
+}
+
+.logo-tile img{
+  width: 100%;
+  height: 52px;           /* ✅ padroniza altura da logo */
+  object-fit: contain;    /* ✅ nunca estoura */
+  display:block;
+  filter: grayscale(1) contrast(1.05) opacity(.92);
+  transition: filter .15s ease, transform .15s ease;
+}
+
+.logo-tile:hover{
+  transform: translateY(-2px);
+  border: 1px solid rgba(32,192,90,.28);
+  box-shadow:
+    0 18px 44px rgba(10,30,60,.12),
+    0 0 0 1px rgba(255,255,255,.65) inset;
+}
+
+.logo-tile:hover img{
+  filter: grayscale(0) contrast(1.08) opacity(1);
+  transform: scale(1.02);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px){
+  .logos-grid{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 760px){
+  .clientes-hero h2{ font-size: 34px; }
+  .logos-grid{ grid-template-columns: repeat(3, 1fr); }
+  .logo-tile img{ height: 46px; }
+}
+@media (max-width: 520px){
+  .logos-grid{ grid-template-columns: repeat(2, 1fr); }
+}
