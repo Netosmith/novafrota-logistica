@@ -245,7 +245,7 @@ header::after{
   max-width:1200px;
   margin:0 auto;
   display:flex;
-  align-items:flex-start;
+  align-items:center; /* ✅ deixa os 2 blocos (logo + ícones) na mesma altura */
   gap:22px;
 
   background: var(--vidro);
@@ -897,64 +897,59 @@ footer{
   100% { transform: translateX(0%); }
 }
 
-/* =========================
-   REDES SOCIAIS NO HEADER (padrão + tamanho fixo)
-   ========================= */
+/* =========================================
+   REDES SOCIAIS – PADRÃO ÚNICO (NOVA FROTA + GVA)
+   ========================================= */
 
+/* container das redes (fica abaixo da logo) */
 .social-icons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:6px;
+}
+
+/* botão circular */
+.social-icons a{
+  width:26px;
+  height:26px;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
 
-  margin-top:8px;
-  line-height:0;
-  white-space:nowrap;
-}
-
-.social-icons a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  width:26px;
-  height:26px;
-
-  border-radius:999px;
-  background: rgba(255,255,255,.12);
+  border-radius:50%;
+  background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.25);
 
+  text-decoration:none;
   overflow:hidden;
-  flex: 0 0 26px;
-
   transition: transform .15s ease, background .15s ease;
 }
 
+/* hover elegante */
 .social-icons a:hover{
   transform: translateY(-2px);
-  background: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.24);
 }
 
-/* força QUALQUER imagem/SVG dentro do botão ficar pequena */
-.social-icons a img,
-.social-icons a svg{
+/* imagem do ícone (TRAVADA) */
+.social-icons img{
   width:14px;
   height:14px;
-  max-width:14px;
-  max-height:14px;
-
   display:block;
   object-fit:contain;
-
   filter: brightness(0) invert(1);
 }
 
-/* ordem fixa (se você usar essas classes no HTML) */
-.social-icons .wpp{ order: 1; }
-.social-icons .insta{ order: 2; }
-.social-icons .linkedin{ order: 3; }
+/* 🔒 trava QUALQUER texto dentro do <a> */
+.social-icons a,
+.social-icons a *{
+  font-size:0 !important;
+  line-height:0 !important;
+}
 
-/* mobile: opcional esconder (igual você já queria) */
-@media (max-width: 600px){
+/* mobile: esconder (opcional e limpo) */
+@media (max-width:600px){
   .social-icons{ display:none; }
 }
