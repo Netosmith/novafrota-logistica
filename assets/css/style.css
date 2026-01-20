@@ -1177,3 +1177,40 @@ footer{
 @media (max-width: 520px){
   .logos-grid{ grid-template-columns: repeat(2, 1fr); }
 }
+/* =========================
+   AJUSTE DE TAMANHO – HERO CLIENTES
+   ========================= */
+
+/* reduz apenas o PRIMEIRO section da página clientes */
+.page-clientes section:first-of-type{
+  padding: 22px 26px;        /* antes era 32px+ */
+  margin: 20px auto 24px;    /* reduz altura total */
+  min-height: unset;         /* remove qualquer altura forçada */
+}
+
+/* título "Clientes" */
+.page-clientes section:first-of-type h1,
+.page-clientes section:first-of-type h2{
+  font-size: 30px;           /* antes estava muito grande */
+  margin-bottom: 6px;
+}
+
+/* texto descritivo */
+.page-clientes section:first-of-type p{
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .page-clientes section:first-of-type{
+    padding: 18px 16px;
+    margin: 14px auto 18px;
+  }
+
+  .page-clientes section:first-of-type h1,
+  .page-clientes section:first-of-type h2{
+    font-size: 22px;
+  }
+}
