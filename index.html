@@ -29,21 +29,10 @@
 </div>
 
 <script>
-  // ✅ Mostra a intro só na 1ª visita ao index
-  (function () {
-    const KEY = "nf_intro_seen_v1";
+  // ✅ Mostra SEMPRE ao carregar/recarregar a página
+  window.addEventListener("load", () => {
     const splash = document.getElementById("splash");
-
     if (!splash) return;
-
-    // Se já viu, não mostra
-    if (localStorage.getItem(KEY) === "1") {
-      splash.style.display = "none";
-      return;
-    }
-
-    // Marca como visto
-    localStorage.setItem(KEY, "1");
 
     // Tempo total da intro (ms)
     const DURATION = 2200;
@@ -55,7 +44,7 @@
         splash.style.display = "none";
       }, 650);
     }, DURATION);
-  })();
+  });
 </script>
 
 <header>
@@ -81,7 +70,7 @@
       </nav>
     </div>
 
-    <!-- ✅ Logo GVA (direita) - mantém alinhado e dimensionável pelo CSS -->
+    <!-- ✅ Logo GVA (direita) -->
     <div class="logo-gva">
       <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
     </div>
