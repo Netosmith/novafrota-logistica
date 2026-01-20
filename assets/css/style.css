@@ -283,10 +283,11 @@ header::after{
 
 /* LOGO GVA */
 .logo-gva{
-  flex: 0 0 auto;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
+  gap:8px;
 }
 
 .logo-gva img,
