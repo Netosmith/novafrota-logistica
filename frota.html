@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
-<body>
+
+<!-- ✅ IMPORTANTE: essa classe ajuda no CSS por página -->
+<body class="page-frota">
 
 <header>
   <div class="header-container">
@@ -23,9 +25,15 @@
       <nav>
         <a href="index.html">Início</a>
         <a href="sobre.html">A Nova Frota</a>
-        <a href="servicos.html">Serviços</a>
+
+        <!-- ✅ Pode remover do HTML se quiser (o CSS já esconde) -->
+        <!-- <a href="servicos.html">Serviços</a> -->
+
         <a href="regioes.html">Regiões</a>
-        <a href="frota.html">Nossa Frota</a>
+
+        <!-- ✅ Marca a página atual -->
+        <a class="active" href="frota.html">Nossa Frota</a>
+
         <a href="gva.html">Agregados (GVA)</a>
         <a href="contato.html">Contato</a>
       </nav>
