@@ -1272,3 +1272,7 @@ footer{
 .home #clientes .logo-tile img{
   height: 44px;
 }
+
+nav a[href="servicos.html"]{
+  display: none !important;
+}
