@@ -1318,3 +1318,52 @@ nav a[href="servicos.html"]{
   position: relative;
   z-index: 1;
 }
+
+/* =========================
+   FROTA – LOGO COMO FUNDO (WATERMARK)
+   ========================= */
+
+.card.frota{
+  position: relative;
+  overflow: hidden;
+}
+
+/* a imagem fica numa camada separada, atrás do texto */
+.card.frota::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-repeat: no-repeat;
+  background-position: right 18px center; /* posição da marca d’água */
+  background-size: 140px auto;           /* tamanho da logo */
+  opacity: .10;                          /* intensidade */
+  filter: saturate(1.05);
+  pointer-events:none;
+}
+
+/* garante que texto fique na frente */
+.card.frota > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* caminhos das logos (ajuste os nomes se forem diferentes) */
+.card.frota.nova-frota::before{
+  background-image: url("assets/images/logo-novafrota.png");
+}
+
+.card.frota.lucesi::before{
+  background-image: url("assets/images/logo-lucesi.png");
+}
+
+.card.frota.gva::before{
+  background-image: url("assets/images/logo-gva.png");
+}
+
+/* mobile: reduz a marca d’água */
+@media (max-width:600px){
+  .card.frota::before{
+    background-size: 110px auto;
+    opacity: .08;
+  }
+}
