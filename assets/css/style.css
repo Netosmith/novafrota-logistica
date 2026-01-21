@@ -595,7 +595,7 @@ footer{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  min-height: 520px;
+  min-height: auto;
 
   min-width:0;
   overflow: hidden;
@@ -1217,4 +1217,58 @@ footer{
   .page-clientes section:first-of-type h2{
     font-size: 22px;
   }
+}
+/* =====================================================
+   AJUSTES HOME (index.html)
+   - remove “buraco” do painel
+   - deixa cards mais alinhados
+   - compacta a seção de clientes para subir mais
+   ===================================================== */
+
+.home .layout-home{
+  gap: 16px; /* um pouco mais justo */
+  align-items: start;
+}
+
+.home .home-main{
+  gap: 14px; /* reduz o espaçamento entre cards */
+}
+
+/* painel lateral: sem altura forçada e com “cara” mais leve */
+.home .side-box{
+  min-height: auto;        /* 🔥 elimina o buraco */
+  padding: 20px;
+}
+
+/* deixa o card de clientes mais compacto */
+.home #clientes.card{
+  padding: 16px;
+  margin-top: 0 !important;
+}
+
+/* título + texto do clientes com respiro menor */
+.home #clientes h2{
+  margin-bottom: 6px;
+  font-size: 26px;
+}
+
+.home #clientes p{
+  margin-top: 0;
+}
+
+/* grid de logos mais “premium” no index */
+.home #clientes .logos-grid{
+  margin-top: 12px;
+  gap: 12px;
+}
+
+/* tiles mais compactos (sem perder elegância) */
+.home #clientes .logo-tile{
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* logos um pouco menores no index */
+.home #clientes .logo-tile img{
+  height: 44px;
 }
