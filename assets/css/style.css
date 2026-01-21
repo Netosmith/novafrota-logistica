@@ -1276,3 +1276,45 @@ footer{
 nav a[href="servicos.html"]{
   display: none !important;
 }
+/* =========================
+   CARDS FROTA – LOGO NO FUNDO
+   ========================= */
+
+.card.frota{
+  position: relative;
+  overflow: hidden;
+}
+
+/* camada da logo */
+.card.frota::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+  opacity: 0.06;              /* 🔥 intensidade da logo */
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+/* NOVA FROTA */
+.card.frota.nova-frota::before{
+  background-image: url("assets/images/logo-novafrota.png");
+}
+
+/* LUCESI */
+.card.frota.lucesi::before{
+  background-image: url("assets/images/logo-lucesi.png");
+}
+
+/* GVA */
+.card.frota.gva::before{
+  background-image: url("assets/images/logo-gva.png");
+}
+
+/* garante que o texto fique acima */
+.card.frota > *{
+  position: relative;
+  z-index: 1;
+}
