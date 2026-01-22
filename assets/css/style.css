@@ -1383,7 +1383,7 @@ header::before{
   left:0;
   right:0;
   bottom:-1px;
-  height:80px;
+  height:180px;
 
   background: linear-gradient(
     to bottom,
