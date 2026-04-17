@@ -4,57 +4,23 @@
   <meta charset="UTF-8">
   <title>NOVA FROTA Logística e Transportes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- ✅ Cache-buster -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body class="home">
-
-<!-- ✅ SPLASH / INTRO (SOMENTE NO INDEX) -->
-<div id="splash" class="splash" aria-hidden="true">
-  <div class="splash-bg"></div>
-
-  <div class="splash-content">
-    <img class="splash-logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
-
-    <div class="splash-loader" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</div>
-
-<script>
-  window.addEventListener("load", () => {
-    const splash = document.getElementById("splash");
-    if (!splash) return;
-
-    const DURATION = 1000;
-
-    setTimeout(() => {
-      splash.classList.add("splash-hide");
-      setTimeout(() => {
-        splash.style.display = "none";
-      }, 650);
-    }, DURATION);
-  });
-</script>
 
 <header>
   <div class="header-container">
 
-    <!-- ✅ ESQUERDA: LOGO NOVA FROTA -->
     <div class="logo-area">
       <img class="logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
     </div>
 
-    <!-- ✅ CENTRO: TEXTO + MENU -->
     <div class="menu-area">
       <p>Atendimento regional com suporte direto por estado.</p>
 
       <nav>
-        <a href="index.html">Início</a>
+        <a class="active" href="index.html">Início</a>
         <a href="sobre.html">A Nova Frota</a>
-        <a href="servicos.html">Serviços</a>
         <a href="regioes.html">Regiões</a>
         <a href="frota.html">Nossa Frota</a>
         <a href="gva.html">Agregados (GVA)</a>
@@ -62,7 +28,6 @@
       </nav>
     </div>
 
-    <!-- ✅ DIREITA: LOGO GVA -->
     <div class="logo-gva">
       <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
     </div>
@@ -70,60 +35,161 @@
   </div>
 </header>
 
-<!-- CONTEÚDO + QUADRO LATERAL -->
-<section>
-  <div class="layout-home">
+<main class="site-main">
 
-    <main class="home-main">
+  <section class="hero-home">
+    <div class="hero-home-content">
+      <p class="hero-kicker">LOGÍSTICA QUE MOVE O AGRO</p>
 
-      <div class="card hero-mini">
-        <h2>Bem-vindo à NOVA FROTA</h2>
-        <p>
-          Transporte de grãos, fertilizantes, defensivos, açúcar e cargas industriais,
-          com padrão operacional e suporte regional.
-        </p>
-        <p>
-          <a href="contato.html">Solicitar Cotação</a> |
-          <a href="gva.html">Quero ser Agregado</a>
-        </p>
+      <h1>
+        SOLUÇÕES LOGÍSTICAS<br>
+        PARA <span>GRÃOS</span> EM TODO O BRASIL
+      </h1>
+
+      <p class="hero-sub">
+        Transporte com eficiência, segurança e compromisso em cada entrega.
+      </p>
+
+      <div class="hero-badges">
+        <div class="hero-badge">Segurança em cada operação</div>
+        <div class="hero-badge">Atuação em todo o Brasil</div>
+        <div class="hero-badge">Suporte especializado</div>
       </div>
 
-      <div class="card">
+      <div class="hero-buttons">
+        <a href="contato.html" class="btn">SOLICITAR COTAÇÃO</a>
+        <a href="gva.html" class="btn-outline">QUERO SER AGREGADO</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-item">
+      <strong>Atuação Nacional</strong>
+      <span>GO • MT • MS • MG • SP • BA • MA • TO • SC</span>
+    </div>
+    <div class="stats-item">
+      <strong>+170</strong>
+      <span>Veículos</span>
+    </div>
+    <div class="stats-item">
+      <strong>+350</strong>
+      <span>Agregados</span>
+    </div>
+    <div class="stats-item">
+      <strong>+10</strong>
+      <span>Anos de história</span>
+    </div>
+  </section>
+
+  <section class="home-layout">
+
+    <div class="home-left">
+
+      <div class="card section-card">
         <h2>Nossos Serviços</h2>
-        <ul>
-          <li>Grãos</li>
-          <li>Fertilizantes</li>
-          <li>Defensivos</li>
-          <li>Açúcar</li>
-          <li>Cargas Industriais</li>
-        </ul>
-        <p><a href="servicos.html">Ver todos os serviços</a></p>
-      </div>
 
-      <div class="card">
-        <h2>Atuação Regional</h2>
-        <p>GO • MT • MS • MG • SP • BA • MA • TO • SC</p>
-        <p><a href="regioes.html">Ver regiões e contatos</a></p>
-      </div>
+        <div class="services-grid">
+          <div class="service-box">
+            <div class="service-icon">🌾</div>
+            <h3>Grãos</h3>
+            <p>Transporte de grãos e derivados.</p>
+          </div>
 
-      <div class="card">
-        <h2>Agregados – GVA</h2>
-        <p>
-          O Grupo Vale do Araguaia (GVA) é uma extensão dos serviços da NOVA FROTA,
-          criado para integrar parceiros e ampliar a capacidade operacional.
+          <div class="service-box">
+            <div class="service-icon">🧪</div>
+            <h3>Fertilizantes</h3>
+            <p>Movimentação de fertilizantes e insumos.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">🛡️</div>
+            <h3>Defensivos</h3>
+            <p>Operação segura para cargas agrícolas.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">📦</div>
+            <h3>Açúcar</h3>
+            <p>Transporte com padronização e controle.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">🏭</div>
+            <h3>Cargas Industriais</h3>
+            <p>Soluções para cargas industriais diversas.</p>
+          </div>
+        </div>
+
+        <p class="section-link">
+          <a href="servicos.html">Ver todos os serviços</a>
         </p>
-        <p><a href="gva.html">Quero me filiar ao GVA</a></p>
       </div>
 
-      <!-- ✅ CLIENTES / PARCEIROS (AGORA NO INÍCIO) -->
-      <div class="card" id="clientes" style="margin-top:4px;">
-        <h2>Clientes e Parceiros</h2>
-        <p style="opacity:.85; margin-top:-6px;">
-          Parcerias que fazem a diferença.
+      <div class="card section-card">
+        <h2>Como Funciona</h2>
+
+        <div class="steps-grid">
+          <div class="step-box">
+            <div class="step-number">1</div>
+            <h3>Solicite cotação</h3>
+            <p>Fale com nosso time e informe sua necessidade.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-number">2</div>
+            <h3>Alocamos a frota</h3>
+            <p>Indicamos o veículo ideal e a melhor rota.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-number">3</div>
+            <h3>Acompanhamento</h3>
+            <p>Monitoramento completo da operação.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-number">4</div>
+            <h3>Entrega garantida</h3>
+            <p>Compromisso com prazo, segurança e qualidade.</p>
+          </div>
+        </div>
+
+        <p class="section-link">
+          <a href="regioes.html">Ver regiões e contatos</a>
         </p>
+      </div>
+
+      <div class="card regional-card">
+        <div class="regional-map">🗺️</div>
+        <div class="regional-content">
+          <h2>Atuação Regional</h2>
+          <p>GO • MT • MS • MG • SP • BA • MA • TO • SC</p>
+          <ul class="check-list">
+            <li>Cobertura nacional com foco no agronegócio</li>
+            <li>Suporte regional especializado</li>
+          </ul>
+          <p class="section-link">
+            <a href="regioes.html">Ver todas as regiões atendidas</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <h2>Torne-se um <span>Agregado GVA</span></h2>
+          <p>
+            Pronto para transportar sua carga? Vamos conversar.
+            Clique no botão abaixo e fale com nossa equipe agora mesmo.
+          </p>
+          <a href="gva.html" class="btn">SOLICITAR FRETE AGORA</a>
+        </div>
+      </div>
+
+      <div class="card" id="clientes">
+        <h2>Empresas que confiam na NOVA FROTA</h2>
 
         <div class="logos-grid">
-
           <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Ouro Safra">
             <img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy">
           </a>
@@ -135,7 +201,7 @@
           <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Cutrale">
             <img src="assets/images/clientes/CUTRALE.png" alt="Cutrale" loading="lazy">
           </a>
-          
+
           <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="LDC">
             <img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy">
           </a>
@@ -144,112 +210,71 @@
             <img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy">
           </a>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Amaggi">
-            <img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy">
+          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Sumitomo Chemical">
+            <img src="assets/images/clientes/sumitomo.png" alt="Sumitomo Chemical" loading="lazy">
           </a>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="CHS">
-            <img src="assets/images/clientes/chs.png" alt="CHS" loading="lazy">
+          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="ADM">
+            <img src="assets/images/clientes/adm.png" alt="ADM" loading="lazy">
           </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="BUNGE">
-            <img src="assets/images/clientes/bunge.png" alt="BUNGE" loading="lazy">
-          </a>
-          
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Neomille">
-            <img src="assets/images/clientes/neomille.png" alt="Neomille" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Inpasa">
-            <img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Engelhart">
-            <img src="assets/images/clientes/engelhart2.png" alt="Engelhart" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Milhao">
-            <img src="assets/images/clientes/milhao.png" alt="Milhao" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="grupocereal">
-            <img src="assets/images/clientes/grupocereal.png" alt="grupocereal" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Olam">
-            <img src="assets/images/clientes/olam.png" alt="Olam" loading="lazy">
-          </a>
-
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Cerradinho">
-            <img src="assets/images/clientes/cerradinho.png" alt="Cerradinho" loading="lazy">
-          </a>
-
         </div>
-
-        <p style="margin-top:20px;">
-          <a href="clientes.html" class="btn">Ver página completa de Clientes</a>
-        </p>
       </div>
 
-    </main>
+    </div>
 
-    <aside class="home-side">
-      <div class="side-box">
-        <h3>Painel de Informações</h3>
-        <p class="side-sub">Um pouco sobre nossa empresa.</p>
+    <aside class="home-right">
+      <div class="operational-panel">
+        <h2>Painel Operacional</h2>
+        <p class="panel-subtitle">Informações atualizadas em tempo real</p>
 
-        <!-- SLIDER DE EVENTOS COM LEGENDA -->
-        <div class="side-slider">
-          <div class="side-slider-track">
-            <div class="slide">
-              <img src="assets/images/eventos/evento1.jpeg" alt="Evento Nova Frota">
-              <div class="slide-caption">Nossa Frota</div>
-            </div>
-
-            <div class="slide">
-              <img src="assets/images/eventos/evento2.jpeg" alt="Evento Nova Frota">
-              <div class="slide-caption">Nossa Frota</div>
-            </div>
-
-            <div class="slide">
-              <img src="assets/images/eventos/evento3.jpeg" alt="Evento Nova Frota">
-              <div class="slide-caption">Nossa Frota</div>
-            </div>
+        <div class="panel-slider-card">
+          <img src="assets/images/rodocacamba.jpg" alt="Frota Rodocaçamba">
+          <div class="panel-slider-caption">
+            <strong>Frota Rodocaçamba</strong>
+            <span>Veículos modernos e rastreados 24h</span>
           </div>
         </div>
 
-        <div class="side-slider">
-          <div class="side-slider-track">
-            <div class="slide">
-              <img src="assets/images/eventos/evento1.jpeg" alt="Evento Nova Frota">
-              <div class="slide-caption">Nossa Frota</div>
-            </div>
-            </div>
-          </div>
-
-        <div class="side-item">
-          <span class="side-tag">FRETE</span>
-          <p><strong>Fretes:</strong> Disponibilize rotas e oportunidades em destaque.</p>
+        <div class="panel-item">
+          <strong>Fretes disponíveis</strong>
+          <span>27 oportunidades ativas</span>
         </div>
 
-        <div class="side-item">
-          <span class="side-tag">NOVIDADE</span>
-          <p><strong>Novidades:</strong> Festas, sorteios, campanhas e comunicados.</p>
+        <div class="panel-item">
+          <strong>Volume em trânsito</strong>
+          <span>12.450 toneladas</span>
         </div>
 
-        <p style="margin-top:14px;">
-          <a href="contato.html" class="btn" style="width:100%; text-align:center;">
-            Falar com a NOVA FROTA
-          </a>
-        </p>
+        <div class="panel-item">
+          <strong>Regiões ativas</strong>
+          <span>9 estados</span>
+        </div>
+
+        <div class="panel-item">
+          <strong>Status da operação</strong>
+          <span>98% entregas no prazo</span>
+        </div>
+
+        <a href="contato.html" class="btn panel-btn">FALAR COM A NOVA FROTA</a>
+        <p class="panel-footer-text">Atendimento rápido e especializado</p>
       </div>
     </aside>
 
-  </div>
-</section>
+  </section>
+
+</main>
 
 <footer>
-  <p>©️ NOVA FROTA Logística e Transportes LTDA</p>
+  <div class="footer-top">
+    <div class="footer-pill">Frota própria e parceiros estratégicos</div>
+    <div class="footer-pill">Segurança e rastreamento 24h</div>
+    <div class="footer-pill">Atendimento personalizado</div>
+    <div class="footer-pill">Soluções completas para o agro</div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NOVA FROTA Transportes e Logística LTDA. Todos os direitos reservados.</p>
+  </div>
 </footer>
 
 </body>
