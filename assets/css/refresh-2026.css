@@ -258,3 +258,17 @@ img{max-width:100%}
   html{scroll-behavior:auto}
   .nf-btn,.nf-service-card{transition:none}
 }
+/* Hierarquia semântica nas páginas internas */
+.internal-main > section > h1:first-child,
+.internal-main > section > .card > h1:first-child,
+.internal-main > section > .nf-eyebrow + h1,
+.internal-main .clientes-hero h1{
+  font-size:clamp(30px,4vw,48px);
+  font-weight:850;
+  letter-spacing:-.045em;
+  line-height:1.15;
+  color:#0d3341;
+  margin:0 0 16px;
+}
+.internal-main .clientes-hero h1{color:#fff;margin:14px 0 6px}
+.internal-main > section > .nf-eyebrow + h1{margin-top:12px}
