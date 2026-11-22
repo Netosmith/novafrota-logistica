@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Clientes | NOVA FROTA Logística e Transportes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/refresh-2026.css?v=1">
+  <meta name="theme-color" content="#071d2a">
+  <script defer src="assets/js/site.js?v=1"></script>
 </head>
 <body class="page-clientes">
 
-<header>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="site-topline"><div class="site-topline-inner">
+    <span>Nova Frota · Logística e Transportes</span><span>Conectando o agronegócio pelo Brasil</span>
+    <a href="regioes.html">Atendimento por região ↗</a>
+  </div></div>
   <div class="header-container">
-
-    <!-- Logo NOVA FROTA -->
-    <div class="logo-area">
-      <img class="logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
-    </div>
-
-    <!-- Texto + menu -->
-    <div class="menu-area">
-      <p>Atendimento regional com suporte direto por estado.</p>
-
-      <nav>
+    <a class="logo-area" href="index.html" aria-label="Nova Frota, voltar ao início">
+      <img class="logo" src="assets/images/logo-novafrota.png" alt="Nova Frota">
+    </a>
+    <div class="menu-area" id="site-menu">
+      <nav class="main-nav-faithful" aria-label="Menu principal">
         <a href="index.html">Início</a>
         <a href="sobre.html">A Nova Frota</a>
         <a href="servicos.html">Serviços</a>
         <a href="regioes.html">Regiões</a>
         <a href="frota.html">Nossa Frota</a>
-        <a href="gva.html">Agregados (GVA)</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="gva.html">Agregados GVA</a>
         <a href="contato.html">Contato</a>
       </nav>
     </div>
-
-    <!-- Logo GVA -->
-    <div class="logo-gva">
-      <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
+    <div class="header-actions">
+      <a class="header-contact" href="contato.html">Solicitar cotação <span aria-hidden="true">↗</span></a>
+      <a class="logo-gva" href="gva.html" aria-label="Conheça os agregados GVA">
+        <img class="gva-logo" src="assets/images/logo-gva.png" alt="GVA">
+      </a>
     </div>
-
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
+<main id="conteudo" class="internal-main">
 
 <section class="clientes-page">
 
@@ -46,7 +53,7 @@
     <div class="clientes-hero-overlay"></div>
     <div class="clientes-hero-content">
       <div class="clientes-kicker">EMPRESAS PARCEIRAS</div>
-      <h2>Clientes</h2>
+      <h1>Clientes</h1>
       <p>Parcerias que fazem a diferença: nossos clientes e parceiros estratégicos.</p>
     </div>
   </div>
@@ -55,139 +62,160 @@
   <div class="card" style="margin-top:16px;">
     <h3>Nossos parceiros</h3>
     <p style="opacity:.85; margin-top:-6px;">
-      Clique em uma logo para abrir o site (se quiser). Se preferir, deixamos sem link também.
+      Empresas presentes na nossa rede de clientes e parceiros.
     </p>
 
     <div class="logos-grid">
 
       <!-- Exemplo com link (troque href quando tiver) -->
-      <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Ouro Safra">
+      <div class="logo-tile">
             <img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="cargill">
+          <div class="logo-tile">
             <img src="assets/images/clientes/cargill.png" alt="cargill" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="ldc">
+          <div class="logo-tile">
             <img src="assets/images/clientes/ldc.png" alt="ldc" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Neomille">
+          <div class="logo-tile">
             <img src="assets/images/clientes/neomille.png" alt="Neomille" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Inpasa">
+          <div class="logo-tile">
             <img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Engelhart">
+          <div class="logo-tile">
             <img src="assets/images/clientes/engelhart2.png" alt="Engelhart" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Cutrale">
+          <div class="logo-tile">
             <img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Milhao">
+          <div class="logo-tile">
             <img src="assets/images/clientes/milhao.png" alt="Milhao" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="grupocereal">
+          <div class="logo-tile">
             <img src="assets/images/clientes/grupocereal.png" alt="grupocereal" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="BRF">
+          <div class="logo-tile">
             <img src="assets/images/clientes/brf.png" alt="brf" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Olam">
+          <div class="logo-tile">
             <img src="assets/images/clientes/olam.png" alt="Olam" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Amaggi">
+          <div class="logo-tile">
             <img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="CHS">
+          <div class="logo-tile">
             <img src="assets/images/clientes/chs.png" alt="CHS" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="BUNGE">
+          <div class="logo-tile">
             <img src="assets/images/clientes/bunge.png" alt="BUNGE" loading="lazy">
-          </a>
+          </div>
 
-           <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="CJSELECTA">
+           <div class="logo-tile">
             <img src="assets/images/clientes/cjselecta.png" alt="CJSELECTA" loading="lazy">
-          </a>
+          </div>
       
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="Cerradinho">
+          <div class="logo-tile">
             <img src="assets/images/clientes/cerradinhobio.png" alt="Cerradinho" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="olfar">
+          <div class="logo-tile">
             <img src="assets/images/clientes/olfar.png" alt="olfar" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="btg">
+          <div class="logo-tile">
             <img src="assets/images/clientes/btg.png" alt="btg" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="sementessaofrancisco">
+          <div class="logo-tile">
             <img src="assets/images/clientes/sementessaofrancisco2.png" alt="sementessaofrancisco" loading="lazy">
-          </a>
+          </div>
       
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="agricolaalvorada">
+          <div class="logo-tile">
             <img src="assets/images/clientes/agricolaalvorada.png" alt="agricolaalvorada" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="mosaic">
+          <div class="logo-tile">
             <img src="assets/images/clientes/mosaic.png" alt="mosaic" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="cibra">
+          <div class="logo-tile">
             <img src="assets/images/clientes/cibra.png" alt="cibra" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="sipal">
+          <div class="logo-tile">
             <img src="assets/images/clientes/sipal.png" alt="sipal" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="mmjv">
+          <div class="logo-tile">
             <img src="assets/images/clientes/MMJV.png" alt="mmjv" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="3tentos">
+          <div class="logo-tile">
             <img src="assets/images/clientes/3tentos.png" alt="3tentos" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="fs">
+          <div class="logo-tile">
             <img src="assets/images/clientes/fs2.png" alt="fs" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="atvos">
+          <div class="logo-tile">
             <img src="assets/images/clientes/atvos.png" alt="atvos" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="cocari">
+          <div class="logo-tile">
             <img src="assets/images/clientes/cocari.png" alt="cocari" loading="lazy">
-          </a>
+          </div>
 
-          <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="gen">
+          <div class="logo-tile">
             <img src="assets/images/clientes/gen2.png" alt="gen" loading="lazy">
-          </a>
+          </div>
 
-      <a class="logo-tile" href="#" target="_blank" rel="noopener" aria-label="agromercantil">
+      <div class="logo-tile">
             <img src="assets/images/clientes/agromercantil.png" alt="agromercantil" loading="lazy">
-          </a>
+          </div>
       
     </div>
   </div>
 
 </section>
 
-<footer>
-  <p>©️ NOVA FROTA Logística e Transportes LTDA</p>
+</main>
+<footer class="site-footer">
+  <div class="nf-container footer-main">
+    <div>
+      <a href="index.html" aria-label="Nova Frota, página inicial"><img class="footer-logo" src="assets/images/logo-novafrota.png" alt="Nova Frota"></a>
+      <p class="footer-about">Soluções de transporte rodoviário para o agronegócio, com planejamento, parceria e atendimento próximo em cada etapa.</p>
+    </div>
+    <div>
+      <h3>Institucional</h3>
+      <nav class="footer-links" aria-label="Links institucionais">
+        <a href="sobre.html">Sobre a Nova Frota</a><a href="frota.html">Nossa Frota</a>
+        <a href="clientes.html">Clientes</a><a href="gva.html">Agregados GVA</a>
+      </nav>
+    </div>
+    <div>
+      <h3>Como podemos ajudar?</h3>
+      <nav class="footer-links" aria-label="Links de atendimento">
+        <a href="servicos.html">Nossos serviços</a><a href="regioes.html">Regiões e contatos</a>
+        <a href="contato.html">Solicitar cotação</a><a href="gva.html">Seja um agregado</a>
+      </nav>
+    </div>
+  </div>
+  <div class="nf-container footer-base"><span>© <span data-current-year>2026</span> NOVA FROTA Logística e Transportes LTDA. Todos os direitos reservados.</span><a href="#conteudo">Voltar ao topo ↑</a></div>
 </footer>
 
 </body>
