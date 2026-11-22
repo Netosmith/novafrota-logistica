@@ -62,8 +62,9 @@
       item.append(details);
     }
     const link = node("a", "nf-job-contact", "Como me candidatar →");
-    link.href = contactLink(job);
-    if (link.href.startsWith("https://")) {
+    const href = contactLink(job);
+    link.href = href;
+    if (/^https:\/\//i.test(href)) {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     }
@@ -122,8 +123,7 @@
       ].join("\n");
       const url = "https://wa.me/5564992215878?text=" + encodeURIComponent(text);
       // O clique é iniciado pelo próprio candidato; nenhuma informação é salva no site.
-      const opened = window.open(url, "_blank", "noopener,noreferrer");
-      if (!opened) window.location.href = url;
+      window.location.assign(url);
     });
   }
   if (cards.length || badges.length) loadVacancies();
