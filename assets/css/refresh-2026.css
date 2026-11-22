@@ -370,3 +370,6 @@ img{max-width:100%}
  .nf-careers-intro-actions .nf-btn{text-align:center}
  .nf-careers-jobs-card{padding:18px}
 }
+
+/* Contraste do título do hero de carreiras */
+.internal-main.nf-careers-page > section.nf-careers-intro > .nf-eyebrow + h1 { color:#fff; }
