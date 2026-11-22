@@ -1,99 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Contato | NOVA FROTA Logística e Transportes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/refresh-2026.css?v=1">
+  <meta name="theme-color" content="#071d2a">
+  <script defer src="assets/js/site.js?v=1"></script>
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="site-topline"><div class="site-topline-inner">
+    <span>Nova Frota · Logística e Transportes</span><span>Conectando o agronegócio pelo Brasil</span>
+    <a href="regioes.html">Atendimento por região ↗</a>
+  </div></div>
   <div class="header-container">
-
-    <!-- Logo NOVA FROTA -->
-    <div class="logo-area">
-      <img class="logo" src="assets/images/logo-novafrota.png" alt="NOVA FROTA">
-    </div>
-
-    <!-- Texto + menu -->
-    <div class="menu-area">
-      <p>Atendimento regional com suporte direto por estado.</p>
-
-      <nav>
+    <a class="logo-area" href="index.html" aria-label="Nova Frota, voltar ao início">
+      <img class="logo" src="assets/images/logo-novafrota.png" alt="Nova Frota">
+    </a>
+    <div class="menu-area" id="site-menu">
+      <nav class="main-nav-faithful" aria-label="Menu principal">
         <a href="index.html">Início</a>
         <a href="sobre.html">A Nova Frota</a>
         <a href="servicos.html">Serviços</a>
         <a href="regioes.html">Regiões</a>
         <a href="frota.html">Nossa Frota</a>
-        <a href="gva.html">Agregados (GVA)</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="gva.html">Agregados GVA</a>
         <a href="contato.html">Contato</a>
       </nav>
     </div>
-
-    <!-- Logo GVA -->
-    <div class="logo-gva">
-      <img class="gva-logo" src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia">
+    <div class="header-actions">
+      <a class="header-contact" href="contato.html">Solicitar cotação <span aria-hidden="true">↗</span></a>
+      <a class="logo-gva" href="gva.html" aria-label="Conheça os agregados GVA">
+        <img class="gva-logo" src="assets/images/logo-gva.png" alt="GVA">
+      </a>
     </div>
-
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
+<main id="conteudo" class="internal-main">
 
 
-<section>
-  <h2>Contato</h2>
-  <p>
-    Entre em contato com a <strong>NOVA FROTA</strong>. Nosso atendimento está pronto para entender sua demanda
-    e orientar a melhor solução logística.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>WhatsApp</h3>
-      <p><strong>Número:</strong> —</p>
-      <p><a class="btn" href="#">Chamar no WhatsApp</a></p>
-      <p style="font-size:14px; opacity:.85;">
-        (link direto: https://wa.me/55DDDNUMERO)
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>E-mail</h3>
-      <p><strong>Comercial:</strong> —</p>
-      <p><strong>Operacional:</strong> —</p>
-      <p style="font-size:14px; opacity:.85;">
-        (preenchar depois)
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Regiões</h3>
-      <p>
-        Para falar direto com o atendimento por estado, acesse:
-      </p>
-      <p><a href="regioes.html">Ver Regiões e Contatos</a></p>
-    </div>
+<section aria-labelledby="contact-title">
+  <span class="nf-eyebrow">Fale com a nossa equipe</span>
+  <h2 id="contact-title">Vamos levar sua carga mais longe.</h2>
+  <p>Tem uma carga para transportar ou precisa de informações? Encontre o atendimento regional e apresente sua necessidade logística.</p>
+  <div class="contact-options">
+    <article class="card">
+      <span class="contact-icon" aria-hidden="true">☏</span>
+      <h3>Atendimento em Goiás</h3>
+      <p>Contato regional com base em Rio Verde, Goiás.</p>
+      <p><strong>WhatsApp:</strong> (64) 99221-5878</p>
+      <a class="btn" href="https://wa.me/5564992215878" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp ↗</a>
+    </article>
+    <article class="card">
+      <span class="contact-icon" aria-hidden="true">⌖</span>
+      <h3>Outras regiões</h3>
+      <p>Consulte os canais regionais da Nova Frota e encontre o atendimento adequado para sua operação.</p>
+      <a class="btn" href="regioes.html">Ver regiões e contatos ↗</a>
+    </article>
   </div>
-
-  <div class="card" style="margin-top:16px;">
-    <h3>Solicitar Cotação</h3>
-    <p>
-      criar forms para cotar.
-    </p>
-
-    <p><strong>Link do formulário:</strong> —</p>
-    <p>
-      <a class="btn" href="#">Solicitar Cotação</a>
-    </p>
-
-    <p style="font-size:14px; opacity:.85;">
-     Crie um Forms aqui tbm.
-    </p>
+  <div class="internal-cta">
+    <h3>Precisa solicitar uma cotação?</h3>
+    <p>Para agilizar o atendimento, informe origem, destino, tipo de carga, volume aproximado e período desejado.</p>
+    <a class="btn" href="regioes.html">Encontrar meu atendimento ↗</a>
   </div>
 </section>
 
-<footer>
-  <p>© NOVA FROTA Logística e Transportes LTDA</p>
+</main>
+<footer class="site-footer">
+  <div class="nf-container footer-main">
+    <div>
+      <a href="index.html" aria-label="Nova Frota, página inicial"><img class="footer-logo" src="assets/images/logo-novafrota.png" alt="Nova Frota"></a>
+      <p class="footer-about">Soluções de transporte rodoviário para o agronegócio, com planejamento, parceria e atendimento próximo em cada etapa.</p>
+    </div>
+    <div>
+      <h3>Institucional</h3>
+      <nav class="footer-links" aria-label="Links institucionais">
+        <a href="sobre.html">Sobre a Nova Frota</a><a href="frota.html">Nossa Frota</a>
+        <a href="clientes.html">Clientes</a><a href="gva.html">Agregados GVA</a>
+      </nav>
+    </div>
+    <div>
+      <h3>Como podemos ajudar?</h3>
+      <nav class="footer-links" aria-label="Links de atendimento">
+        <a href="servicos.html">Nossos serviços</a><a href="regioes.html">Regiões e contatos</a>
+        <a href="contato.html">Solicitar cotação</a><a href="gva.html">Seja um agregado</a>
+      </nav>
+    </div>
+  </div>
+  <div class="nf-container footer-base"><span>© <span data-current-year>2026</span> NOVA FROTA Logística e Transportes LTDA. Todos os direitos reservados.</span><a href="#conteudo">Voltar ao topo ↑</a></div>
 </footer>
 
 </body>
