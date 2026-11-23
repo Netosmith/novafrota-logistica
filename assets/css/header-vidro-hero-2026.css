@@ -1,0 +1,178 @@
+/*
+  NOVA FROTA | Barra de navegação em vidro sobre o hero
+  Apenas para a Home. A paisagem do primeiro slide continua atrás do
+  cabeçalho, enquanto os menus permanecem contrastantes e clicáveis.
+  A partir do fim do hero, a barra recupera um fundo mais sólido.
+*/
+body.nf-home-v4{
+  --nf-glass-header-height:126px;
+  --nf-glass-bg:rgba(3,28,41,.49);
+  --nf-glass-top-bg:rgba(3,23,35,.20);
+}
+/* Manter header sticky e trazê-lo para FRENTE da foto. */
+body.nf-home-v4 > .site-header{
+  position:sticky;
+  top:0;
+  z-index:1100;
+  isolation:isolate;
+  overflow:visible;
+  background:linear-gradient(
+    180deg,
+    rgba(1,23,34,.62) 0%,
+    rgba(3,30,42,.46) 52%,
+    rgba(4,35,47,.31) 100%
+  );
+  color:#f1fff7;
+  border-bottom:1px solid rgba(161,236,205,.23);
+  box-shadow:0 11px 30px rgba(2,20,29,.08);
+  backdrop-filter:blur(12px) saturate(125%);
+  -webkit-backdrop-filter:blur(12px) saturate(125%);
+  transition:background .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+body.nf-home-v4 > .site-header .site-topline{
+  background:var(--nf-glass-top-bg);
+  border-bottom:1px solid rgba(219,255,240,.11);
+  color:rgba(230,251,242,.92);
+  text-shadow:0 1px 8px rgba(1,23,32,.33);
+}
+body.nf-home-v4 > .site-header .site-topline a{
+  color:#a9f3c9;
+}
+body.nf-home-v4 > .site-header .header-container{
+  background:transparent;
+}
+body.nf-home-v4 > .site-header .main-nav-faithful a,
+body.nf-home-v4 > .site-header .main-nav-faithful a[href="servicos.html"]{
+  color:#edf9f5;
+  text-shadow:0 1px 7px rgba(1,23,32,.25);
+}
+body.nf-home-v4 > .site-header .main-nav-faithful a.active{
+  color:#b6ffd5;
+  background:rgba(217,255,235,.11);
+}
+body.nf-home-v4 > .site-header .main-nav-faithful a:hover{
+  background:rgba(230,255,242,.13);
+  color:#fff;
+}
+body.nf-home-v4 > .site-header .nf-nav-more>summary{
+  color:#ebfff5;
+}
+body.nf-home-v4 > .site-header .menu-toggle{
+  border-color:rgba(220,255,238,.47);
+  background:rgba(3,37,49,.48);
+  color:#f1fff7;
+}
+/* Quando o banner sai debaixo da barra, escurecer para que o
+   menu continue legível sobre as seções de fundo branco. */
+body.nf-home-v4 > .site-header.nf-header-solid{
+  background:rgba(4,28,39,.94);
+  border-bottom-color:rgba(90,205,153,.21);
+  box-shadow:0 8px 26px rgba(1,23,34,.20);
+  backdrop-filter:blur(17px) saturate(120%);
+  -webkit-backdrop-filter:blur(17px) saturate(120%);
+}
+body.nf-home-v4 > .site-header.nf-header-solid .site-topline{
+  background:rgba(1,20,31,.42);
+}
+/*
+  O cabeçalho permanece no fluxo para preservar o comportamento sticky,
+  mas a Home sobe exatamente a altura dele: assim a foto passa por trás
+  da barra, sem duplicar a foto ou desalinhar o slider.
+*/
+body.nf-home-v4 main.site-main.nf-home{
+  margin-top:calc(-1 * var(--nf-glass-header-height));
+}
+/* Aumenta a altura interna do hero para compensar a sobreposição:
+   o H1, os botões e os indicadores não ficam escondidos sob o menu. */
+body.nf-home-v4 .nf-hero-v4,
+body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+  min-height:calc(660px + var(--nf-glass-header-height));
+}
+body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+  padding-top:calc(94px + var(--nf-glass-header-height));
+  padding-bottom:105px;
+}
+/* A barra escura preserva nitidez de menus abertos, sem caixa branca. */
+body.nf-home-v4 .site-header .nf-nav-more-menu{
+  background:rgba(4,37,48,.96);
+  border-color:rgba(140,233,192,.3);
+  box-shadow:0 18px 44px rgba(1,17,26,.32);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+@media(max-width:1100px){
+  body.nf-home-v4 .nf-hero-v4,
+  body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+    min-height:calc(600px + var(--nf-glass-header-height));
+  }
+}
+@media(max-width:850px){
+  body.nf-home-v4 .nf-hero-v4,
+  body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+    min-height:calc(610px + var(--nf-glass-header-height));
+  }
+  body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+    padding-top:calc(85px + var(--nf-glass-header-height));
+    padding-bottom:115px;
+  }
+}
+/* O menu mobile aberto fica suspenso sobre a foto, sem alterar a altura
+   medida do header e sem provocar salto na posição do hero. */
+@media(max-width:1100px){
+  body.nf-home-v4 > .site-header .menu-area.is-open{
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    z-index:1102;
+    margin:0;
+    padding:13px 22px 18px;
+    width:100%;
+    max-height:calc(100dvh - var(--nf-glass-header-height) - 8px);
+    overflow-y:auto;
+    background:rgba(3,29,41,.97);
+    border-top:1px solid rgba(178,247,206,.15);
+    border-bottom:1px solid rgba(151,235,190,.26);
+    box-shadow:0 20px 36px rgba(2,23,31,.26);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+  }
+}
+@media(max-width:620px){
+  body.nf-home-v4 .nf-hero-v4,
+  body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+    min-height:calc(605px + var(--nf-glass-header-height));
+  }
+  body.nf-home-v4 .nf-hero-v4 .nf-hero-v4-inner{
+    padding-top:calc(79px + var(--nf-glass-header-height));
+    padding-bottom:100px;
+  }
+  body.nf-home-v4 > .site-header{
+    background:linear-gradient(
+      180deg,rgba(2,24,35,.80),rgba(4,33,43,.59)
+    );
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+  }
+  body.nf-home-v4 > .site-header .site-topline-inner{
+    gap:7px;
+  }
+  body.nf-home-v4 > .site-header .menu-area.is-open{
+    padding:12px 16px 18px;
+  }
+}
+@media(prefers-reduced-transparency:reduce){
+  body.nf-home-v4 > .site-header{
+    background:rgba(3,27,39,.91);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+  body.nf-home-v4 > .site-header .site-topline{
+    background:rgba(2,20,31,.6);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.nf-home-v4 > .site-header{
+    transition:none;
+  }
+}
