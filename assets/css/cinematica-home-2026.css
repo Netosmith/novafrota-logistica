@@ -2,7 +2,7 @@
    Abertura logo original, marcas em duas faixas, segmentos coloridos e vagas rotativas.
    Progressivo: sem JS, a Home permanece acessível. */
 .nf-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;clip-path:inset(50%)!important}
-.nf-home-v4 .site-header .logo-area{background:linear-gradient(125deg,#f3faf7,#deefe8);padding:7px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.19);box-shadow:0 4px 18px rgba(3,19,26,.17)}
+
 .nf-home-v4 .site-header .logo{height:48px;width:183px;filter:none}
 .nf-intro[hidden]{display:none!important}
 .nf-intro{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;overflow:hidden;isolation:isolate;background:linear-gradient(120deg,#031624 0%,#092f45 53%,#061d2a 100%);color:#fff;opacity:1;transform:none}
@@ -121,7 +121,7 @@ body.nf-intro-locked{overflow:hidden}
 .nf-carousel-assist{font-size:11px;color:#637d75;margin:8px 0 0}
 @keyframes nf-carousel-in{from{opacity:0;transform:translateX(15px)}to{opacity:1;transform:translateX(0)}}
 @media(max-width:1100px){
-  .nf-home-v4 .site-header .logo-area{padding:5px 8px}
+
   .nf-home-v4 .site-header .logo{width:151px;height:47px}
 }
 @media(max-width:780px){
@@ -135,7 +135,7 @@ body.nf-intro-locked{overflow:hidden}
   .nf-intro-replay{font-size:10px}
 }
 @media(max-width:560px){
-  .nf-home-v4 .site-header .logo-area{padding:4px 7px;border-radius:6px}
+
   .nf-home-v4 .site-header .logo{width:122px;height:43px}
   .nf-intro-brand{width:min(94%,470px);margin-top:24px}
   .nf-intro-brand-surface{height:126px}
@@ -350,4 +350,152 @@ body.nf-intro-locked{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
   .nf-intro-brand-floating .nf-intro-letter,
   .nf-intro-brand-floating .nf-intro-submark{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+}
+
+
+/* ---------------------------------------------------
+   Cabeçalho sem placa branca: marca flutuando no azul.
+   --------------------------------------------------- */
+.nf-home-v4 .site-header .logo-area{
+  background:transparent!important;
+  border:0!important;
+  padding:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.nf-home-v4 .site-header .logo{
+  display:block;
+  width:clamp(155px,12vw,216px);
+  height:auto;
+  max-height:64px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 2px rgba(173,242,242,.42)) drop-shadow(0 0 9px rgba(40,165,180,.17));
+}
+
+/* ---------------------------------------------------
+   Slider cinematográfico: mantém texto estático,
+   alterna somente imagens de fundo com fade suave.
+   --------------------------------------------------- */
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  width:100%;
+  height:100%;
+  transform:none;
+  filter:none;
+  background:transparent;
+  overflow:hidden;
+  pointer-events:none;
+}
+.nf-home-v4 .nf-hero-v4-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center 54%;
+  opacity:0;
+  transform:scale(1.065);
+  transition:opacity 1.05s ease-in-out,transform 7s ease;
+  will-change:opacity;
+}
+.nf-home-v4 .nf-hero-v4-slide:nth-child(2){
+  background-position:center 50%;
+  filter:saturate(.9) brightness(.88);
+}
+.nf-home-v4 .nf-hero-v4-slide:nth-child(3){
+  background-position:center 40%;
+  filter:saturate(.83) brightness(.85);
+}
+.nf-home-v4 .nf-hero-v4-slide.is-active{
+  opacity:1;
+  transform:scale(1.005);
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-shade{
+  z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(3,24,33,.99) 0%,rgba(3,25,34,.95) 28%,rgba(5,27,37,.77) 49%,rgba(3,26,35,.34) 78%,rgba(5,26,35,.18) 100%),
+    linear-gradient(0deg,rgba(2,19,30,.67),transparent 38%,rgba(4,20,28,.2));
+}
+.nf-hero-v4-slider-controls{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:33px;
+  max-width:480px;
+  min-height:48px;
+}
+.nf-hero-v4-slide-buttons{display:flex;align-items:center;gap:8px}
+.nf-hero-v4-dot{
+  display:grid;place-items:center;
+  cursor:pointer;
+  background:transparent;
+  border:0;
+  border-radius:30px;
+  padding:12px 0;
+  min-height:44px;
+  min-width:25px;
+}
+.nf-hero-v4-dot span{
+  display:block;
+  width:24px;height:4px;
+  background:rgba(228,244,243,.43);
+  border-radius:10px;
+  transition:background .25s,width .25s;
+}
+.nf-hero-v4-dot.is-active span{
+  background:#7ae7ab;
+  width:34px;
+}
+.nf-hero-v4-slide-counter{
+  color:#c6e4db;
+  font:750 11px "DM Sans",system-ui,sans-serif;
+  letter-spacing:.1em;
+  min-width:50px;
+}
+.nf-hero-v4-slide-arrows{display:flex;align-items:center;gap:7px}
+.nf-hero-v4-slide-arrows button,.nf-hero-v4-pause{
+  border:1px solid rgba(202,249,229,.32);
+  background:rgba(5,38,48,.63);
+  border-radius:8px;
+  color:#e0f8eb;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease;
+}
+.nf-hero-v4-slide-arrows button{
+  display:grid;place-items:center;
+  width:44px;height:44px;
+  font-size:19px;
+}
+.nf-hero-v4-pause{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:9px 12px;
+  min-height:44px;
+  font:750 11px "DM Sans",system-ui,sans-serif;
+}
+.nf-hero-v4-slide-arrows button:hover,.nf-hero-v4-pause:hover{
+  background:rgba(12,99,79,.75);
+  border-color:#9ae8be;
+}
+.nf-hero-v4-pause[hidden]{display:none!important}
+
+@media(max-width:1100px){
+  .nf-home-v4 .site-header .logo{width:150px;max-height:52px}
+}
+@media(max-width:560px){
+  .nf-home-v4 .site-header .logo{width:125px;max-height:46px}
+  .nf-hero-v4-slider-controls{gap:8px;margin-top:19px}
+  .nf-hero-v4-slide-arrows button{height:40px;width:40px;min-width:40px}
+  .nf-hero-v4-pause{min-height:40px;padding:7px 9px}
+  .nf-hero-v4-dot{min-height:40px}
+  .nf-home-v4 .nf-hero-v4-slide:nth-child(2){background-position:56% center}
+  .nf-home-v4 .nf-hero-v4-slide:nth-child(3){background-position:60% center}
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-home-v4 .nf-hero-v4-slide{transition:none!important;transform:none!important}
+  .nf-home-v4 .nf-hero-v4-slide.is-active{transform:none!important}
+  .nf-hero-v4-dot span{transition:none}
 }
