@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="assets/css/elegance-2026.css?v=2">
   <link rel="stylesheet" href="assets/css/referencia-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/operacao-publica-2026.css?v=1">
-  <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=2">
+  <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=3">
   <script src="assets/js/site.js?v=2" defer></script>
   <script src="assets/js/vagas.js?v=2" defer></script>
   <script src="assets/js/intro-home.js?v=2" defer></script>
+  <script src="assets/js/hero-slider.js?v=1" defer></script>
 </head>
 <body class="home nf-home-v4">
 <div class="nf-intro" id="nf-site-intro" role="dialog" aria-modal="true" aria-labelledby="nf-intro-name" aria-describedby="nf-intro-tagline" hidden>
@@ -91,7 +92,11 @@
 <main id="conteudo" class="site-main nf-home">
   <!-- Apresentação principal com foto da frota: identidade Nova Frota -->
   <section class="nf-hero nf-hero-v4" aria-labelledby="nf-hero-title">
-    <div class="nf-hero-v4-media" aria-hidden="true"></div>
+    <div class="nf-hero-v4-media nf-hero-v4-slides" aria-hidden="true">
+      <div class="nf-hero-v4-slide is-active" style="background-image:url('assets/css/images/rodocacamba.jpeg')" data-hero-slide="0"></div>
+      <div class="nf-hero-v4-slide" style="background-image:url('assets/css/images/rodocacamba.png')" data-hero-slide="1"></div>
+      <div class="nf-hero-v4-slide" style="background-image:url('assets/images/eventos/evento3.jpeg')" data-hero-slide="2"></div>
+    </div>
     <div class="nf-hero-v4-shade" aria-hidden="true"></div>
     <div class="nf-container nf-hero-v4-inner">
       <div class="nf-hero-v4-copy">
@@ -101,6 +106,19 @@
         <div class="nf-hero-v4-actions">
           <a class="nf-btn nf-btn-primary" href="contato.html">Solicitar cotação <span aria-hidden="true">↗</span></a>
           <a class="nf-btn nf-btn-glass" href="sobre.html">Conheça a Nova Frota <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="nf-hero-v4-slider-controls" aria-label="Controle das imagens do banner">
+          <div class="nf-hero-v4-slide-buttons" role="group" aria-label="Selecionar imagem">
+            <button type="button" class="nf-hero-v4-dot is-active" data-hero-goto="0" aria-label="Imagem 1: frota em operação" aria-current="true"><span></span></button>
+            <button type="button" class="nf-hero-v4-dot" data-hero-goto="1" aria-label="Imagem 2: veículos Nova Frota"><span></span></button>
+            <button type="button" class="nf-hero-v4-dot" data-hero-goto="2" aria-label="Imagem 3: evento institucional"><span></span></button>
+          </div>
+          <span class="nf-hero-v4-slide-counter" data-hero-counter>01 / 03</span>
+          <div class="nf-hero-v4-slide-arrows" role="group" aria-label="Navegar entre imagens">
+            <button type="button" data-hero-prev aria-label="Imagem anterior">←</button>
+            <button type="button" data-hero-next aria-label="Próxima imagem">→</button>
+          </div>
+          <button type="button" data-hero-pause class="nf-hero-v4-pause" aria-label="Pausar troca automática" aria-pressed="false">Ⅱ <span>Pausar</span></button>
         </div>
       </div>
       <div class="nf-hero-v4-footer">
@@ -184,48 +202,54 @@
       <a class="nf-btn nf-btn-dark" href="clientes.html">Conheça nossos clientes <span aria-hidden="true">↗</span></a>
     </div>
     <div class="nf-clients-marquee">
-<div class="nf-client-marquee-row " aria-label="Primeira linha de clientes">
-    <div class="nf-client-marquee-track"><div class="nf-client-marquee-group" role="list">
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy" decoding="async"></div>
-    </div><div class="nf-client-marquee-group" aria-hidden="true">
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ourosafra.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cargill.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ldc.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/brf.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/bunge.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/amaggi.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/inpasa.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cutralenovo.png" alt="" loading="lazy" decoding="async"></div>
-    </div></div>
-  </div>
-<div class="nf-client-marquee-row is-reverse" aria-label="Segunda linha de clientes">
-    <div class="nf-client-marquee-track"><div class="nf-client-marquee-group" role="list">
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy" decoding="async"></div>
-    </div><div class="nf-client-marquee-group" aria-hidden="true">
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/bunge.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/amaggi.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/inpasa.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cutralenovo.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ourosafra.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cargill.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ldc.png" alt="" loading="lazy" decoding="async"></div>
-      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/brf.png" alt="" loading="lazy" decoding="async"></div>
-    </div></div>
-  </div>
+      <div class="nf-client-marquee-row " aria-label="Primeira linha de clientes">
+        <div class="nf-client-marquee-track">
+          <div class="nf-client-marquee-group" role="list">
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/neomille.png" alt="Neomille" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/engelhart2.png" alt="Engelhart" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/milhao.png" alt="Milhão" loading="lazy" decoding="async"></div>
+          </div>
+          <div class="nf-client-marquee-group" aria-hidden="true">
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ourosafra.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cargill.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ldc.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/neomille.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/inpasa.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/engelhart2.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cutralenovo.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/milhao.png" alt="" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </div>
+      <div class="nf-client-marquee-row is-reverse" aria-label="Segunda linha de clientes">
+        <div class="nf-client-marquee-track">
+          <div class="nf-client-marquee-group" role="list">
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/grupocereal.png" alt="Grupo Cereal" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/olam.png" alt="Olam" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/chs.png" alt="CHS" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cjselecta.png" alt="CJ Selecta" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cerradinhobio.png" alt="Cerradinho Bio" loading="lazy" decoding="async"></div>
+          </div>
+          <div class="nf-client-marquee-group" aria-hidden="true">
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/grupocereal.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/brf.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/olam.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/amaggi.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/chs.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/bunge.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cjselecta.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cerradinhobio.png" alt="" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="nf-section" id="servicos" aria-labelledby="services-title">
