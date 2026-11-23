@@ -13,72 +13,56 @@
   <link rel="stylesheet" href="assets/css/referencia-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/operacao-publica-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=4">
-  <link rel="stylesheet" href="assets/css/intro-poster-2026.css?v=2">
-  <link rel="stylesheet" href="assets/css/intro-assembly-2026.css?v=1">
+  <link rel="stylesheet" href="assets/css/agro-abertura-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/segmentos-ilustrados-2026.css?v=1">
   <script src="assets/js/site.js?v=2" defer></script>
   <script src="assets/js/vagas.js?v=2" defer></script>
-  <script src="assets/js/intro-logo-assembly.js?v=1" defer></script>
-  <script src="assets/js/intro-home.js?v=6" defer></script>
+  <script src="assets/js/intro-home.js?v=7" defer></script>
   <script src="assets/js/hero-slider.js?v=1" defer></script>
 </head>
 <body class="home nf-home-v4">
-<div class="nf-intro nf-intro-poster-mode" id="nf-site-intro" role="dialog" aria-modal="true" aria-labelledby="nf-intro-name" aria-describedby="nf-intro-tagline" hidden>
-  <div class="nf-intro-poster" aria-hidden="true">
-    <img class="nf-intro-poster-image" src="assets/images/intro/cenario-nova-frota.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
-    <div class="nf-intro-poster-glint"></div>
-    <div class="nf-intro-dynamic-lights" aria-hidden="true">
-      <svg class="nf-intro-laser-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <defs>
-          <linearGradient id="nf-live-green-beam" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#00b986" stop-opacity=".05"/>
-            <stop offset=".42" stop-color="#27efb9" stop-opacity=".94"/>
-            <stop offset=".57" stop-color="#c9ffe9" stop-opacity="1"/>
-            <stop offset="1" stop-color="#05c78d" stop-opacity=".05"/>
-          </linearGradient>
-          <linearGradient id="nf-live-blue-beam" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0" stop-color="#066bde" stop-opacity=".04"/>
-            <stop offset=".45" stop-color="#26baff" stop-opacity=".95"/>
-            <stop offset=".57" stop-color="#ccf8ff" stop-opacity="1"/>
-            <stop offset="1" stop-color="#1598f3" stop-opacity=".04"/>
-          </linearGradient>
-          <filter id="nf-live-laser-bloom" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="6"/>
-          </filter>
-        </defs>
-        <g class="nf-intro-beam-set nf-intro-beam-set-green">
-          <path class="nf-intro-beam nf-intro-beam-glow" d="M-130 40 L 1330 826" stroke="#2bffc2" stroke-width="14" filter="url(#nf-live-laser-bloom)"/>
-          <path class="nf-intro-beam nf-intro-beam-core" d="M-130 40 L 1330 826" stroke="url(#nf-live-green-beam)" stroke-width="4"/>
-        </g>
-        <g class="nf-intro-beam-set nf-intro-beam-set-blue">
-          <path class="nf-intro-beam nf-intro-beam-glow" d="M1810 88 L 480 858" stroke="#40baff" stroke-width="14" filter="url(#nf-live-laser-bloom)"/>
-          <path class="nf-intro-beam nf-intro-beam-core" d="M1810 88 L 480 858" stroke="url(#nf-live-blue-beam)" stroke-width="4"/>
-        </g>
-        <g class="nf-intro-beam-set nf-intro-beam-set-sweep">
-          <path class="nf-intro-beam nf-intro-beam-glow" d="M-160 540 Q836 475 1830 510" stroke="#32eac6" stroke-width="10" filter="url(#nf-live-laser-bloom)"/>
-          <path class="nf-intro-beam nf-intro-beam-core" d="M-160 540 Q836 475 1830 510" stroke="#7eeed8" stroke-width="2"/>
-        </g>
-      </svg>
-      <span class="nf-intro-light-orb nf-intro-light-orb-a"></span>
-      <span class="nf-intro-light-orb nf-intro-light-orb-b"></span>
-      <span class="nf-intro-light-scan"></span>
-      <span class="nf-intro-light-grid"></span>
+<div class="nf-intro nf-agro-intro" id="nf-site-intro" role="dialog" aria-modal="true" aria-labelledby="nf-intro-name" aria-describedby="nf-intro-tagline" hidden>
+  <div class="nf-agro-stage" aria-hidden="true">
+    <img class="nf-agro-landscape" src="assets/images/intro/cenario-agronegocio-2026.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+    <div class="nf-agro-shade"></div>
+    <div class="nf-agro-lightbars">
+      <span class="nf-agro-lightbar nf-agro-lightbar-blue"></span>
+      <span class="nf-agro-lightbar nf-agro-lightbar-green"></span>
+      <span class="nf-agro-lightbar nf-agro-lightbar-cyan"></span>
+      <span class="nf-agro-lightbar nf-agro-lightbar-green-secondary"></span>
     </div>
-    <!-- A marca oficial é uma camada transparente separada do cenário.
-         As peças e partículas surgem e se unem sobre ela. -->
-    <div class="nf-intro-assembly" aria-hidden="true">
-      <span class="nf-intro-assembly-halo"></span>
-      <div class="nf-intro-assembly-logo-box" data-nf-logo-stage>
-        <div class="nf-intro-assembly-fragments" data-nf-logo-fragments></div>
-        <canvas class="nf-intro-assembly-dust" data-nf-logo-dust></canvas>
-        <img class="nf-intro-assembly-logo" src="assets/images/intro/logo-nova-frota-oficial.webp" alt="" width="1100" height="194" decoding="async" fetchpriority="high">
+    <div class="nf-agro-brand-scene">
+      <div class="nf-agro-eyebrow"><span></span>IDENTIDADE EM MOVIMENTO<span></span></div>
+      <div class="nf-agro-logo-mask">
+        <div class="nf-agro-logo-strips">
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 91.6667% 0 0.0000%);--travel:-367px;--delay:1.171s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 83.3333% 0 8.3333%);--travel:-344px;--delay:1.089s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 75.0000% 0 16.6667%);--travel:-321px;--delay:1.007s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 66.6667% 0 25.0000%);--travel:-298px;--delay:0.925s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 58.3333% 0 33.3333%);--travel:-275px;--delay:0.843s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 50.0000% 0 41.6667%);--travel:-252px;--delay:0.761s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 41.6667% 0 50.0000%);--travel:+252px;--delay:0.761s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 33.3333% 0 58.3333%);--travel:+275px;--delay:0.843s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 25.0000% 0 66.6667%);--travel:+298px;--delay:0.925s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 16.6667% 0 75.0000%);--travel:+321px;--delay:1.007s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 8.3333% 0 83.3333%);--travel:+344px;--delay:1.089s"></span>
+        <span class="nf-agro-logo-strip" style="clip-path:inset(0 0.0000% 0 91.6667%);--travel:+367px;--delay:1.171s"></span>
+        </div>
+        <img class="nf-agro-logo-image" src="assets/images/intro/logo-nova-frota-oficial.webp" alt="" width="1100" height="194" decoding="async">
       </div>
-      <span class="nf-intro-assembly-signal"></span>
+      <div class="nf-agro-details">
+        <span class="nf-agro-detail-long nf-agro-detail-blue"></span>
+        <span class="nf-agro-detail-chevron"></span>
+        <span class="nf-agro-detail-chevron"></span>
+        <span class="nf-agro-detail-chevron"></span>
+        <span class="nf-agro-detail-long nf-agro-detail-green"></span>
+      </div>
     </div>
+    <img class="nf-agro-approved" src="assets/images/intro/abertura-agro-aprovada.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
   </div>
   <button class="nf-intro-skip" id="nf-intro-skip" type="button">Pular apresentação <span aria-hidden="true">↗</span></button>
   <h2 class="nf-visually-hidden" id="nf-intro-name">Nova Frota Transportes e Logística</h2>
-  <p class="nf-visually-hidden" id="nf-intro-tagline">Identidade em movimento. Nova Frota, conectando o agronegócio pelo Brasil.</p>
+  <p class="nf-visually-hidden" id="nf-intro-tagline">Nossa identidade nasce do campo. Nova Frota, transportes e logística em movimento.</p>
 </div>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>

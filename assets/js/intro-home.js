@@ -7,8 +7,8 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v6-assembly";
-  const DURATION = 7400;
+  const KEY = "nf-cinematic-opening-2026-v7-agro";
+  const DURATION = 6700;
   const FADE_DURATION = 680;
   const reducedMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -80,11 +80,13 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && playing) finish(true);
   });
-  // A cena só começa com o cenário e a logomarca oficial já carregados.
+  // A animação só começa com o cenário agrícola, a logo oficial
+  // e a composição aprovada carregados para evitar flash visual.
   // Se qualquer recurso falhar, não bloquear a navegação.
   const requiredImages = [
-    intro.querySelector(".nf-intro-poster-image"),
-    intro.querySelector(".nf-intro-assembly-logo")
+    intro.querySelector(".nf-agro-landscape"),
+    intro.querySelector(".nf-agro-logo-image"),
+    intro.querySelector(".nf-agro-approved")
   ].filter(Boolean);
 
   const ready = (image) => new Promise((resolve) => {
