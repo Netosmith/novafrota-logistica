@@ -1,0 +1,164 @@
+/*
+ * NOVA FROTA | Hero slider restaurado, 2026
+ * O primeiro quadro usa a mesma paisagem da abertura cinematográfica.
+ * Este arquivo é independente da animação da intro, evitando regressões.
+ */
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-media.nf-hero-v4-slides {
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  background-image:none !important;
+  background-color:#082b30;
+  filter:none !important;
+  transform:none !important;
+  pointer-events:none;
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  opacity:0;
+  visibility:visible;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  transform:scale(1.04);
+  transition:opacity 1s ease-in-out, transform 7.2s ease-out;
+  will-change:opacity;
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide.is-active {
+  opacity:1;
+  transform:scale(1.005);
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide-agro {
+  background-position:center center;
+  filter:none !important;
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide:nth-child(2) {
+  background-position:center 50%;
+  filter:saturate(.91) brightness(.9);
+}
+.nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide:nth-child(3) {
+  background-position:center 42%;
+  filter:saturate(.93) brightness(.89);
+}
+/* Controles do carrossel: não depender da folha da abertura cinematográfica. */
+.nf-home-v4 .nf-hero-v4-slider-controls {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:13px;
+  margin-top:27px;
+  min-height:45px;
+  width:fit-content;
+  max-width:100%;
+  color:#e6fbf4;
+}
+.nf-home-v4 .nf-hero-v4-slide-buttons {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.nf-home-v4 .nf-hero-v4-dot {
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:9px 1px;
+  min-width:23px;
+  min-height:44px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+}
+.nf-home-v4 .nf-hero-v4-dot span {
+  display:block;
+  width:21px;
+  height:4px;
+  border-radius:6px;
+  background:rgba(243,255,251,.45);
+  transition:width .25s ease, background .25s ease;
+}
+.nf-home-v4 .nf-hero-v4-dot.is-active span {
+  width:34px;
+  background:#87efb5;
+}
+.nf-home-v4 .nf-hero-v4-slide-counter {
+  min-width:49px;
+  color:#e1f6ee;
+  font:800 11px/1.3 "DM Sans",system-ui,sans-serif;
+  letter-spacing:.09em;
+  text-align:center;
+}
+.nf-home-v4 .nf-hero-v4-slide-arrows {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+.nf-home-v4 .nf-hero-v4-slide-arrows button,
+.nf-home-v4 .nf-hero-v4-pause {
+  appearance:none;
+  border:1px solid rgba(216,255,237,.34);
+  border-radius:8px;
+  background:rgba(3,32,42,.58);
+  color:#eefff6;
+  min-height:42px;
+  cursor:pointer;
+  box-shadow:0 3px 13px rgba(0,0,0,.13);
+  transition:background .2s ease,border-color .2s ease;
+}
+.nf-home-v4 .nf-hero-v4-slide-arrows button {
+  display:grid;
+  place-items:center;
+  width:42px;
+  font-size:18px;
+}
+.nf-home-v4 .nf-hero-v4-pause {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:8px 11px;
+  font:700 11px/1.3 "DM Sans",system-ui,sans-serif;
+}
+.nf-home-v4 .nf-hero-v4-slide-arrows button:hover,
+.nf-home-v4 .nf-hero-v4-pause:hover {
+  background:rgba(12,110,83,.74);
+  border-color:#96f6c3;
+}
+.nf-home-v4 .nf-hero-v4-dot:focus-visible,
+.nf-home-v4 .nf-hero-v4-slide-arrows button:focus-visible,
+.nf-home-v4 .nf-hero-v4-pause:focus-visible {
+  outline:2px solid #a8ffd2;
+  outline-offset:3px;
+}
+.nf-home-v4 .nf-hero-v4-pause[hidden] {display:none!important}
+@media(max-width:1100px) {
+  .nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide-agro {
+    background-position:55% center;
+  }
+}
+@media(max-width:600px) {
+  .nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide-agro {
+    background-position:57% center;
+  }
+  .nf-home-v4 .nf-hero-v4-slider-controls{gap:8px;margin-top:20px}
+  .nf-home-v4 .nf-hero-v4-slide-arrows button{width:40px;min-height:40px}
+  .nf-home-v4 .nf-hero-v4-pause{min-height:40px;padding:7px 9px}
+  .nf-home-v4 .nf-hero-v4-dot{min-height:40px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .nf-home-v4 .nf-hero-v4 .nf-hero-v4-slides .nf-hero-v4-slide {
+    transition:none!important;
+    transform:none!important;
+    will-change:auto;
+  }
+  .nf-home-v4 .nf-hero-v4-dot span{transition:none}
+}
