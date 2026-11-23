@@ -75,7 +75,7 @@ h1,h2,h3,h4,.nf-title{font-family:"Manrope",system-ui,sans-serif}
 .nf-hero-seal{position:absolute;z-index:4;right:-18px;bottom:100px;border:1px solid rgba(255,255,255,.3);background:#ecfff2;color:#073b2e;box-shadow:0 14px 42px rgba(0,0,0,.16);padding:16px 20px;border-radius:7px;display:flex;align-items:center;gap:14px}
 .nf-hero-seal-icon{display:grid;place-items:center;font-size:24px;width:39px;height:39px;border:1px solid #b6e9c4;border-radius:50%}
 .nf-hero-seal strong{display:block;font-size:13px;font-weight:800}
-.nf-hero-seal span{display:block;font-size:10px;margin-top:2px;color:#3a6e60}
+.nf-hero-seal > span:last-child > span{display:block;font-size:10px;margin-top:2px;color:#3a6e60}
 .nf-stats{background:#fff;color:#123440;border-top:none;box-shadow:0 10px 30px rgba(17,47,49,.04)}
 .nf-stats-inner{max-width:1320px;grid-template-columns:1.45fr repeat(3,1fr)}
 .nf-stat{padding:29px 36px;border-right:1px solid #e5eeeb}
