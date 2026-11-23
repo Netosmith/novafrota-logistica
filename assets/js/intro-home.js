@@ -7,9 +7,9 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v7-agro";
-  const DURATION = 6700;
-  const FADE_DURATION = 680;
+  const KEY = "nf-cinematic-opening-2026-v8-continuo";
+  const DURATION = 4700;
+  const FADE_DURATION = 830;
   const reducedMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let playing = false;
@@ -80,13 +80,12 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && playing) finish(true);
   });
-  // A animação só começa com o cenário agrícola, a logo oficial
-  // e a composição aprovada carregados para evitar flash visual.
+  // Cenário e logo carregados antes da animação. A própria Home já
+  // usa este mesmo cenário e aparece durante a dissolução final.
   // Se qualquer recurso falhar, não bloquear a navegação.
   const requiredImages = [
     intro.querySelector(".nf-agro-landscape"),
-    intro.querySelector(".nf-agro-logo-image"),
-    intro.querySelector(".nf-agro-approved")
+    intro.querySelector(".nf-agro-logo-image")
   ].filter(Boolean);
 
   const ready = (image) => new Promise((resolve) => {
