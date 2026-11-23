@@ -7,8 +7,8 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v5-lasers";
-  const DURATION = 5600;
+  const KEY = "nf-cinematic-opening-2026-v6-assembly";
+  const DURATION = 7400;
   const FADE_DURATION = 680;
   const reducedMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -42,6 +42,7 @@
   function finish(restoreFocus = false) {
     if (!playing) return;
     playing = false;
+    intro.dispatchEvent(new Event("nf-intro-end"));
     clearTimers();
     markSeen();
     intro.classList.add("is-exiting");
@@ -69,6 +70,7 @@
     // Reiniciar os keyframes também ao clicar em "Rever abertura".
     void intro.offsetWidth;
     intro.classList.add("is-playing");
+    intro.dispatchEvent(new Event("nf-intro-start"));
     if (skip) skip.focus({ preventScroll: true });
     finishTimer = window.setTimeout(() => finish(false), DURATION);
   }
@@ -78,22 +80,31 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && playing) finish(true);
   });
-  const poster = intro.querySelector(".nf-intro-poster-image");
+  // A cena só começa com o cenário e a logomarca oficial já carregados.
+  // Se qualquer recurso falhar, não bloquear a navegação.
+  const requiredImages = [
+    intro.querySelector(".nf-intro-poster-image"),
+    intro.querySelector(".nf-intro-assembly-logo")
+  ].filter(Boolean);
+
+  const ready = (image) => new Promise((resolve) => {
+    if (image.complete) {
+      resolve(image.naturalWidth > 0);
+      return;
+    }
+    image.addEventListener("load", () => resolve(true), { once: true });
+    image.addEventListener("error", () => resolve(false), { once: true });
+  });
+
   if (!reducedMotion && !wasSeen()) {
-    if (poster && !poster.complete) {
-      // Iniciar a cena apenas quando os pixels já estiverem disponíveis.
-      poster.addEventListener("load", () => play(), { once: true });
-      poster.addEventListener("error", () => {
+    Promise.all(requiredImages.map(ready)).then((statuses) => {
+      if (statuses.every(Boolean)) play();
+      else {
         markSeen();
         intro.hidden = true;
         document.body.classList.remove("nf-intro-locked");
-      }, { once: true });
-    } else if (!poster || poster.naturalWidth > 0) {
-      play();
-    } else {
-      markSeen();
-      intro.hidden = true;
-    }
+      }
+    });
   } else {
     intro.hidden = true;
   }
