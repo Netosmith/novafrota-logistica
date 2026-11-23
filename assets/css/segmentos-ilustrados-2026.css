@@ -1,0 +1,104 @@
+/*
+  NOVA FROTA | Fundos dos segmentos
+  Ilustrações autorais temáticas leves, sem esconder título, descrição ou CTA.
+  São decorativas, não alteram layout, dados ou links.
+*/
+.nf-home-v4 #servicos .nf-service-card{
+  isolation:isolate;
+  overflow:hidden;
+  position:relative;
+}
+.nf-home-v4 #servicos .nf-service-card > *{
+  position:relative;
+  z-index:1;
+}
+.nf-home-v4 #servicos .nf-service-card::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  right:-3%;
+  bottom:-7%;
+  width:78%;
+  height:114%;
+  pointer-events:none;
+  background-image:var(--nf-segment-illustration);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:right bottom;
+  opacity:var(--nf-segment-opacity,.5);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 17%,#000 43%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.3) 17%,#000 43%);
+  transform:translateX(0) scale(1);
+  transform-origin:right bottom;
+  transition:transform .45s ease,opacity .45s ease;
+}
+.nf-home-v4 #servicos .nf-service-card:hover::after,
+.nf-home-v4 #servicos .nf-service-card:focus-within::after{
+  opacity:min(1,calc(var(--nf-segment-opacity,.5) + .13));
+  transform:translateX(-6px) scale(1.035);
+}
+.nf-home-v4 #servicos .nf-service-card:nth-child(1){
+  --nf-segment-illustration:url("../images/segmentos/graos.svg");
+  --nf-segment-opacity:.86;
+  background-image:
+    radial-gradient(ellipse at 88% 55%,rgba(44,199,130,.24),transparent 62%),
+    linear-gradient(130deg,#07333b 0%,#095644 70%,#0b7455 100%);
+}
+.nf-home-v4 #servicos .nf-service-card:nth-child(2){
+  --nf-segment-illustration:url("../images/segmentos/fertilizantes.svg");
+  --nf-segment-opacity:.67;
+  background-image:
+    radial-gradient(ellipse at 90% 80%,rgba(101,207,209,.17),transparent 55%),
+    linear-gradient(130deg,#e8f8f8,#f9fdfb 74%);
+}
+.nf-home-v4 #servicos .nf-service-card:nth-child(3){
+  --nf-segment-illustration:url("../images/segmentos/defensivos.svg");
+  --nf-segment-opacity:.55;
+  background-image:
+    radial-gradient(ellipse at 100% 75%,rgba(75,193,229,.15),transparent 60%),
+    linear-gradient(130deg,#eaf8fc,#f8fcfd 75%);
+}
+.nf-home-v4 #servicos .nf-service-card:nth-child(4){
+  --nf-segment-illustration:url("../images/segmentos/acucar.svg");
+  --nf-segment-opacity:.58;
+  background-image:
+    radial-gradient(ellipse at 92% 70%,rgba(159,194,97,.18),transparent 62%),
+    linear-gradient(130deg,#f3f8e7,#fbfcf4 75%);
+}
+.nf-home-v4 #servicos .nf-service-card:nth-child(5){
+  --nf-segment-illustration:url("../images/segmentos/industria.svg");
+  --nf-segment-opacity:.6;
+  background-image:
+    radial-gradient(ellipse at 95% 74%,rgba(100,166,206,.18),transparent 60%),
+    linear-gradient(130deg,#eaf1f8,#fafcff 75%);
+}
+.nf-home-v4 #servicos .nf-service-card:first-child h3,
+.nf-home-v4 #servicos .nf-service-card:first-child p,
+.nf-home-v4 #servicos .nf-service-card:first-child .nf-service-link{
+  text-shadow:0 1px 3px rgba(3,35,34,.16);
+}
+@media(max-width:800px){
+  .nf-home-v4 #servicos .nf-service-card::after{
+    width:76%;
+    height:103%;
+    right:-7%;
+    opacity:calc(var(--nf-segment-opacity,.5) * .8);
+  }
+}
+@media(max-width:560px){
+  .nf-home-v4 #servicos .nf-service-card::after{
+    width:65%;
+    height:100%;
+    right:-4%;
+    bottom:-13%;
+    opacity:calc(var(--nf-segment-opacity,.5) * .7);
+    mask-image:linear-gradient(90deg,transparent,#000 45%);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-home-v4 #servicos .nf-service-card::after{
+    transition:none;
+    transform:none;
+  }
+}
