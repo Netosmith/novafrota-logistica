@@ -113,3 +113,176 @@
     display: none;
   }
 }
+
+
+/* -------------------------------------------------------------
+   LASERS VIVOS | Cada pulso percorre uma trajetória de verdade.
+   Os efeitos estão SOBRE a arte, sem filtro nas letras da marca.
+-------------------------------------------------------------- */
+.nf-intro-poster-mode .nf-intro-dynamic-lights{
+  position:absolute;
+  z-index:3;
+  inset:0;
+  overflow:hidden;
+  isolation:isolate;
+  pointer-events:none;
+  mix-blend-mode:screen;
+}
+.nf-intro-poster-mode .nf-intro-laser-svg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  inset:0;
+  overflow:visible;
+  pointer-events:none;
+}
+.nf-intro-poster-mode .nf-intro-beam-set{
+  opacity:0;
+}
+.nf-intro-poster-mode .nf-intro-beam{
+  fill:none;
+  stroke-linecap:round;
+  stroke-dasharray:300 2100;
+  stroke-dashoffset:1700;
+  vector-effect:non-scaling-stroke;
+}
+.nf-intro-poster-mode .nf-intro-beam-glow{
+  opacity:.74;
+}
+.nf-intro-poster-mode .nf-intro-beam-core{
+  opacity:1;
+}
+.nf-intro.is-playing .nf-intro-beam-set-green{
+  animation:nf-live-beam-appearance 2.75s .1s ease-in-out both;
+}
+.nf-intro.is-playing .nf-intro-beam-set-green .nf-intro-beam{
+  animation:nf-live-laser-passage 2.75s .1s linear both;
+}
+.nf-intro.is-playing .nf-intro-beam-set-blue{
+  animation:nf-live-beam-appearance 2.85s .68s ease-in-out both;
+}
+.nf-intro.is-playing .nf-intro-beam-set-blue .nf-intro-beam{
+  animation:nf-live-laser-passage 2.85s .68s linear both;
+}
+.nf-intro.is-playing .nf-intro-beam-set-sweep{
+  animation:nf-live-beam-appearance 2.15s 1.7s ease-in-out both;
+}
+.nf-intro.is-playing .nf-intro-beam-set-sweep .nf-intro-beam{
+  animation:nf-live-laser-passage 2.15s 1.7s linear both;
+}
+@keyframes nf-live-laser-passage{
+  0%{stroke-dashoffset:1650;stroke-dasharray:270 2100}
+  45%{stroke-dasharray:410 2100}
+  100%{stroke-dashoffset:-1900;stroke-dasharray:270 2100}
+}
+@keyframes nf-live-beam-appearance{
+  0%,100%{opacity:0}
+  12%{opacity:.42}
+  30%,65%{opacity:1}
+  87%{opacity:.6}
+}
+.nf-intro-poster-mode .nf-intro-light-orb{
+  position:absolute;
+  z-index:4;
+  width:140px;
+  height:140px;
+  left:-9%;
+  top:4%;
+  opacity:0;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(173,255,238,.88) 0%,rgba(54,243,168,.52) 5%,rgba(30,241,174,.14) 26%,transparent 71%);
+  filter:blur(4px);
+  mix-blend-mode:screen;
+}
+.nf-intro-poster-mode .nf-intro-light-orb-b{
+  left:auto;
+  right:-8%;
+  top:4%;
+  background:radial-gradient(circle,rgba(201,245,255,.85),rgba(58,178,254,.5) 6%,rgba(20,143,255,.15) 27%,transparent 70%);
+}
+.nf-intro.is-playing .nf-intro-light-orb-a{
+  animation:nf-live-orb-green 2.45s .16s ease-in-out both;
+}
+.nf-intro.is-playing .nf-intro-light-orb-b{
+  animation:nf-live-orb-blue 2.65s .9s ease-in-out both;
+}
+@keyframes nf-live-orb-green{
+  0%{opacity:0;transform:translate3d(0,0,0) scale(.65)}
+  16%{opacity:.75}
+  65%{opacity:.94}
+  100%{opacity:0;transform:translate3d(89vw,72vh,0) scale(.8)}
+}
+@keyframes nf-live-orb-blue{
+  0%{opacity:0;transform:translate3d(0,0,0) scale(.65)}
+  18%{opacity:.85}
+  68%{opacity:.9}
+  100%{opacity:0;transform:translate3d(-75vw,70vh,0) scale(.7)}
+}
+.nf-intro-poster-mode .nf-intro-light-scan{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:-16%;
+  width:36%;
+  height:2px;
+  border-radius:50%;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(98,224,255,.1),rgba(126,255,222,.5),transparent);
+  box-shadow:0 0 10px rgba(52,236,199,.21),0 0 35px rgba(44,183,228,.1);
+  opacity:0;
+  transform:translateX(0) rotate(-5deg);
+}
+.nf-intro.is-playing .nf-intro-light-scan{
+  animation:nf-live-scan-line 2.5s 1.5s ease-in-out both;
+}
+@keyframes nf-live-scan-line{
+  0%{opacity:0;transform:translateX(0) rotate(-5deg)}
+  21%{opacity:.48}
+  79%{opacity:.5}
+  100%{opacity:0;transform:translateX(360%) rotate(-5deg)}
+}
+.nf-intro-poster-mode .nf-intro-light-grid{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 50% 54%,transparent 19%,rgba(24,227,166,.075) 36%,transparent 64%),
+    repeating-linear-gradient(0deg,transparent 0 51px,rgba(77,223,217,.025) 51px 52px);
+  opacity:0;
+}
+.nf-intro.is-playing .nf-intro-light-grid{
+  animation:nf-live-grid-pulse 4.65s ease-in-out both;
+}
+@keyframes nf-live-grid-pulse{
+  0%,100%{opacity:0}
+  25%,65%{opacity:.75}
+}
+/* A composição entra aos poucos; os lasers realmente se deslocam. */
+.nf-intro.is-playing .nf-intro-poster-image{
+  animation:nf-poster-kinetic-reveal 5.25s cubic-bezier(.21,.68,.22,1) both;
+}
+@keyframes nf-poster-kinetic-reveal{
+  0%{opacity:0;transform:scale(1.095)}
+  13%{opacity:.28}
+  36%{opacity:.83}
+  57%,100%{opacity:1;transform:scale(1.006)}
+}
+@media(max-width:800px){
+  .nf-intro-poster-mode .nf-intro-light-orb{
+    width:88px;
+    height:88px;
+  }
+  .nf-intro-poster-mode .nf-intro-beam-glow{
+    opacity:.45;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-intro-poster-mode .nf-intro-dynamic-lights{
+    display:none!important;
+  }
+  .nf-intro.is-playing .nf-intro-poster-image{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+}
