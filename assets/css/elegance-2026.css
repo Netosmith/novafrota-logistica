@@ -1,0 +1,248 @@
+/* NOVA FROTA — Edição Elegance 2026
+   Camada visual reversível sobre refresh-2026.css.
+   Não altera formulários, vagas ou integrações. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root {
+  --e-navy:#071e2b;
+  --e-navy-2:#092c38;
+  --e-green:#27be77;
+  --e-green-light:#b5f1ca;
+  --e-paper:#f6f9f7;
+  --e-ink:#132e39;
+  --e-gray:#647782;
+  --e-line:#e1ebe7;
+  --e-shadow:0 24px 70px rgba(8,34,36,.08);
+}
+body{font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--e-paper);color:var(--e-ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.nf-title{font-family:"Manrope",system-ui,sans-serif}
+::selection{background:#b1efd0;color:#0c3e33}
+.nf-container{width:min(calc(100% - 64px),1280px)}
+.nf-title{font-weight:800;font-size:clamp(34px,3.6vw,54px);letter-spacing:-.055em;line-height:1.12}
+.nf-description{font-size:16px;color:#667982;line-height:1.85}
+.nf-section{padding:104px 0}
+.nf-eyebrow{font-family:"Manrope",sans-serif;font-size:11px;letter-spacing:.19em;gap:11px;color:#1b945d}
+.nf-eyebrow::before{width:30px;height:2px;background:#32bb77}
+.nf-btn{min-height:52px;padding:15px 25px;border-radius:9px;font-family:"Manrope",sans-serif;font-size:12px;letter-spacing:.01em;font-weight:800;box-shadow:none;transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease}
+.nf-btn-primary{color:#05281e;background:#6ce6a1;box-shadow:0 12px 30px rgba(22,176,93,.14)}
+.nf-btn-primary:hover{background:#a2f3bf;color:#092f25;box-shadow:0 14px 26px rgba(30,164,95,.17)}
+.nf-btn-dark{background:#0c3442;color:#fff}
+.nf-btn-dark:hover{background:#165362}
+.nf-btn-outline{background:transparent;border-color:rgba(255,255,255,.35)}
+.nf-arrow{font-weight:400;font-size:18px}
+.site-header{background:#071c29;box-shadow:0 8px 30px rgba(4,21,27,.12)}
+.site-topline{background:#061923;border-bottom-color:rgba(255,255,255,.06);color:#a9bfc4}
+.site-topline-inner{max-width:1470px;padding:6px 40px;font-weight:700;font-size:10px;letter-spacing:.11em}
+.site-topline a{color:#afeabf;font-size:10px}
+.site-header .header-container{max-width:1470px;padding:14px 40px;gap:28px;min-height:90px}
+.site-header .logo{width:190px;height:55px}
+.site-header .menu-area{flex:1 1 auto;min-width:0}
+.site-header .main-nav-faithful{gap:7px;justify-content:center}
+.site-header .main-nav-faithful a,.site-header .main-nav-faithful a[href="servicos.html"]{min-height:44px;padding:11px 9px;font-family:"Manrope",sans-serif;font-size:11px;font-weight:700;letter-spacing:0;color:#dce7e8;border-radius:7px}
+.site-header .main-nav-faithful a.active{background:rgba(255,255,255,.085);box-shadow:none;color:#92e4b1}
+.site-header .main-nav-faithful a:hover{background:rgba(255,255,255,.095);color:#fff}
+.site-header .header-contact{padding:12px 19px;border-radius:8px;background:#2dbe77;color:#061d20;font-family:"Manrope",sans-serif;font-weight:800;font-size:11px;min-height:46px}
+.site-header .header-contact:hover{background:#87e7a8;color:#072b23}
+.site-header .gva-logo{width:60px;height:43px}
+.site-header .header-actions{gap:13px}
+.nf-nav-more{position:relative;font-family:"Manrope",sans-serif}
+.nf-nav-more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:11px 10px;border-radius:7px;color:#dce7e8;font-size:11px;font-weight:700;white-space:nowrap}
+.nf-nav-more>summary::-webkit-details-marker{display:none}
+.nf-nav-more>summary:hover,.nf-nav-more[open]>summary,.nf-nav-more:has(.active)>summary{background:rgba(255,255,255,.09);color:#a5eabc}
+.nf-nav-more>summary:focus-visible{outline:2px solid #7deaaa;outline-offset:3px}
+.nf-nav-more-menu{position:absolute;z-index:30;top:calc(100% + 15px);right:0;width:235px;padding:10px;border:1px solid rgba(141,224,180,.18);background:#092b38;border-radius:12px;box-shadow:0 23px 44px rgba(3,18,23,.35);display:grid;gap:4px}
+.site-header .nf-nav-more-menu a{justify-content:flex-start!important;font-size:12px!important;white-space:normal!important;padding:12px 13px!important}
+.nf-hero{padding:0;background:linear-gradient(113deg,#061c29 0%,#092b39 76%,#103b43 100%);overflow:hidden}
+.nf-hero::before{background:radial-gradient(ellipse 56% 78% at 8% 54%,rgba(23,92,77,.27),transparent 72%),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:auto,80px 80px;opacity:.72;mask-image:none}
+.nf-hero::after{content:"";pointer-events:none;position:absolute;right:-9%;bottom:-260px;width:530px;height:530px;border:1px solid rgba(124,230,165,.09);border-radius:50%}
+.nf-hero-grid{width:min(calc(100% - 78px),1390px);min-height:680px;display:grid;grid-template-columns:1fr .95fr;gap:56px;align-items:center;padding:46px 0 48px}
+.nf-hero-copy{padding:35px 0 26px;z-index:2}
+.nf-hero .nf-eyebrow{color:#94ebbb;font-size:11px}
+.nf-hero h1{font-family:"Manrope",sans-serif;font-size:clamp(46px,5.3vw,74px);line-height:1.095;font-weight:800;letter-spacing:-.063em;max-width:760px;margin:28px 0 25px;color:#f6faf9}
+.nf-hero h1 span{color:#7de7a8}
+.nf-hero-lead{font-size:16px;max-width:535px;color:#c3d3d6;line-height:1.85;margin-bottom:30px}
+.nf-hero-actions{gap:13px}
+.nf-hero-note{max-width:575px;font-size:12px;color:#b3c9c8;border-top-color:rgba(255,255,255,.13);margin-top:44px;padding-top:22px}
+.nf-hero-note span{background:#8ae7ac}
+.nf-hero-visual{display:flex;position:relative;align-items:stretch;min-width:0;min-height:570px;margin-right:-10px}
+.nf-hero-photo{width:100%;height:580px;min-height:580px;border-radius:140px 12px 12px 12px;box-shadow:0 30px 80px rgba(0,0,0,.24);border:1px solid rgba(242,255,247,.16);background:#113a43;overflow:hidden}
+.nf-hero-photo img{height:100%;object-fit:cover;object-position:center;filter:saturate(.84) contrast(1.06) brightness(.91)}
+.nf-hero-visual::after{border-radius:140px 12px 12px 12px;background:linear-gradient(180deg,transparent 50%,rgba(3,26,31,.8) 100%);inset:0}
+.nf-photo-tag{right:auto;left:26px;top:25px;box-shadow:none;background:rgba(6,33,39,.76);border:1px solid rgba(255,255,255,.2);color:#e6fff0;backdrop-filter:blur(8px);border-radius:5px;font-size:10px;letter-spacing:.14em;padding:11px 16px}
+.nf-photo-caption{left:32px;bottom:32px}
+.nf-photo-caption-icon{width:45px;height:45px;border-radius:7px;background:#8ce7b0;color:#09352d}
+.nf-photo-caption strong{font-size:16px}
+.nf-photo-caption small{font-size:11px}
+.nf-hero-seal{position:absolute;z-index:4;right:-18px;bottom:100px;border:1px solid rgba(255,255,255,.3);background:#ecfff2;color:#073b2e;box-shadow:0 14px 42px rgba(0,0,0,.16);padding:16px 20px;border-radius:7px;display:flex;align-items:center;gap:14px}
+.nf-hero-seal-icon{display:grid;place-items:center;font-size:24px;width:39px;height:39px;border:1px solid #b6e9c4;border-radius:50%}
+.nf-hero-seal strong{display:block;font-size:13px;font-weight:800}
+.nf-hero-seal > span:last-child > span{display:block;font-size:10px;margin-top:2px;color:#3a6e60}
+.nf-stats{background:#fff;color:#123440;border-top:none;box-shadow:0 10px 30px rgba(17,47,49,.04)}
+.nf-stats-inner{max-width:1320px;grid-template-columns:1.45fr repeat(3,1fr)}
+.nf-stat{padding:29px 36px;border-right:1px solid #e5eeeb}
+.nf-stat:first-child{padding-left:15px}
+.nf-stat strong{font-family:"Manrope",sans-serif;color:#0d6f4c;font-size:35px;font-weight:800;letter-spacing:-.045em}
+.nf-stat span{color:#6e8587;letter-spacing:.12em;font-size:10px}
+.nf-stat:first-child strong{color:#153a44;font-size:19px}
+.nf-section:not(.nf-careers){background:var(--e-paper)}
+.nf-services-head{margin-bottom:37px}
+.nf-services-head .nf-btn{align-self:center}
+.nf-service-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:17px}
+.nf-service-card{grid-column:span 4;min-height:272px;padding:31px;border:1px solid #e0eae6;border-radius:13px;background:#fff;box-shadow:none;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.nf-service-card:nth-child(-n+2){grid-column:span 6;min-height:277px}
+.nf-service-card:first-child{background:linear-gradient(130deg,#0a3540 0%,#0c5748 100%);border-color:#0f5e4f}
+.nf-service-card:hover{transform:translateY(-5px);border-color:#91d6b5;box-shadow:var(--e-shadow)}
+.nf-service-symbol{height:56px;width:56px;border-radius:10px;background:#e6f6ed;color:#168752;font-size:24px}
+.nf-service-card:first-child .nf-service-symbol{color:#ccf9db;background:rgba(255,255,255,.12)}
+.nf-service-index{color:#91a8a7;font-size:11px}
+.nf-service-card:first-child .nf-service-index{color:#b6dacd}
+.nf-service-card h3{font-size:22px;letter-spacing:-.04em;margin:24px 0 10px;color:#1b3640}
+.nf-service-card:first-child h3{color:#fff}
+.nf-service-card p{color:#6b7e84;font-size:14px;line-height:1.75;max-width:400px}
+.nf-service-card:first-child p{color:#cbe4db}
+.nf-service-card .nf-service-link{padding-top:22px;color:#0d8353}
+.nf-service-card:first-child .nf-service-link{color:#9ef4b9}
+.nf-careers{background:#eaf3ee!important}
+.nf-careers-heading{margin-bottom:33px}
+.nf-career-panel{border-radius:16px;padding:40px;min-height:430px}
+.nf-career-panel-join{background:linear-gradient(135deg,#103b42,#0a7653)}
+.nf-career-icon{border-radius:9px;background:rgba(255,255,255,.1)}
+.nf-career-panel h3{font-size:31px}
+.nf-career-panel-join .nf-btn{background:#fff;color:#075039}
+.nf-career-panel-join .nf-btn:hover{background:#cbf7df}
+.nf-career-panel-vacancies{border-color:#dce9e4}
+.nf-career-panel-vacancies .nf-job-empty{background:#f7faf8}
+.nf-story{background:#fff!important}
+.nf-story-grid{gap:95px}
+.nf-story-visual{min-height:535px;border-radius:12px 115px 12px 12px;box-shadow:0 20px 60px rgba(6,37,34,.13)}
+.nf-story-visual img{object-fit:cover;object-position:center}
+.nf-story-tag{font-size:20px;left:35px;bottom:35px}
+.nf-benefit-list{gap:23px;padding:30px 0}
+.nf-benefit-mark{background:#e5f6eb;border-radius:8px;color:#097b4a}
+.nf-benefit strong{font-family:"Manrope",sans-serif;font-size:14px}
+.nf-coverage{background:linear-gradient(105deg,#061d2b 0%,#093d42 100%);padding:110px 0}
+.nf-coverage-content{gap:90px}
+.nf-coverage .nf-title{color:#fff}
+.nf-coverage::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,255,255,.07);right:-165px;top:-180px;font-size:unset}
+.nf-state-grid{gap:10px}
+.nf-state{border-radius:9px;min-height:102px;background:rgba(255,255,255,.055);transition:background .18s}
+.nf-state:hover{background:rgba(255,255,255,.1)}
+.nf-state strong{color:#a2f4bf;font-size:27px}
+.nf-state span{font-size:11px;color:#b7cecb}
+.nf-process{background:#f5f9f6!important}
+.nf-process-grid{gap:14px}
+.nf-process-item{border-radius:11px;background:#fff;padding:31px 25px;border:1px solid var(--e-line);position:relative}
+.nf-process-num{width:auto;height:auto;margin-bottom:30px;display:block;background:transparent;font-family:"Manrope",sans-serif;color:#14a465;font-size:31px;font-weight:800;line-height:1}
+.nf-process-item h3{font-size:17px}
+.nf-process-item p{line-height:1.75}
+.nf-gva{background:#fff}
+.nf-gva-card{border-radius:15px;padding:55px 66px;background:linear-gradient(110deg,#0e6251,#0a8760)}
+.nf-gva-card h2{letter-spacing:-.05em}
+.nf-gva-card .nf-btn{border-radius:8px}
+.nf-gva-mark{border-radius:15px}
+.nf-clients{background:#f7faf8!important}
+.nf-client-logo{border-radius:10px;min-height:105px;background:#fff;border-color:#e8efec;transition:box-shadow .2s ease,transform .2s ease}
+.nf-client-logo:hover{box-shadow:0 12px 24px rgba(14,49,48,.07);transform:translateY(-2px)}
+.nf-bottom-cta{background:#0b3540;padding:55px 0}
+.nf-bottom-cta h2{font-family:"Manrope",sans-serif}
+.site-footer{background:#061d29}
+.site-footer .footer-main{padding:70px 0 55px}
+.site-footer h3{font-size:13px;letter-spacing:.03em}
+.site-footer .footer-links a{font-size:13px}
+.site-footer .footer-base{font-size:11px}
+.internal-main{margin:56px auto 94px}
+.internal-main>section{border-radius:15px;box-shadow:0 18px 55px rgba(12,50,49,.045);padding:42px}
+.internal-main .card{border-radius:12px}
+.internal-main>section>h1:first-child,.internal-main>section>h2:first-child,.internal-main .clientes-hero h1{font-family:"Manrope",sans-serif}
+.internal-main .grid{gap:20px}
+.internal-main .clientes-hero{border-radius:14px}
+.internal-main .logo-tile{border-radius:9px}
+.internal-main .contact-options .card{background:#f8fbf9}
+.nf-careers-page>.nf-careers-intro{border-radius:13px}
+.nf-careers-page .nf-careers-form-card,.nf-careers-page .nf-careers-jobs-card{font-family:"DM Sans",sans-serif}
+@media(max-width:1360px){
+  .site-header .header-container{gap:15px;padding:13px 24px}
+  .site-header .logo{width:160px;height:50px}
+  .site-header .main-nav-faithful{gap:2px}
+  .site-header .main-nav-faithful a{font-size:11px;padding:10px 7px}
+  .site-header .header-actions{gap:9px}
+  .site-header .gva-logo{width:50px}
+  .nf-hero-grid{width:min(calc(100% - 56px),1280px);gap:32px}
+  .nf-hero h1{font-size:clamp(46px,5.5vw,70px)}
+}
+@media(max-width:1100px){
+  .site-header .header-container{min-height:74px}
+  .site-header .menu-area{display:none}
+  .site-header .menu-area.is-open{display:block}
+  .site-header .main-nav-faithful{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .site-header .main-nav-faithful a{font-size:14px;padding:11px 12px}
+  .site-header .menu-toggle{display:inline-flex}
+  .nf-nav-more{grid-column:span 2}
+  .nf-nav-more>summary{justify-content:flex-start;font-size:14px;padding:11px 12px}
+  .nf-nav-more-menu{position:static;width:100%;box-shadow:none;border:0;background:rgba(255,255,255,.04);margin-top:3px}
+  .nf-hero-grid{gap:26px}
+  .nf-hero-photo{height:510px;min-height:510px}
+  .nf-hero-visual{min-height:510px}
+  .nf-hero-seal{display:none}
+  .nf-story-grid{gap:43px}
+}
+@media(max-width:800px){
+  .nf-container{width:min(calc(100% - 40px),1280px)}
+  .nf-section{padding:74px 0}
+  .nf-hero-grid{width:min(calc(100% - 40px),740px);grid-template-columns:1fr;padding:46px 0 32px;gap:20px;min-height:0}
+  .nf-hero-copy{padding:0;max-width:730px}
+  .nf-hero h1{font-size:clamp(40px,7.4vw,60px);margin:20px 0}
+  .nf-hero-lead{max-width:600px}
+  .nf-hero-note{margin-top:30px}
+  .nf-hero-visual{min-height:0}
+  .nf-hero-photo{height:380px;min-height:380px;border-radius:75px 9px 9px 9px}
+  .nf-hero-visual::after{border-radius:75px 9px 9px 9px}
+  .nf-stats-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nf-stat{padding:22px!important}
+  .nf-stat:first-child strong{font-size:17px}
+  .nf-service-card:nth-child(n){grid-column:span 6}
+  .nf-service-card:nth-child(-n+2){min-height:260px}
+  .nf-story-grid{gap:34px}
+  .nf-story-visual{min-height:340px;border-radius:10px 75px 10px 10px}
+  .nf-coverage{padding:74px 0}
+  .nf-coverage-content{gap:40px}
+  .nf-gva-card{padding:36px}
+  .internal-main{margin:25px auto 65px}
+}
+@media(max-width:560px){
+  .site-topline-inner{padding:7px 14px}
+  .site-topline-inner span:nth-child(2){display:none}
+  .site-header .header-container{padding:11px 15px;gap:8px}
+  .site-header .logo{width:135px;height:44px}
+  .site-header .header-contact{display:none}
+  .site-header .gva-logo{width:45px;height:38px}
+  .nf-container{width:min(calc(100% - 34px),1280px)}
+  .nf-hero-grid{width:min(calc(100% - 34px),740px)}
+  .nf-hero h1{font-size:clamp(34px,9.5vw,49px)}
+  .nf-hero-lead{font-size:15px}
+  .nf-hero-photo{height:300px;min-height:300px;border-radius:55px 8px 8px 8px}
+  .nf-hero-visual::after{border-radius:55px 8px 8px 8px}
+  .nf-photo-caption{left:15px;bottom:16px;gap:9px}
+  .nf-photo-caption-icon{height:38px;width:38px}
+  .nf-photo-caption strong{font-size:12px}
+  .nf-photo-caption small{font-size:10px}
+  .nf-photo-tag{left:12px;top:12px;font-size:9px}
+  .nf-stat strong{font-size:26px}
+  .nf-stat:first-child strong{font-size:15px}
+  .nf-stat{padding:18px 13px!important}
+  .nf-section{padding:57px 0}
+  .nf-title{font-size:clamp(30px,8vw,38px)}
+  .nf-description{font-size:14px}
+  .nf-service-card:nth-child(n){grid-column:span 12;min-height:0;padding:26px}
+  .nf-service-card h3{font-size:20px}
+  .nf-career-panel{padding:26px;min-height:0}
+  .nf-career-panel h3{font-size:27px}
+  .nf-story-visual{min-height:300px}
+  .nf-story-tag{font-size:16px;left:20px;bottom:22px}
+  .nf-gva-card{padding:29px 23px}
+  .nf-state{min-height:79px}
+  .nf-process-item{padding:25px}
+  .internal-main>section{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-btn,.nf-service-card,.nf-client-logo,.nf-state{transition:none}
+}
