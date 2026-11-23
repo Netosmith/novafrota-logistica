@@ -4,8 +4,8 @@
   Mantém a foto legível e todos os controles do slider existentes.
 */
 .nf-home-v4 .nf-hero-v4-slide.nf-hero-v4-slide-agro{
-  background-position:center 58%;
-  filter:saturate(1.05) contrast(1.03);
+  background-position:center center;
+  filter:none;
 }
 /* Um degradê mais translúcido deixa o campo e o caminhão visíveis,
    sem sacrificar o contraste do H1 e dos links sobre a paisagem. */
@@ -31,7 +31,7 @@
 }
 @media(max-width:620px){
   .nf-home-v4 .nf-hero-v4-slide.nf-hero-v4-slide-agro{
-    background-position:66% center;
+    background-position:57% center;
   }
   .nf-home-v4 .nf-hero-v4 .nf-hero-v4-shade{
     background:
