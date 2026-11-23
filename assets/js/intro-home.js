@@ -7,8 +7,8 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v8-continuo";
-  const DURATION = 4700;
+  const KEY = "nf-cinematic-opening-2026-v9-gva";
+  const DURATION = 5250;
   const FADE_DURATION = 830;
   const reducedMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
