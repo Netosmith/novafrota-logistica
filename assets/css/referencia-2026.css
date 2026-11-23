@@ -20,7 +20,7 @@
 /* Full-bleed brand photography */
 .nf-home-v4 .nf-hero-v4{position:relative;isolation:isolate;min-height:660px;padding:0;background:#08252f;color:#fff;overflow:hidden;display:flex;align-items:stretch}
 .nf-home-v4 .nf-hero-v4::before,.nf-home-v4 .nf-hero-v4::after{display:none}
-.nf-hero-v4-media{position:absolute;z-index:-2;inset:0;background-image:url("images/rodocacamba.jpeg");background-size:cover;background-position:center 54%;filter:brightness(.83) saturate(.87) contrast(1.04);transform:scale(1.01)}
+.nf-hero-v4-media{position:absolute;z-index:-2;inset:0;background-image:url("../images/intro/cenario-agronegocio-2026.webp");background-size:cover;background-position:center 54%;filter:brightness(.83) saturate(.87) contrast(1.04);transform:scale(1.01)}
 .nf-hero-v4-shade{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(3,24,33,.99) 0%,rgba(3,26,35,.96) 27%,rgba(5,28,36,.81) 49%,rgba(5,32,36,.38) 77%,rgba(5,30,35,.18) 100%),linear-gradient(0deg,rgba(4,25,32,.72) 0%,transparent 29%,rgba(5,24,31,.25) 100%)}
 .nf-hero-v4-inner{min-height:660px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;padding:94px 0 105px}
 .nf-hero-v4-copy{max-width:760px}
