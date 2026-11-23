@@ -7,7 +7,7 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v3";
+  const KEY = "nf-cinematic-opening-2026-v4-poster";
   const DURATION = 4500;
   const FADE_DURATION = 680;
   const reducedMotion = window.matchMedia &&
@@ -78,6 +78,23 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && playing) finish(true);
   });
-  if (!reducedMotion && !wasSeen()) play();
-  else intro.hidden = true;
+  const poster = intro.querySelector(".nf-intro-poster-image");
+  if (!reducedMotion && !wasSeen()) {
+    if (poster && !poster.complete) {
+      // Iniciar a cena apenas quando os pixels já estiverem disponíveis.
+      poster.addEventListener("load", () => play(), { once: true });
+      poster.addEventListener("error", () => {
+        markSeen();
+        intro.hidden = true;
+        document.body.classList.remove("nf-intro-locked");
+      }, { once: true });
+    } else if (!poster || poster.naturalWidth > 0) {
+      play();
+    } else {
+      markSeen();
+      intro.hidden = true;
+    }
+  } else {
+    intro.hidden = true;
+  }
 })();
