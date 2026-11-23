@@ -259,3 +259,39 @@ body:not(.nf-home-v4) .site-footer{background:#061c27}
   .nf-detail-cta-actions{width:100%;display:grid;grid-template-columns:1fr}
   .nf-detail-cta .nf-btn{text-align:center}
 }
+
+
+/* Banner da página "A Nova Frota": altura menor, mantendo o alinhamento
+   das outras seções e preservando o hero das páginas Serviços/Frota. */
+.nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] {
+  min-height: 0;
+  padding: 32px 45px;
+}
+.nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] > h1 {
+  font-size: clamp(29px, 3.1vw, 45px);
+  line-height: 1.13;
+  margin: 12px 0 10px;
+}
+.nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] > p {
+  font-size: 15px;
+  line-height: 1.58;
+  margin: 0 0 18px;
+  max-width: 730px;
+}
+.nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] > .nf-btn {
+  min-height: 45px;
+  padding: 12px 21px;
+}
+@media (max-width: 900px) {
+  .nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] {
+    padding: 29px 30px;
+  }
+}
+@media (max-width: 620px) {
+  .nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] {
+    padding: 26px 22px;
+  }
+  .nf-detail-page > section.nf-detail-intro[aria-labelledby="about-title"] > h1 {
+    font-size: clamp(27px, 7vw, 35px);
+  }
+}
