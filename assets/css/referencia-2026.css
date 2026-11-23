@@ -170,3 +170,92 @@ body:not(.nf-home-v4) .site-footer{background:#061c27}
 @media(prefers-reduced-motion:reduce){
   .nf-audience-card,.nf-quick-links a{transition:none}
 }
+
+/* Página institucional, frota e serviços */
+.nf-detail-page{width:min(calc(100% - 48px),1190px);margin:46px auto 85px;display:grid;gap:22px}
+.nf-detail-page>section{padding:0;max-width:none;box-shadow:none;border:0;background:transparent}
+.nf-detail-page>section.nf-detail-intro{position:relative;isolation:isolate;overflow:hidden;padding:64px 63px;background:radial-gradient(ellipse at 95% 0%,rgba(67,170,123,.21),transparent 48%),linear-gradient(126deg,#08222f,#0b5045);border-radius:12px;min-height:345px;color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.nf-detail-page>section.nf-detail-intro::after{content:"";position:absolute;pointer-events:none;right:-115px;top:-160px;border:1px solid rgba(255,255,255,.09);width:450px;height:450px;border-radius:50%;z-index:-1}
+.nf-detail-intro .nf-eyebrow{color:#a4edbe;font-size:11px}
+.nf-detail-intro .nf-eyebrow::before{background:#8ceeb1}
+.nf-detail-page>section.nf-detail-intro>h1{font-family:"Manrope",system-ui,sans-serif;color:#fff;font-size:clamp(34px,4.4vw,54px);line-height:1.15;font-weight:800;letter-spacing:-.06em;margin:20px 0 15px}
+.nf-detail-intro h1 .nf-title-accent{color:#a9f1be}
+.nf-detail-page>section.nf-detail-intro>p{font-size:16px;color:#d5e8e3;max-width:710px;line-height:1.75;margin:0 0 26px}
+.nf-detail-intro .nf-btn-primary{background:#b6f6cd;color:#073e2d}
+.nf-detail-page>section.nf-detail-content{background:#fff;padding:48px;border-radius:12px;border:1px solid #e1ebe8;box-shadow:0 8px 29px rgba(11,48,44,.035)}
+.nf-detail-heading{max-width:750px;margin-bottom:31px}
+.nf-detail-heading h2,.nf-about-copy h2{font-family:"Manrope",system-ui,sans-serif;color:#113542;line-height:1.17;letter-spacing:-.055em;font-size:clamp(29px,3.6vw,43px);margin:15px 0 12px}
+.nf-detail-heading>p{font-size:14px;color:#63797b;max-width:660px}
+.nf-service-detail-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:15px}
+.nf-service-detail-card{grid-column:span 2;min-height:247px;padding:28px;border:1px solid #e0ebe6;border-radius:10px;background:#fbfdfb;display:flex;align-items:flex-start;flex-direction:column}
+.nf-service-detail-card:nth-child(-n+2){grid-column:span 3}
+.nf-service-detail-featured{background:linear-gradient(135deg,#08323f,#0b5946);color:#fff;border-color:#0b5946}
+.nf-service-detail-number{font-size:10px;letter-spacing:.16em;font-weight:900;color:#7e9794}
+.nf-service-detail-featured .nf-service-detail-number{color:#abe7bf}
+.nf-service-detail-icon{margin:19px 0 6px;display:grid;place-items:center;width:42px;height:42px;background:#e6f7ed;border-radius:7px;font-size:21px;color:#12945b}
+.nf-service-detail-featured .nf-service-detail-icon{color:#b6ffd1;background:rgba(255,255,255,.12)}
+.nf-service-detail-card h3{font-family:"Manrope",system-ui,sans-serif;font-size:21px;line-height:1.2;color:#163b43;letter-spacing:-.035em;margin:8px 0 9px}
+.nf-service-detail-card p{font-size:13px;line-height:1.75;color:#637a7e;margin:0}
+.nf-service-detail-featured h3{color:#fff}
+.nf-service-detail-featured p{color:#d2e9df}
+.nf-detail-page>section.nf-detail-cta{border-radius:12px;padding:43px 48px;background:#0a3440;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.nf-detail-cta .nf-eyebrow{color:#a6eec0}
+.nf-detail-cta .nf-eyebrow::before{background:#a6eec0}
+.nf-detail-cta h2{font-family:"Manrope",system-ui,sans-serif;color:#fff;font-size:clamp(25px,3vw,36px);letter-spacing:-.05em;line-height:1.2;margin:12px 0 9px}
+.nf-detail-cta p{color:#c0d8d6;font-size:14px;max-width:570px;margin:0}
+.nf-detail-cta-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px;flex-shrink:0}
+.nf-detail-cta .nf-btn-primary{background:#abf4c5;color:#083f2f}
+.nf-detail-cta .nf-btn-glass{border-color:rgba(255,255,255,.29);color:#fff}
+/* Frota: apresentar dados sem alterar os quantitativos publicados */
+.nf-detail-page>section.nf-fleet-intro{background:linear-gradient(90deg,rgba(5,29,38,.98),rgba(5,29,38,.83) 52%,rgba(5,29,38,.48)),url("images/rodocacamba.jpeg") center 55%/cover}
+.nf-fleet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.nf-fleet-card{padding:31px;border-radius:10px;background:#f9fcfa;border:1px solid #e1ebe8;min-width:0}
+.nf-fleet-card-kicker{color:#138653;font-size:10px;font-weight:900;letter-spacing:.14em}
+.nf-fleet-card h3{font-family:"Manrope",system-ui,sans-serif;color:#103a43;font-size:26px;letter-spacing:-.05em;margin:12px 0}
+.nf-fleet-card p{font-size:14px;color:#667d7f;line-height:1.75;margin:0 0 24px;max-width:460px}
+.nf-fleet-figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;padding-top:18px;border-top:1px solid #dbe8e1}
+.nf-fleet-figures div{display:grid;gap:5px}
+.nf-fleet-figures strong{font-family:"Manrope",system-ui,sans-serif;color:#0b7951;font-size:34px;line-height:1.2}
+.nf-fleet-figures span{font-size:12px;color:#60767a}
+.nf-fleet-card-gva{grid-column:1/-1;background:linear-gradient(115deg,#e8f5ec,#f8fbf9)}
+.nf-fleet-card-gva p{max-width:660px}
+.nf-fleet-card-gva>a,.nf-about-text-link{color:#087c50;font-size:14px;font-weight:900}
+.nf-fleet-card-gva>a:hover,.nf-about-text-link:hover{text-decoration:underline}
+/* Sobre: vídeo original preservado e melhor contexto */
+.nf-detail-page>section.nf-about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:35px;align-items:center}
+.nf-about-copy p{font-size:15px;line-height:1.8;color:#62787b}
+.nf-about-text-link{display:inline-flex;align-items:center;gap:10px;margin-top:12px}
+.nf-about-media{min-width:0;padding:12px;background:#f3f8f5;border:1px solid #e1ece6;border-radius:10px}
+.nf-about-media-label{display:block;font-size:10px;font-weight:900;letter-spacing:.16em;color:#148959;padding:10px 11px 16px}
+.nf-detail-page .nf-about-media .video-wrapper{width:100%;aspect-ratio:16/9;border-radius:7px;background:#0b2d3b;overflow:hidden}
+.nf-detail-page .nf-about-media .video-wrapper iframe{height:100%;width:100%;border:0}
+.nf-about-media>p{font-size:12px;color:#67807e;margin:12px 10px 6px}
+.nf-pillars-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.nf-pillars-grid>div{background:#f8fcf9;border:1px solid #e0ece6;padding:24px;border-radius:9px}
+.nf-pillars-grid>div>span{color:#0f9860;font-size:21px;font-weight:900;letter-spacing:-.06em}
+.nf-pillars-grid h3{font-family:"Manrope",system-ui,sans-serif;color:#123d42;font-size:16px;margin:17px 0 8px;letter-spacing:-.035em}
+.nf-pillars-grid p{color:#61787b;font-size:13px;line-height:1.7;margin:0}
+@media(max-width:900px){
+  .nf-detail-page{width:min(calc(100% - 36px),1190px);margin:26px auto 65px}
+  .nf-detail-page>section.nf-detail-intro{padding:48px 37px}
+  .nf-detail-page>section.nf-detail-content{padding:31px}
+  .nf-detail-page>section.nf-detail-cta{padding:32px;flex-direction:column;align-items:flex-start}
+  .nf-detail-cta-actions{justify-content:flex-start;flex-shrink:1}
+  .nf-detail-page>section.nf-about-grid{grid-template-columns:1fr}
+  .nf-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .nf-detail-page{width:min(calc(100% - 26px),1190px)}
+  .nf-detail-page>section.nf-detail-intro{padding:34px 25px;min-height:0}
+  .nf-detail-page>section.nf-detail-intro>h1{font-size:clamp(29px,8vw,39px)}
+  .nf-detail-page>section.nf-detail-intro>p{font-size:14px}
+  .nf-detail-page>section.nf-detail-content{padding:25px 19px}
+  .nf-service-detail-card:nth-child(n){grid-column:1/-1;min-height:0;padding:24px}
+  .nf-fleet-grid,.nf-pillars-grid{grid-template-columns:1fr}
+  .nf-fleet-card-gva{grid-column:auto}
+  .nf-fleet-card{padding:25px}
+  .nf-fleet-figures strong{font-size:29px}
+  .nf-detail-page>section.nf-detail-cta{padding:26px 21px}
+  .nf-detail-cta-actions{width:100%;display:grid;grid-template-columns:1fr}
+  .nf-detail-cta .nf-btn{text-align:center}
+}
