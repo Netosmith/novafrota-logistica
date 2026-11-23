@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071d2a">
+  <meta name="description" content="Consulte fretes publicamente divulgados pela Nova Frota, com filtros por rota, produto, base e tipo de veículo.">
+  <title>Fretes Disponíveis | Nova Frota Logística</title>
+  <link rel="icon" href="assets/images/logo-novafrota.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/refresh-2026.css?v=2">
+  <link rel="stylesheet" href="assets/css/elegance-2026.css?v=1">
+  <link rel="stylesheet" href="assets/css/operacao-publica-2026.css?v=1">
+  <script src="assets/js/site.js?v=2" defer></script>
+  <script src="assets/js/fretes-publicos.js?v=1" defer></script>
+</head>
+<body class="page-public-freights">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="site-topline"><div class="site-topline-inner">
+    <span>Nova Frota · Logística e Transportes</span><span>Conectando o agronegócio pelo Brasil</span>
+    <a href="regioes.html">Atendimento por região ↗</a>
+  </div></div>
+  <div class="header-container">
+    <a class="logo-area" href="index.html" aria-label="Nova Frota, voltar ao início">
+      <img class="logo" src="assets/images/logo-novafrota.png" alt="Nova Frota">
+    </a>
+    <div class="menu-area" id="site-menu">
+      <nav class="main-nav-faithful" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">A Nova Frota</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="regioes.html">Regiões</a>
+        <a href="frota.html">Nossa Frota</a>
+        <details class="nf-nav-more">
+          <summary>Mais <span aria-hidden="true">⌄</span></summary>
+          <div class="nf-nav-more-menu">
+            <a href="clientes.html">Clientes e parceiros</a>
+            <a href="gva.html">Agregados GVA</a>
+          </div>
+        </details>
+        <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <a class="header-contact" href="contato.html">Solicitar cotação <span aria-hidden="true">↗</span></a>
+      <a class="logo-gva" href="gva.html" aria-label="Conheça os agregados GVA">
+        <img class="gva-logo" src="assets/images/logo-gva.png" alt="GVA">
+      </a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<main id="conteudo" class="nf-operacao-main">
+  <section class="nf-operacao-hero" aria-labelledby="fretes-title">
+    <div class="nf-container nf-operacao-hero-grid">
+      <div>
+        <span class="nf-operacao-kicker"><span></span> PORTAL DE OPORTUNIDADES</span>
+        <h1 id="fretes-title">Fretes disponíveis.<br><em>Novas rotas esperam por você.</em></h1>
+        <p>Consulte os fretes que a equipe Nova Frota autorizou para divulgação pública. Explore rotas, produtos e configurações de veículo, depois fale diretamente com o embarcador.</p>
+        <div class="nf-operacao-hero-actions">
+          <a class="nf-btn nf-btn-primary" href="#consultar-fretes">Consultar oportunidades ↘</a>
+          <a class="nf-btn nf-btn-glass" href="https://portalfrete.net.br/" target="_blank" rel="noopener noreferrer">Conhecer o Portal Frete ↗</a>
+        </div>
+      </div>
+      <div class="nf-operacao-hero-stamp" aria-hidden="true">
+        <span>FRETES</span><strong>GO <small>•</small> MT</strong><span>CONEXÃO EM MOVIMENTO</span>
+      </div>
+    </div>
+  </section>
+  <div class="nf-container nf-operacao-content">
+    <section class="nf-operacao-metrics" aria-label="Resumo dos fretes divulgados">
+      <div class="nf-operacao-metric"><span>Anúncios públicos ativos</span><strong id="fretes-total" aria-live="polite">—</strong><small>Disponíveis para consulta</small></div>
+      <div class="nf-operacao-metric"><span>Base GO / MG / SP</span><strong id="fretes-base-go">—</strong><small>Fretes divulgados</small></div>
+      <div class="nf-operacao-metric"><span>Base MT</span><strong id="fretes-base-mt">—</strong><small>Fretes divulgados</small></div>
+      <div class="nf-operacao-metric nf-operacao-metric-refresh"><span>Atualização do catálogo</span><strong class="nf-operacao-update" id="fretes-atualizado">Consultando...</strong><small>Fonte: Portal Frete</small></div>
+    </section>
+    <section class="nf-operacao-panel" id="consultar-fretes" aria-labelledby="consultar-fretes-title">
+      <div class="nf-operacao-panel-header">
+        <div><span class="nf-eyebrow">Buscar fretes</span><h2 id="consultar-fretes-title">Encontre sua próxima carga.</h2><p>Utilize os filtros para localizar as oportunidades que combinam com a sua operação.</p></div>
+        <button class="nf-operacao-refresh" type="button" id="fretes-atualizar">↻ Atualizar ofertas</button>
+      </div>
+      <div class="nf-operacao-filters">
+        <div class="nf-filter-control nf-filter-search">
+          <label for="fretes-busca">Origem, destino ou local</label>
+          <input type="search" id="fretes-busca" placeholder="Pesquise cidade, destino, produto..." autocomplete="off">
+        </div>
+        <div class="nf-filter-control">
+          <label for="fretes-base">Base operacional</label>
+          <select id="fretes-base"><option value="">Todas as bases</option><option value="fretes">GO / MG / SP</option><option value="fretes2">MT</option></select>
+        </div>
+        <div class="nf-filter-control">
+          <label for="fretes-produto">Produto</label>
+          <select id="fretes-produto"><option value="">Todos os produtos</option></select>
+        </div>
+        <div class="nf-filter-control">
+          <label for="fretes-eixos">Configuração de veículo</label>
+          <select id="fretes-eixos"><option value="">Todas as configurações</option><option value="e4">4E</option><option value="e5">5E</option><option value="e6">6E</option><option value="e7">7E</option><option value="e9">9E</option></select>
+        </div>
+        <button class="nf-clear-filters" type="button" id="fretes-limpar">Limpar filtros</button>
+      </div>
+      <div class="nf-operacao-results-head">
+        <p id="fretes-resumo" role="status" aria-live="polite">Consultando os anúncios públicos...</p>
+        <span class="nf-operacao-live"><span aria-hidden="true"></span> SOMENTE FRETES DIVULGADOS</span>
+      </div>
+      <div class="nf-freights-grid" id="fretes-lista" aria-live="polite">
+        <div class="nf-public-state nf-public-state-loading"><h3>Consultando o Portal Frete</h3><p>Buscando os anúncios divulgados.</p></div>
+      </div>
+    </section>
+    <section class="nf-operacao-note">
+      <span class="nf-operacao-note-icon" aria-hidden="true">i</span>
+      <div><h2>Sobre os anúncios</h2><p>Esta é uma vitrine pública de fretes. Somente cargas explicitamente liberadas para divulgação pela equipe aparecem aqui, e cada anúncio pode permanecer ativo por até 72 horas. Antes de seguir viagem, confirme disponibilidade, valores e condições diretamente com o embarcador. Os dados internos do Portal Frete não são compartilhados.</p></div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="nf-container footer-main">
+    <div>
+      <a href="index.html" aria-label="Nova Frota, página inicial"><img class="footer-logo" src="assets/images/logo-novafrota.png" alt="Nova Frota"></a>
+      <p class="footer-about">Soluções de transporte rodoviário para o agronegócio, com planejamento, parceria e atendimento próximo em cada etapa.</p>
+    </div>
+    <div>
+      <h3>Institucional</h3>
+      <nav class="footer-links" aria-label="Links institucionais">
+        <a href="sobre.html">Sobre a Nova Frota</a><a href="frota.html">Nossa Frota</a>
+        <a href="clientes.html">Clientes</a><a href="gva.html">Agregados GVA</a>
+        <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+      </nav>
+    </div>
+    <div>
+      <h3>Como podemos ajudar?</h3>
+      <nav class="footer-links" aria-label="Links de atendimento">
+        <a href="servicos.html">Nossos serviços</a><a href="regioes.html">Regiões e contatos</a>
+        <a href="contato.html">Solicitar cotação</a><a href="gva.html">Seja um agregado</a>
+      </nav>
+    </div>
+  </div>
+  <div class="nf-container footer-base"><span>© <span data-current-year>2026</span> NOVA FROTA Logística e Transportes LTDA. Todos os direitos reservados.</span><a href="#conteudo">Voltar ao topo ↑</a></div>
+</footer>
+</body>
+</html>
