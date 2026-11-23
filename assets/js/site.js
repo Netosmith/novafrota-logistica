@@ -16,6 +16,16 @@
       if (event.key === "Escape") setOpen(false);
     });
   }
+  // O menu "Mais" usa <details> nativo, com fechamento por clique externo e Esc.
+  const extraMenus = [...document.querySelectorAll(".nf-nav-more")];
+  document.addEventListener("click", (event) => {
+    extraMenus.forEach((details) => {
+      if (!details.contains(event.target)) details.open = false;
+    });
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") extraMenus.forEach((details) => { details.open = false; });
+  });
   const current = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".main-nav-faithful a").forEach((link) => {
     const isCurrent = link.getAttribute("href") === current;
