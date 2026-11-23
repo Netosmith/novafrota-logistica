@@ -1,0 +1,161 @@
+/* NOVA FROTA | Postos credenciados e fretes públicos | 2026
+   Complemento independente da identidade institucional. */
+.nf-operacao-main{background:#f4f8f6;min-height:72vh;padding:0 0 80px}
+.nf-operacao-hero{color:#fff;background:linear-gradient(111deg,#061f2b,#095446);position:relative;overflow:hidden;isolation:isolate}
+.nf-operacao-hero::before{content:"";position:absolute;right:-115px;top:-220px;width:580px;height:580px;border-radius:50%;border:1px solid rgba(187,253,206,.13);pointer-events:none}
+.nf-operacao-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 74% 30%,rgba(103,209,139,.13),transparent 43%),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:auto,100px 100px;pointer-events:none;z-index:-1}
+.nf-operacao-hero .nf-container{width:min(calc(100% - 56px),1220px)}
+.nf-operacao-hero-grid{min-height:360px;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:58px 0 65px}
+.nf-operacao-hero-grid>div:first-child{max-width:790px}
+.nf-operacao-kicker{display:inline-flex;align-items:center;gap:12px;color:#b4f0cd;font-size:11px;font-weight:850;letter-spacing:.18em}
+.nf-operacao-kicker>span{width:28px;height:2px;background:#7de3a5}
+.nf-operacao-hero h1{font-family:"Manrope",sans-serif;font-size:clamp(36px,4.5vw,58px);line-height:1.12;letter-spacing:-.055em;font-weight:800;color:#fff;margin:19px 0}
+.nf-operacao-hero h1 em{font-style:normal;color:#9cf0c5}
+.nf-operacao-hero p{color:#d5e7e5;font-size:15px;line-height:1.8;max-width:670px;margin:0}
+.nf-operacao-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.nf-operacao-hero-actions .nf-btn-primary{background:#9aeebb;color:#064430}
+.nf-operacao-hero-actions .nf-btn-primary:hover{background:#c5f8d8;color:#064430}
+.nf-operacao-hero-stamp{min-width:210px;min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(195,251,206,.18);border-radius:50%;background:rgba(255,255,255,.025);transform:rotate(-7deg);font-family:"Manrope",sans-serif}
+.nf-operacao-hero-stamp>span{font-size:10px;font-weight:800;letter-spacing:.16em;color:#b2dec8}
+.nf-operacao-hero-stamp>strong{font-size:40px;letter-spacing:-.055em;color:#fff}
+.nf-operacao-hero-stamp small{font-size:22px;color:#90eab2}
+.nf-postos-hero{background:linear-gradient(110deg,#061e2c,#0d4249)}
+.nf-operacao-content{width:min(calc(100% - 56px),1220px);margin:0 auto}
+.nf-operacao-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-30px;position:relative;z-index:5}
+.nf-operacao-metric{background:#fff;border:1px solid #e0ebe6;border-radius:11px;padding:23px 25px;box-shadow:0 10px 30px rgba(7,45,42,.065);min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.nf-operacao-metric>span{color:#587572;font-size:11px;font-weight:800;line-height:1.4;letter-spacing:.04em}
+.nf-operacao-metric>strong{font-family:"Manrope",sans-serif;color:#0f7d55;font-size:40px;font-weight:800;line-height:1.1}
+.nf-operacao-metric>small{color:#73898b;font-size:11px;line-height:1.4}
+.nf-operacao-metric-refresh{background:#0a3842;border-color:#0a3842}
+.nf-operacao-metric-refresh>span,.nf-operacao-metric-refresh>small{color:#b7d9d1}
+.nf-operacao-metric>.nf-operacao-update{color:#a9f1bf;font:800 16px/1.3 "Manrope",sans-serif;letter-spacing:-.025em;margin-top:10px}
+.nf-station-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.nf-operacao-panel{margin:33px 0 21px;background:#fff;border:1px solid #e1ebe6;border-radius:13px;padding:35px;box-shadow:0 14px 40px rgba(8,44,38,.042);scroll-margin-top:110px}
+.nf-operacao-panel-header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 29px}
+.nf-operacao-panel-header .nf-eyebrow{color:#137b54;font-size:10px}
+.nf-operacao-panel-header h2{font-family:"Manrope",sans-serif;color:#0c313f;font-size:clamp(25px,3.2vw,37px);line-height:1.2;letter-spacing:-.045em;margin:12px 0 7px}
+.nf-operacao-panel-header p{font-size:14px;line-height:1.75;color:#6d8082;max-width:610px;margin:0}
+.nf-operacao-refresh{appearance:none;border:1px solid #cbe4d5;color:#0b744a;background:#f0faf4;padding:13px 17px;min-height:47px;border-radius:8px;font:800 12px "Manrope",sans-serif;cursor:pointer;white-space:nowrap}
+.nf-operacao-refresh:hover{background:#dff6e9}
+.nf-operacao-refresh:disabled{cursor:wait;opacity:.7}
+.nf-operacao-filters{display:flex;align-items:flex-end;gap:11px;flex-wrap:wrap;background:#f5f9f7;border:1px solid #e4eee8;border-radius:11px;padding:20px}
+.nf-filter-control{display:grid;gap:7px;flex:1 1 140px;min-width:140px}
+.nf-filter-search{flex:2 1 270px;min-width:230px}
+.nf-filter-control label{color:#365951;font-size:11px;font-weight:850;letter-spacing:.01em}
+.nf-filter-control input,.nf-filter-control select{font:500 13px "DM Sans",sans-serif;background:#fff;color:#143842;border:1px solid #cddfd5;min-height:45px;width:100%;padding:11px 13px;border-radius:7px;outline-offset:2px}
+.nf-filter-control input:focus-visible,.nf-filter-control select:focus-visible{outline:2px solid #68d9a0;outline-offset:1px}
+.nf-clear-filters{appearance:none;border:0;white-space:nowrap;background:transparent;color:#137749;font:850 12px "DM Sans",sans-serif;padding:11px;cursor:pointer;min-height:45px}
+.nf-clear-filters:hover{text-decoration:underline}
+.nf-operacao-results-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:28px 0 19px}
+.nf-operacao-results-head p{color:#4a676b;font-size:13px;font-weight:800;margin:0}
+.nf-operacao-live{display:flex;align-items:center;gap:8px;color:#188155;font-size:9px;font-weight:900;letter-spacing:.1em}
+.nf-operacao-live>span{height:6px;width:6px;background:#27b875;border-radius:50%;box-shadow:0 0 0 4px #e4f6e8}
+.nf-freights-grid,.nf-stations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.nf-public-state{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;gap:9px;min-height:255px;border:1px dashed #cddfd6;border-radius:11px;background:#f8fbf9;padding:40px}
+.nf-public-state-mark{width:52px;height:52px;display:grid;place-items:center;border-radius:12px;background:#e2f8e9;color:#0d8352;font-size:26px;margin-bottom:8px}
+.nf-public-state h3{font-family:"Manrope",sans-serif;font-size:20px;letter-spacing:-.035em;color:#173e45;margin:0}
+.nf-public-state p{max-width:560px;color:#6d8284;font-size:14px;line-height:1.75;margin:0}
+.nf-public-state-error{background:#fff8f4;border-color:#e9d8d0}
+.nf-public-state-error .nf-public-state-mark{background:#ffe9dc;color:#8b4b27}
+.nf-public-state-link{color:#097f4e;font-size:13px;font-weight:850;margin-top:10px}
+.nf-freight-card,.nf-station-card{background:#fff;border:1px solid #deebe5;border-radius:12px;padding:26px;min-width:0;display:flex;flex-direction:column;box-shadow:0 8px 22px rgba(12,56,46,.035);transition:border-color .18s,box-shadow .18s,transform .18s}
+.nf-freight-card:hover,.nf-station-card:hover{border-color:#a4dfbd;transform:translateY(-2px);box-shadow:0 18px 36px rgba(12,56,46,.08)}
+.nf-freight-card-top,.nf-station-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.nf-freight-origin-label{display:inline-flex;align-items:center;background:#e9f7ed;color:#116c47;font-size:10px;font-weight:900;letter-spacing:.03em;padding:7px 10px;border-radius:6px}
+.nf-freight-live-status{color:#15875a;font-size:10px;font-weight:800;white-space:nowrap}
+.nf-freight-route{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center;padding:27px 0 25px;border-bottom:1px solid #e5ede9}
+.nf-freight-route-point{display:flex;flex-direction:column;gap:6px;min-width:0}
+.nf-freight-route-point small{color:#8ba09b;font-size:10px;font-weight:850;letter-spacing:.13em}
+.nf-freight-route-point strong{font-family:"Manrope",sans-serif;color:#103741;font-size:18px;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+.nf-freight-arrow{color:#1daa71;font-size:25px;line-height:1}
+.nf-freight-info{display:grid;grid-template-columns:1fr 1fr;gap:17px 14px;padding:24px 0}
+.nf-freight-field{display:grid;gap:4px;min-width:0}
+.nf-freight-field>span,.nf-station-fields div>span{color:#8ba09d;font-size:10px;font-weight:850;letter-spacing:.08em}
+.nf-freight-field>strong,.nf-station-fields div>strong{font-size:13px;font-weight:800;color:#23454b;line-height:1.45;overflow-wrap:anywhere}
+.nf-freight-axles{display:flex;align-items:center;flex-wrap:wrap;gap:7px;padding:0 0 22px}
+.nf-freight-axles>span:first-child{color:#849a97;font-size:10px;font-weight:900;letter-spacing:.08em;margin-right:6px}
+.nf-freight-axle-pill{padding:5px 9px;background:#edf7f2;color:#08784a;font-weight:850;font-size:10px;border-radius:5px}
+.nf-freight-card-bottom{margin-top:auto;border-top:1px solid #e5ede9;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap}
+.nf-freight-published{font-size:11px;color:#819593}
+.nf-freight-contact,.nf-station-contact{display:inline-flex;align-items:center;justify-content:center;background:#0b8b59;color:#fff!important;min-height:44px;padding:11px 15px;font-size:12px;font-weight:850;border-radius:7px}
+.nf-freight-contact:hover,.nf-station-contact:hover{background:#0d6544;color:#fff}
+.nf-station-icon{height:51px;width:51px;display:grid;place-items:center;border-radius:10px;background:#e4f7ec;color:#0c8052;font-size:27px}
+.nf-station-badge{font-size:10px;font-weight:900;padding:7px 10px;color:#116d47;background:#e8f5ee;border-radius:5px}
+.nf-station-card h3{font-family:"Manrope",sans-serif;font-size:23px;letter-spacing:-.045em;color:#123842;margin:24px 0 2px}
+.nf-station-city{color:#2b9a67;font-size:13px;font-weight:800;margin:0 0 21px}
+.nf-station-fields{display:grid;gap:14px;padding:17px 0;border-top:1px solid #e4eee9;border-bottom:1px solid #e4eee9}
+.nf-station-fields>div{display:grid;gap:4px}
+.nf-station-services{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px}
+.nf-station-services>span{font-size:11px;color:#297353;background:#edf8f1;border-radius:5px;padding:7px 9px}
+.nf-station-actions{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:21px}
+.nf-station-map{color:#0a7750;border:1px solid #b9e4cb;padding:11px 15px;min-height:44px;font-size:12px;font-weight:850;border-radius:7px}
+.nf-station-map:hover{background:#eaf9ef}
+.nf-operacao-note{margin-top:20px;display:flex;align-items:flex-start;gap:16px;background:#eaf4ee;border:1px solid #d5e8dd;border-radius:10px;padding:25px 29px}
+.nf-operacao-note-icon{width:32px;height:32px;flex-shrink:0;display:grid;place-items:center;background:#d7eddf;border-radius:50%;color:#0b7c4d;font-weight:900}
+.nf-operacao-note h2{font-family:"Manrope",sans-serif;font-size:15px;margin:2px 0 8px;color:#204e45}
+.nf-operacao-note p{color:#59736d;font-size:13px;line-height:1.8;margin:0}
+.nf-home-access{background:#eff7f2;padding:72px 0 78px}
+.nf-home-access-title{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
+.nf-home-access-title p{max-width:460px;font-size:14px;color:#637c78;line-height:1.7}
+.nf-home-access-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.nf-home-access-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:275px;padding:35px;border-radius:12px;border:1px solid #d8e9de;background:#fff;color:#163c42!important;transition:transform .2s,box-shadow .2s}
+.nf-home-access-card:hover{transform:translateY(-3px);box-shadow:0 17px 45px rgba(8,61,48,.08)}
+.nf-home-access-card:nth-child(1){background:linear-gradient(132deg,#0a303f,#0b694e);border-color:#0a654d;color:#fff!important}
+.nf-home-access-tag{font-size:10px;letter-spacing:.15em;font-weight:900;color:#197b56}
+.nf-home-access-card:nth-child(1) .nf-home-access-tag{color:#acf6c8}
+.nf-home-access-card strong{font-family:"Manrope",sans-serif;font-size:27px;line-height:1.2;letter-spacing:-.045em;margin:18px 0 10px;color:inherit}
+.nf-home-access-card>span:not(.nf-home-access-tag){font-size:14px;max-width:430px;line-height:1.7;color:#698181}
+.nf-home-access-card:nth-child(1)>span:not(.nf-home-access-tag){color:#c8e8db}
+.nf-home-access-card b{margin-top:auto;padding-top:22px;color:#0b8455;font-size:13px}
+.nf-home-access-card:nth-child(1) b{color:#aaf7c6}
+.nf-home-access-icon{position:absolute;right:30px;top:25px;color:#72cda1;font-size:32px;opacity:.55}
+@media(max-width:1100px){
+ .nf-operacao-hero-stamp{display:none}
+ .nf-operacao-hero-grid{min-height:320px}
+ .nf-operacao-metrics{grid-template-columns:repeat(2,1fr)}
+ .nf-station-metrics{grid-template-columns:repeat(3,1fr)}
+ .nf-operacao-filters{align-items:flex-end}
+}
+@media(max-width:780px){
+ .nf-operacao-hero .nf-container,.nf-operacao-content{width:min(calc(100% - 32px),1220px)}
+ .nf-operacao-hero-grid{padding:48px 0 65px}
+ .nf-operacao-hero h1{font-size:clamp(32px,7vw,47px)}
+ .nf-operacao-hero p{font-size:14px}
+ .nf-operacao-panel{padding:24px}
+ .nf-freights-grid,.nf-stations-grid{grid-template-columns:1fr}
+ .nf-operacao-panel-header{align-items:flex-start;flex-direction:column}
+ .nf-station-metrics{grid-template-columns:1fr 1fr}
+ .nf-station-metrics .nf-operacao-metric-refresh{grid-column:1/-1}
+ .nf-operacao-results-head{align-items:flex-start;flex-direction:column}
+ .nf-home-access-title{flex-direction:column;align-items:flex-start}
+ .nf-home-access-grid{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+ .nf-operacao-main{padding-bottom:48px}
+ .nf-operacao-hero-grid{padding:39px 0 70px;min-height:0}
+ .nf-operacao-hero-actions{flex-direction:column;align-items:stretch}
+ .nf-operacao-hero-actions .nf-btn{width:100%}
+ .nf-operacao-metrics{gap:8px;margin-top:-28px}
+ .nf-operacao-metric{padding:17px 14px}
+ .nf-operacao-metric>strong{font-size:30px}
+ .nf-operacao-metric>.nf-operacao-update{font-size:12px}
+ .nf-operacao-panel{padding:19px 15px}
+ .nf-operacao-filters{padding:15px;gap:13px}
+ .nf-filter-control,.nf-filter-search{min-width:100%;flex-basis:100%}
+ .nf-clear-filters{width:100%;border:1px solid #c9e4d6;border-radius:7px}
+ .nf-freight-card,.nf-station-card{padding:19px}
+ .nf-freight-route{gap:7px}
+ .nf-freight-route-point strong{font-size:15px}
+ .nf-freight-info{gap:13px 10px}
+ .nf-freight-field>strong{font-size:12px}
+ .nf-freight-card-bottom{align-items:stretch;flex-direction:column}
+ .nf-freight-contact{width:100%}
+ .nf-operacao-note{padding:20px 17px;gap:11px}
+ .nf-public-state{padding:30px 17px;min-height:225px}
+ .nf-home-access{padding:52px 0}
+ .nf-home-access-card{padding:28px 24px;min-height:235px}
+ .nf-home-access-card strong{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ .nf-freight-card,.nf-station-card,.nf-home-access-card{transition:none}
+}
