@@ -173,3 +173,181 @@ body.nf-intro-locked{overflow:hidden}
   .nf-carousel-dot{transition:none}
   .nf-home-v4 #servicos .nf-service-card,.nf-client-marquee-tile{transition:none}
 }
+
+
+/* ------------------------------------------------------------
+   Wordmark 2.0 | NOVA + FROTA unidos sem placa / fundo branco.
+   Letras vetoriais do navegador, individuais, flutuando no escuro.
+--------------------------------------------------------------- */
+.nf-intro-brand.nf-intro-brand-floating{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:min(97%,840px);
+  margin:40px auto 0;
+  padding:28px 0 8px;
+  isolation:isolate;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  overflow:visible;
+}
+.nf-intro-brand-floating .nf-intro-brand-glow{
+  position:absolute;
+  z-index:-1;
+  width:min(85vw,750px);
+  height:clamp(120px,23vw,250px);
+  left:50%;
+  top:46%;
+  pointer-events:none;
+  border-radius:50%;
+  background:radial-gradient(ellipse at 33% 50%,rgba(30,120,249,.29),transparent 65%),radial-gradient(ellipse at 68% 50%,rgba(10,220,137,.23),transparent 68%);
+  filter:blur(37px);
+  opacity:0;
+  transform:translate(-50%,-50%) scale(.65);
+}
+.nf-intro-brand-floating .nf-intro-brand-glow-secondary{
+  width:min(75vw,680px);
+  height:90px;
+  top:60%;
+  background:linear-gradient(90deg,transparent,rgba(72,181,253,.25),rgba(40,238,141,.22),transparent);
+  filter:blur(25px);
+}
+.nf-intro.is-playing .nf-intro-brand-glow{
+  animation:nf-floating-glow 1.6s .48s ease-out forwards;
+}
+.nf-intro.is-playing .nf-intro-brand-glow-secondary{
+  animation:nf-floating-glow 1.5s .78s ease-out forwards;
+}
+.nf-intro-brand-floating .nf-intro-wordmark{
+  display:inline-flex;
+  justify-content:center;
+  align-items:baseline;
+  width:100%;
+  white-space:nowrap;
+  gap:.035em;
+  padding:0 .02em;
+  color:#f8fffe;
+  font-family:"Manrope","Arial Black",Arial,system-ui,sans-serif;
+  font-size:clamp(42px,7.4vw,118px);
+  font-weight:900;
+  font-style:italic;
+  line-height:1.16;
+  letter-spacing:-.082em;
+  position:relative;
+  z-index:2;
+  transform:translateZ(0);
+  filter:drop-shadow(0 14px 17px rgba(0,13,21,.35));
+}
+.nf-intro-brand-floating .nf-intro-word{
+  display:inline-flex;
+  white-space:nowrap;
+  align-items:baseline;
+}
+.nf-intro-brand-floating .nf-intro-word-nova{
+  color:#5aabf6;
+  text-shadow:0 0 24px rgba(34,121,248,.3),1px 1px 0 rgba(183,220,255,.27);
+}
+.nf-intro-brand-floating .nf-intro-word-frota{
+  color:#32dc89;
+  text-shadow:0 0 26px rgba(22,209,119,.27),1px 1px 0 rgba(183,255,206,.25);
+}
+.nf-intro-brand-floating .nf-intro-letter{
+  display:inline-block;
+  opacity:0;
+  will-change:transform,opacity,filter;
+}
+.nf-intro.is-playing .nf-intro-word-nova .nf-intro-letter{
+  animation:nf-merge-nova .98s var(--nf-letter-delay,.75s) cubic-bezier(.18,.92,.28,1.04) both;
+}
+.nf-intro.is-playing .nf-intro-word-frota .nf-intro-letter{
+  animation:nf-merge-frota .98s var(--nf-letter-delay,.85s) cubic-bezier(.18,.92,.28,1.04) both;
+}
+.nf-intro-brand-floating .nf-intro-submark{
+  position:relative;
+  z-index:2;
+  margin-top:8px;
+  padding:0 10px;
+  color:#c4dcde;
+  background:transparent;
+  border:0;
+  font-family:"Manrope",Arial,system-ui,sans-serif;
+  font-size:clamp(11px,1.9vw,23px);
+  font-weight:600;
+  font-style:italic;
+  letter-spacing:.22em;
+  line-height:1.45;
+  text-shadow:0 0 18px rgba(67,228,178,.13);
+  opacity:0;
+  transform:translateY(22px);
+}
+.nf-intro.is-playing .nf-intro-submark{
+  animation:nf-floating-submark .8s 2.03s cubic-bezier(.2,1,.3,1) forwards;
+}
+.nf-intro-brand-floating .nf-intro-brand-flare{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:46%;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#64bafc,#bbffcf,#40e595,transparent);
+  transform:translateX(-50%);
+  opacity:0;
+  pointer-events:none;
+  filter:drop-shadow(0 0 9px #5cf4c0);
+}
+.nf-intro.is-playing .nf-intro-brand-flare{
+  animation:nf-floating-flare .9s 1.69s ease-out forwards;
+}
+@keyframes nf-floating-glow{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.65)}
+  100%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+}
+@keyframes nf-merge-nova{
+  0%{opacity:0;transform:translate3d(-155px,-14px,0) skewX(-9deg) scale(1.08);filter:blur(9px)}
+  58%{opacity:1}
+  100%{opacity:1;transform:translate3d(0,0,0) skewX(0) scale(1);filter:blur(0)}
+}
+@keyframes nf-merge-frota{
+  0%{opacity:0;transform:translate3d(155px,-14px,0) skewX(9deg) scale(1.08);filter:blur(9px)}
+  58%{opacity:1}
+  100%{opacity:1;transform:translate3d(0,0,0) skewX(0) scale(1);filter:blur(0)}
+}
+@keyframes nf-floating-submark{
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes nf-floating-flare{
+  0%{opacity:0;width:0}
+  25%{opacity:.95}
+  100%{opacity:0;width:min(90vw,780px)}
+}
+@media(max-width:600px){
+  .nf-intro-brand.nf-intro-brand-floating{width:min(100%,490px);margin-top:30px;padding:18px 0 4px}
+  .nf-intro-brand-floating .nf-intro-wordmark{
+    font-size:clamp(39px,10.1vw,60px);
+    letter-spacing:-.095em;
+    gap:.025em;
+  }
+  .nf-intro-brand-floating .nf-intro-submark{font-size:clamp(10px,2.6vw,14px);letter-spacing:.15em;margin-top:5px}
+  .nf-intro.is-playing .nf-intro-word-nova .nf-intro-letter{
+    animation-name:nf-merge-nova-mobile
+  }
+  .nf-intro.is-playing .nf-intro-word-frota .nf-intro-letter{
+    animation-name:nf-merge-frota-mobile
+  }
+}
+@keyframes nf-merge-nova-mobile{
+  from{opacity:0;transform:translate3d(-90px,-6px,0);filter:blur(5px)}
+  to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+}
+@keyframes nf-merge-frota-mobile{
+  from{opacity:0;transform:translate3d(90px,-6px,0);filter:blur(5px)}
+  to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-intro-brand-floating .nf-intro-letter,
+  .nf-intro-brand-floating .nf-intro-submark{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+}

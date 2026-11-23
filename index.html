@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="assets/css/elegance-2026.css?v=2">
   <link rel="stylesheet" href="assets/css/referencia-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/operacao-publica-2026.css?v=1">
-  <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=1">
+  <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=2">
   <script src="assets/js/site.js?v=2" defer></script>
   <script src="assets/js/vagas.js?v=2" defer></script>
-  <script src="assets/js/intro-home.js?v=1" defer></script>
+  <script src="assets/js/intro-home.js?v=2" defer></script>
 </head>
 <body class="home nf-home-v4">
 <div class="nf-intro" id="nf-site-intro" role="dialog" aria-modal="true" aria-labelledby="nf-intro-name" aria-describedby="nf-intro-tagline" hidden>
@@ -30,14 +30,15 @@
   <button class="nf-intro-skip" id="nf-intro-skip" type="button">Pular apresentação <span aria-hidden="true">↗</span></button>
   <div class="nf-intro-center">
     <div class="nf-intro-overline"><span aria-hidden="true"></span> IDENTIDADE EM MOVIMENTO</div>
-    <div class="nf-intro-brand" aria-hidden="true">
-      <span class="nf-intro-brand-line nf-intro-brand-line-top"></span>
-      <span class="nf-intro-brand-line nf-intro-brand-line-bottom"></span>
-      <span class="nf-intro-brand-surface">
-        <img class="nf-intro-logo nf-intro-logo-left" src="assets/images/logo-novafrota.png" alt="">
-        <img class="nf-intro-logo nf-intro-logo-center" src="assets/images/logo-novafrota.png" alt="">
-        <img class="nf-intro-logo nf-intro-logo-right" src="assets/images/logo-novafrota.png" alt="">
-      </span>
+    <!-- NOVA e FROTA são letras reais, sem imagem raster com fundo branco. -->
+    <div class="nf-intro-brand nf-intro-brand-floating" aria-hidden="true">
+      <span class="nf-intro-brand-glow"></span>
+      <span class="nf-intro-brand-glow nf-intro-brand-glow-secondary"></span>
+      <div class="nf-intro-wordmark">
+        <span class="nf-intro-word nf-intro-word-nova"><span class="nf-intro-letter" style="--nf-letter-delay:0.74s">N</span><span class="nf-intro-letter" style="--nf-letter-delay:0.845s">O</span><span class="nf-intro-letter" style="--nf-letter-delay:0.95s">V</span><span class="nf-intro-letter" style="--nf-letter-delay:1.055s">A</span></span><span class="nf-intro-word nf-intro-word-frota"><span class="nf-intro-letter" style="--nf-letter-delay:0.83s">F</span><span class="nf-intro-letter" style="--nf-letter-delay:0.9349999999999999s">R</span><span class="nf-intro-letter" style="--nf-letter-delay:1.04s">O</span><span class="nf-intro-letter" style="--nf-letter-delay:1.145s">T</span><span class="nf-intro-letter" style="--nf-letter-delay:1.25s">A</span></span>
+      </div>
+      <div class="nf-intro-submark">TRANSPORTES E LOGÍSTICA</div>
+      <span class="nf-intro-brand-flare"></span>
     </div>
     <h2 class="nf-visually-hidden" id="nf-intro-name">Nova Frota Logística e Transportes</h2>
     <p class="nf-intro-tagline" id="nf-intro-tagline">Tecnologia, força e logística em movimento.</p>
