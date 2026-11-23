@@ -72,6 +72,109 @@
     return item;
   };
 
+
+  // Na Home, mostrar uma vaga por vez. Na página de carreiras, preservar
+  // a lista completa. Sem vagas reais, manter o aviso estático.
+  function renderCarousel(list, candidates) {
+    list.replaceChildren();
+    if (!candidates.length) {
+      list.append(emptyState());
+      return;
+    }
+
+    const stage = node("div", "nf-carousel-stage");
+    const slides = candidates.map((job) => {
+      const slide = node("div", "nf-carousel-slide");
+      slide.append(jobCard(job));
+      stage.append(slide);
+      return slide;
+    });
+    list.append(stage);
+
+    if (slides.length === 1) {
+      slides[0].classList.add("is-active");
+      return;
+    }
+
+    const controls = node("div", "nf-carousel-controls");
+    const arrows = node("div", "nf-carousel-arrows");
+    const previous = node("button", "nf-carousel-arrow", "‹");
+    const next = node("button", "nf-carousel-arrow", "›");
+    previous.type = next.type = "button";
+    previous.setAttribute("aria-label", "Vaga anterior");
+    next.setAttribute("aria-label", "Próxima vaga");
+    arrows.append(previous, next);
+
+    const dots = node("div", "nf-carousel-pagination");
+    dots.setAttribute("role", "group");
+    dots.setAttribute("aria-label", "Selecionar vaga anunciada");
+    const dotButtons = slides.map((_, i) => {
+      const dot = node("button", "nf-carousel-dot");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Exibir vaga " + (i + 1) + " de " + slides.length);
+      dots.append(dot);
+      return dot;
+    });
+
+    const position = node("span", "nf-carousel-position");
+    controls.append(arrows, dots, position);
+    list.append(controls);
+
+    const assist = node("p", "nf-carousel-assist",
+      "As vagas alternam automaticamente. Use as setas ou os indicadores para navegar.");
+    list.append(assist);
+
+    const prefersReducedMotion = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) assist.textContent = "Use as setas ou os indicadores para consultar outras vagas.";
+
+    let index = 0;
+    let timer = null;
+
+    function show(nextIndex) {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        const selected = i === index;
+        slide.hidden = !selected;
+        slide.classList.toggle("is-active", selected);
+      });
+      dotButtons.forEach((dot, i) => {
+        const selected = i === index;
+        dot.classList.toggle("is-active", selected);
+        if (selected) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+      position.textContent = (index + 1) + " / " + slides.length;
+    }
+    function pause() {
+      window.clearInterval(timer);
+      timer = null;
+    }
+    function resume() {
+      pause();
+      if (prefersReducedMotion || document.hidden || list.matches(":hover") ||
+          list.contains(document.activeElement)) return;
+      timer = window.setInterval(() => show(index + 1), 5000);
+    }
+    previous.addEventListener("click", () => { show(index - 1); resume(); });
+    next.addEventListener("click", () => { show(index + 1); resume(); });
+    dotButtons.forEach((dot, i) => dot.addEventListener("click", () => {
+      show(i);
+      resume();
+    }));
+    list.addEventListener("mouseenter", pause);
+    list.addEventListener("mouseleave", resume);
+    list.addEventListener("focusin", pause);
+    list.addEventListener("focusout", () => {
+      window.setTimeout(() => {
+        if (!list.contains(document.activeElement)) resume();
+      }, 0);
+    });
+    document.addEventListener("visibilitychange", resume);
+    show(0);
+    resume();
+  }
+
   async function loadVacancies() {
     try {
       const response = await fetch(dataUrl, { cache: "no-store" });
@@ -90,9 +193,13 @@
           candidates.length === 1 ? "1 vaga anunciada" : candidates.length + " vagas anunciadas";
       });
       cards.forEach((list) => {
-        list.replaceChildren();
-        if (!candidates.length) list.append(emptyState());
-        else candidates.forEach((job) => list.append(jobCard(job)));
+        if (list.hasAttribute("data-vagas-carousel")) {
+          renderCarousel(list, candidates);
+        } else {
+          list.replaceChildren();
+          if (!candidates.length) list.append(emptyState());
+          else candidates.forEach((job) => list.append(jobCard(job)));
+        }
       });
     } catch (error) {
       badges.forEach((label) => label.textContent = "Atualização indisponível");

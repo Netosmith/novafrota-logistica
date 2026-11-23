@@ -12,10 +12,41 @@
   <link rel="stylesheet" href="assets/css/elegance-2026.css?v=2">
   <link rel="stylesheet" href="assets/css/referencia-2026.css?v=1">
   <link rel="stylesheet" href="assets/css/operacao-publica-2026.css?v=1">
+  <link rel="stylesheet" href="assets/css/cinematica-home-2026.css?v=1">
   <script src="assets/js/site.js?v=2" defer></script>
-  <script src="assets/js/vagas.js?v=1" defer></script>
+  <script src="assets/js/vagas.js?v=2" defer></script>
+  <script src="assets/js/intro-home.js?v=1" defer></script>
 </head>
 <body class="home nf-home-v4">
+<div class="nf-intro" id="nf-site-intro" role="dialog" aria-modal="true" aria-labelledby="nf-intro-name" aria-describedby="nf-intro-tagline" hidden>
+  <div class="nf-intro-field" aria-hidden="true">
+    <span class="nf-intro-orbit nf-intro-orbit-a"></span>
+    <span class="nf-intro-orbit nf-intro-orbit-b"></span>
+    <span class="nf-intro-laser nf-intro-laser-blue"></span>
+    <span class="nf-intro-laser nf-intro-laser-green"></span>
+    <span class="nf-intro-scanline"></span>
+    <span class="nf-intro-sparks"></span>
+  </div>
+  <button class="nf-intro-skip" id="nf-intro-skip" type="button">Pular apresentação <span aria-hidden="true">↗</span></button>
+  <div class="nf-intro-center">
+    <div class="nf-intro-overline"><span aria-hidden="true"></span> IDENTIDADE EM MOVIMENTO</div>
+    <div class="nf-intro-brand" aria-hidden="true">
+      <span class="nf-intro-brand-line nf-intro-brand-line-top"></span>
+      <span class="nf-intro-brand-line nf-intro-brand-line-bottom"></span>
+      <span class="nf-intro-brand-surface">
+        <img class="nf-intro-logo nf-intro-logo-left" src="assets/images/logo-novafrota.png" alt="">
+        <img class="nf-intro-logo nf-intro-logo-center" src="assets/images/logo-novafrota.png" alt="">
+        <img class="nf-intro-logo nf-intro-logo-right" src="assets/images/logo-novafrota.png" alt="">
+      </span>
+    </div>
+    <h2 class="nf-visually-hidden" id="nf-intro-name">Nova Frota Logística e Transportes</h2>
+    <p class="nf-intro-tagline" id="nf-intro-tagline">Tecnologia, força e logística em movimento.</p>
+    <span class="nf-intro-signature">NOVA FROTA <span aria-hidden="true">•</span> CONECTANDO O AGRO</span>
+  </div>
+  <span class="nf-intro-corner nf-intro-corner-a" aria-hidden="true"></span>
+  <span class="nf-intro-corner nf-intro-corner-b" aria-hidden="true"></span>
+</div>
+
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="site-topline"><div class="site-topline-inner">
@@ -73,7 +104,7 @@
       </div>
       <div class="nf-hero-v4-footer">
         <span class="nf-hero-v4-scroll">EXPERIÊNCIA QUE SEGUE EM FRENTE <span aria-hidden="true">↓</span></span>
-        <span class="nf-hero-v4-right">Logística para o agronegócio · Brasil</span>
+        <span class="nf-hero-v4-meta"><span class="nf-hero-v4-right">Logística para o agronegócio · Brasil</span><button class="nf-intro-replay" type="button" data-nf-intro-replay aria-label="Rever apresentação animada da Nova Frota">↺ Rever abertura</button></span>
       </div>
     </div>
   </section>
@@ -142,6 +173,60 @@
       </div>
     </div>
   </section>
+  <section class="nf-clients-showcase" aria-labelledby="clients-title">
+    <div class="nf-container nf-clients-showcase-heading">
+      <div>
+        <span class="nf-eyebrow">Relações que impulsionam</span>
+        <h2 class="nf-title" id="clients-title">Empresas que movem o Brasil<br><span class="nf-title-accent">com a gente.</span></h2>
+        <p class="nf-description">Relacionamentos que fortalecem nossa operação e conectam o agronegócio aos seus destinos.</p>
+      </div>
+      <a class="nf-btn nf-btn-dark" href="clientes.html">Conheça nossos clientes <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="nf-clients-marquee">
+<div class="nf-client-marquee-row " aria-label="Primeira linha de clientes">
+    <div class="nf-client-marquee-track"><div class="nf-client-marquee-group" role="list">
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy" decoding="async"></div>
+    </div><div class="nf-client-marquee-group" aria-hidden="true">
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ourosafra.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cargill.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ldc.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/brf.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/bunge.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/amaggi.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/inpasa.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cutralenovo.png" alt="" loading="lazy" decoding="async"></div>
+    </div></div>
+  </div>
+<div class="nf-client-marquee-row is-reverse" aria-label="Segunda linha de clientes">
+    <div class="nf-client-marquee-track"><div class="nf-client-marquee-group" role="list">
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" role="listitem"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy" decoding="async"></div>
+    </div><div class="nf-client-marquee-group" aria-hidden="true">
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/bunge.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/amaggi.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/inpasa.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cutralenovo.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ourosafra.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/cargill.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/ldc.png" alt="" loading="lazy" decoding="async"></div>
+      <div class="nf-client-marquee-tile" ><img src="assets/images/clientes/brf.png" alt="" loading="lazy" decoding="async"></div>
+    </div></div>
+  </div>
+    </div>
+  </section>
   <section class="nf-section" id="servicos" aria-labelledby="services-title">
     <div class="nf-container">
       <div class="nf-services-head">
@@ -182,7 +267,7 @@
             <div><span class="nf-career-tag"><span class="nf-status-dot" aria-hidden="true"></span> MURAL DE OPORTUNIDADES</span><h3 id="nf-career-vacancy-title">Vagas abertas</h3></div>
             <span class="nf-vacancy-count" data-vagas-count aria-live="polite">Consultando vagas...</span>
           </div>
-          <div class="nf-vacancies-list" data-vagas-list aria-live="polite"><p class="nf-job-loading">Carregando oportunidades...</p></div>
+          <div class="nf-vacancies-list nf-vacancies-carousel" data-vagas-list data-vagas-carousel aria-live="off"><p class="nf-job-loading">Carregando oportunidades...</p></div>
           <a class="nf-career-all-link" href="trabalhe-conosco.html#vagas">Acessar a área de vagas <span aria-hidden="true">↗</span></a>
         </article>
       </div>
@@ -239,21 +324,6 @@
       <div class="nf-gva-card">
         <div><span class="nf-eyebrow">Parceria que abre caminhos</span><h2 id="gva-title">Faça parte da nossa rede<br>de agregados GVA.</h2><p>Motoristas e transportadores encontram no Grupo Vale do Araguaia um caminho para novas conexões e oportunidades.</p><a class="nf-btn" href="gva.html">Quero ser agregado <span class="nf-arrow" aria-hidden="true">↗</span></a></div>
         <div class="nf-gva-mark"><img src="assets/images/logo-gva.png" alt="Grupo Vale do Araguaia" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-  <section class="nf-section nf-clients" aria-labelledby="clients-title">
-    <div class="nf-container">
-      <div class="nf-clients-heading"><div><span class="nf-eyebrow">Relações que impulsionam</span><h2 class="nf-title" id="clients-title">Quem confia e caminha<br><span class="nf-title-accent">com a Nova Frota.</span></h2><p class="nf-description">Empresas presentes na nossa rede de relacionamentos logísticos.</p></div><a class="nf-btn nf-btn-dark" href="clientes.html">Ver clientes <span class="nf-arrow" aria-hidden="true">↗</span></a></div>
-      <div class="nf-client-grid">
-        <div class="nf-client-logo"><img src="assets/images/clientes/ourosafra.png" alt="Ouro Safra" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/cargill.png" alt="Cargill" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/ldc.png" alt="LDC" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/brf.png" alt="BRF" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/bunge.png" alt="Bunge" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/amaggi.png" alt="Amaggi" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/inpasa.png" alt="Inpasa" loading="lazy"></div>
-        <div class="nf-client-logo"><img src="assets/images/clientes/cutralenovo.png" alt="Cutrale" loading="lazy"></div>
       </div>
     </div>
   </section>
