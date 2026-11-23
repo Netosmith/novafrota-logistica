@@ -246,3 +246,15 @@ h1,h2,h3,h4,.nf-title{font-family:"Manrope",system-ui,sans-serif}
 @media(prefers-reduced-motion:reduce){
   .nf-btn,.nf-service-card,.nf-client-logo,.nf-state{transition:none}
 }
+
+
+/* Entradas institucionais de Fretes e Postos no menu */
+.site-header .main-nav-faithful a.nf-nav-feature{color:#aaf0c4;font-weight:800}
+.site-header .main-nav-faithful a.nf-nav-feature:hover,
+.site-header .main-nav-faithful a.nf-nav-feature.active{color:#fff;background:rgba(59,192,115,.16)}
+@media(max-width:1360px){
+  .site-header .main-nav-faithful a.nf-nav-feature{padding-left:5px;padding-right:5px}
+}
+@media(max-width:1100px){
+  .site-header .main-nav-faithful a.nf-nav-feature{padding:11px 12px}
+}
