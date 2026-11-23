@@ -428,8 +428,17 @@
   .nf-agro-gva-logo{height:100%;max-height:53px;width:min(100%,170px)}
   .nf-agro-gva-aura{filter:blur(8px)}
 }
+@media(max-height:720px) and (min-width:901px){
+  .nf-agro-brand-scene{top:47%}
+  .nf-agro-logo-mask{width:min(77vw,1050px)}
+  .nf-agro-eyebrow{margin-bottom:15px}
+  .nf-agro-details{margin-top:9px}
+  .nf-agro-gva{margin-top:7px}
+  .nf-agro-gva-identity{height:58px}
+  .nf-agro-gva-logo{max-height:57px}
+}
 @media(max-height:560px){
-  .nf-agro-brand-scene{top:24%}
+  .nf-agro-brand-scene{top:45%}
   .nf-agro-logo-mask{width:min(74vw,900px)}
   .nf-agro-eyebrow{margin-bottom:10px}
   .nf-agro-details{margin-top:8px}
