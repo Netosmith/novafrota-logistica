@@ -1,0 +1,165 @@
+/*
+  NOVA FROTA | Montagem cinética da marca, 2026
+  A logo oficial é PNG/WebP transparente sobre um cenário sem letras.
+  Sequência: aparece -> dispersa -> partículas -> recomposição -> marca nítida.
+  O fundo não contém a marca, portanto ela nunca fica parada atrás do efeito.
+*/
+.nf-intro-poster-mode .nf-intro-assembly{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  pointer-events:none;
+  isolation:isolate;
+}
+.nf-intro-assembly-halo{
+  position:absolute;
+  left:50%;
+  top:49%;
+  width:min(88vw,1250px);
+  height:clamp(125px,21vw,340px);
+  transform:translate(-50%,-50%) scale(.8);
+  border-radius:50%;
+  background:
+    radial-gradient(ellipse at 28% 55%,rgba(34,115,229,.22),transparent 58%),
+    radial-gradient(ellipse at 72% 45%,rgba(9,235,132,.16),transparent 60%);
+  filter:blur(43px);
+  opacity:0;
+  z-index:0;
+}
+.nf-intro.is-playing .nf-intro-assembly-halo{
+  animation:nf-assembly-halo-pulse 7.3s ease-out both;
+}
+.nf-intro-assembly-logo-box{
+  position:absolute;
+  z-index:2;
+  top:49%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:min(77vw,1050px);
+  max-width:calc(100vw - 36px);
+  aspect-ratio:1100 / 194;
+  background:transparent;
+  overflow:visible;
+}
+.nf-intro-assembly-logo{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:fill;
+  background:transparent;
+  opacity:0;
+  filter:none !important;
+  border:0 !important;
+  box-shadow:none !important;
+  image-rendering:auto;
+}
+.nf-intro.is-playing .nf-intro-assembly-logo{
+  animation:nf-logo-identity-cycle 7.3s linear both;
+}
+.nf-intro-assembly-fragments,
+.nf-intro-assembly-dust{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.nf-intro-assembly-fragments{
+  z-index:3;
+  overflow:visible;
+}
+.nf-intro-assembly-dust{
+  z-index:4;
+  opacity:0;
+}
+.nf-intro.is-playing .nf-intro-assembly-dust{
+  opacity:1;
+}
+.nf-intro-assembly-fragment{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  background-image:url("../images/intro/logo-nova-frota-oficial.webp");
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  transform-origin:center;
+  opacity:0;
+  filter:none;
+  will-change:opacity,transform;
+  pointer-events:none;
+}
+.nf-intro.is-playing .nf-intro-assembly-fragment{
+  animation:nf-assembly-shatter 7.3s cubic-bezier(.31,.05,.2,1) both;
+}
+.nf-intro-assembly-signal{
+  position:absolute;
+  z-index:1;
+  top:49%;
+  left:-45%;
+  width:45%;
+  height:1px;
+  opacity:0;
+  background:linear-gradient(90deg,transparent,rgba(84,188,247,.2),rgba(133,255,218,.62),transparent);
+  box-shadow:0 0 22px rgba(29,239,165,.35);
+  filter:blur(.25px);
+  transform:translateX(0) rotate(-4deg);
+}
+.nf-intro.is-playing .nf-intro-assembly-signal{
+  animation:nf-assembly-signal 2s 3.1s ease-in-out both;
+}
+@keyframes nf-logo-identity-cycle{
+  0%,4%{opacity:0;transform:scale(.965)}
+  9%,18%{opacity:1;transform:scale(1)}
+  25%,60%{opacity:0;transform:scale(1)}
+  70%,100%{opacity:1;transform:scale(1)}
+}
+@keyframes nf-assembly-shatter{
+  0%,8%{opacity:0;transform:translate3d(0,0,0) rotate(0) scale(1)}
+  15%,20%{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1)}
+  36%{opacity:.66;transform:translate3d(var(--nf-dx),var(--nf-dy),0) rotate(var(--nf-rot)) scale(.86)}
+  46%{opacity:.44;transform:translate3d(var(--nf-dx),var(--nf-dy),0) rotate(var(--nf-rot)) scale(.93)}
+  68%{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1)}
+  75%,100%{opacity:0;transform:translate3d(0,0,0) rotate(0) scale(1)}
+}
+@keyframes nf-assembly-halo-pulse{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.75)}
+  18%{opacity:.8;transform:translate(-50%,-50%) scale(1)}
+  42%{opacity:.2;transform:translate(-50%,-50%) scale(1.18)}
+  69%{opacity:.8;transform:translate(-50%,-50%) scale(.96)}
+  100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}
+}
+@keyframes nf-assembly-signal{
+  0%{opacity:0;transform:translateX(0) rotate(-4deg)}
+  25%{opacity:.7}
+  75%{opacity:.8}
+  100%{opacity:0;transform:translateX(400%) rotate(-4deg)}
+}
+@media(max-width:900px){
+  .nf-intro-assembly-logo-box{width:min(89vw,1000px)}
+  .nf-intro-assembly-halo{height:clamp(110px,23vw,240px)}
+}
+@media(max-width:560px){
+  .nf-intro-assembly-logo-box{width:calc(100vw - 18px)}
+  .nf-intro-assembly-halo{
+    top:49%;
+    width:120vw;
+    height:165px;
+    filter:blur(27px);
+  }
+  .nf-intro-assembly-fragment{will-change:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-intro-assembly-fragments,
+  .nf-intro-assembly-dust,
+  .nf-intro-assembly-signal{display:none!important}
+  .nf-intro-assembly-logo{opacity:1!important;transform:none!important;animation:none!important}
+  .nf-intro-assembly-halo{animation:none!important;opacity:.55!important}
+}
