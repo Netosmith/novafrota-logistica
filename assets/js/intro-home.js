@@ -45,11 +45,10 @@
     clearTimers();
     markSeen();
     intro.classList.add("is-exiting");
-    intro.classList.remove("is-playing");
     document.body.classList.remove("nf-intro-locked");
     removalTimer = window.setTimeout(() => {
       intro.hidden = true;
-      intro.classList.remove("is-exiting");
+      intro.classList.remove("is-exiting", "is-playing");
       if (restoreFocus && hero) {
         hero.setAttribute("tabindex", "-1");
         hero.focus({ preventScroll: true });
