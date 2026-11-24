@@ -307,7 +307,7 @@
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  width:min(65vw,760px);
+  width:min(57vw,635px);
   max-width:100%;
   margin-top:13px;
   gap:7px;
@@ -417,12 +417,12 @@
 /* O conjunto Nova Frota + GVA fica completamente no quadro até
    a transição para a Home começar. */
 @media(max-width:900px){
-  .nf-agro-gva{margin-top:11px;gap:7px;width:min(70vw,600px)}
+  .nf-agro-gva{margin-top:11px;gap:7px;width:min(63vw,500px)}
   .nf-agro-gva-identity{width:100%;height:auto}
   .nf-agro-gva-logo{max-height:none;width:100%;height:auto}
 }
 @media(max-width:600px){
-  .nf-agro-gva{width:min(72vw,310px);margin-top:10px;gap:7px}
+  .nf-agro-gva{width:min(64vw,260px);margin-top:10px;gap:7px}
   .nf-agro-gva-caption{gap:9px;font-size:10px;letter-spacing:.13em}
   .nf-agro-gva-caption-line{max-width:38px}
   .nf-agro-gva-identity{height:auto;width:100%}
@@ -435,7 +435,7 @@
   .nf-agro-eyebrow{margin-bottom:15px}
   .nf-agro-details{margin-top:9px}
   .nf-agro-gva{margin-top:7px}
-  .nf-agro-gva-identity{height:auto;width:min(100%,540px)}
+  .nf-agro-gva-identity{height:auto;width:min(100%,465px)}
   .nf-agro-gva-logo{max-height:none}
 }
 @media(max-height:560px){
@@ -444,7 +444,7 @@
   .nf-agro-eyebrow{margin-bottom:10px}
   .nf-agro-details{margin-top:8px}
   .nf-agro-gva{margin-top:6px;gap:3px}
-  .nf-agro-gva-identity{height:auto;width:min(100%,270px)}
+  .nf-agro-gva-identity{height:auto;width:min(100%,235px)}
   .nf-agro-gva-logo{max-height:none}
 }
 @media(prefers-reduced-motion:reduce){
