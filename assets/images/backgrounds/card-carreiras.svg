@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" fill="none" aria-hidden="true">
+<defs>
+  <linearGradient id="career-line" x1="200" y1="520" x2="780" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#80e7dc" stop-opacity=".08"/><stop offset=".52" stop-color="#d6ffe8" stop-opacity=".38"/><stop offset="1" stop-color="#8cf6c0" stop-opacity=".22"/></linearGradient>
+  <radialGradient id="career-glow"><stop stop-color="#affbce" stop-opacity=".17"/><stop offset="1" stop-color="#67e8bb" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="635" cy="190" r="220" fill="url(#career-glow)"/>
+<g stroke="url(#career-line)" stroke-width="2.4" stroke-linecap="round">
+ <path d="M219 520C348 451 391 383 421 326s55-66 109-69 107-51 151-129" stroke-width="8" opacity=".44"/>
+ <path d="M241 520c106-81 166-148 195-204 34-67 65-93 124-94 72-2 121-57 164-141" opacity=".7"/>
+ <path d="M280 520c95-86 157-165 192-230 32-60 57-100 123-107 54-6 109-60 126-121" opacity=".5"/>
+ <path d="M341 520C431 422 461 356 500 294s71-74 113-78" opacity=".35"/>
+</g>
+<g stroke="#adffd0" stroke-opacity=".36" stroke-width="2">
+ <circle cx="420" cy="325" r="10"/><circle cx="530" cy="257" r="10"/><circle cx="682" cy="125" r="10"/>
+ <circle cx="420" cy="325" r="22" stroke-opacity=".12"/><circle cx="530" cy="257" r="22" stroke-opacity=".12"/>
+</g>
+<g stroke="#b8f7d4" stroke-opacity=".3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M643 98h68V30"/><path d="m685 55 26-26 26 26"/>
+ <path d="m594 320 12 12 25-29"/><path d="m390 167 9 9 21-21"/>
+</g>
+<g fill="#bbf9dc" fill-opacity=".24"><circle cx="334" cy="247" r="3"/><circle cx="623" cy="423" r="4"/><circle cx="709" cy="360" r="2.5"/><circle cx="503" cy="110" r="3"/></g>
+</svg>

@@ -1,0 +1,166 @@
+/*
+  NOVA FROTA | Cards da Home com cenários ilustrados
+  Quatro fundos vetoriais sutis: carreira, vagas, fretes e postos.
+  Nenhuma alteração em links, scripts, conteúdo ou dados das vagas.
+  Ilustrações decorativas, sem informação funcional.
+*/
+
+/* Estrutura para isolar a arte atrás do conteúdo clicável e legível. */
+body.nf-home-v4 .nf-career-panel-join,
+body.nf-home-v4 .nf-career-panel-vacancies,
+body.nf-home-v4 .nf-home-access-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+body.nf-home-v4 .nf-career-panel-join > *,
+body.nf-home-v4 .nf-career-panel-vacancies > *,
+body.nf-home-v4 .nf-home-access-card > :not(.nf-home-access-icon) {
+  position: relative;
+  z-index: 1;
+}
+body.nf-home-v4 .nf-home-access-card > .nf-home-access-icon {
+  z-index: 2;
+}
+
+/* 01. Banco de interesse: crescimento, rotas e novas trajetórias. */
+body.nf-home-v4 .nf-career-panel-join {
+  background: linear-gradient(127deg, #082c3a 4%, #095443 61%, #0a7154 100%);
+  border-color: rgba(57, 171, 132, .35);
+  box-shadow: 0 20px 48px rgba(4, 43, 41, .10);
+}
+body.nf-home-v4 .nf-career-panel-join::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("../images/backgrounds/card-carreiras.svg") right -54px bottom -50px / min(86%, 660px) auto no-repeat,
+    radial-gradient(ellipse at 85% 95%, rgba(59, 236, 160, .18), transparent 57%),
+    radial-gradient(ellipse at 5% 0%, rgba(49, 164, 194, .13), transparent 58%);
+  opacity: .92;
+}
+/* O anel decorativo original não fica sobre o texto. */
+body.nf-home-v4 .nf-career-panel-join::after {
+  z-index: 0;
+  pointer-events: none;
+  border-color: rgba(214, 255, 237, .13);
+}
+body.nf-home-v4 .nf-career-panel-join .nf-career-icon {
+  background: rgba(207, 255, 232, .13);
+  border: 1px solid rgba(196, 255, 230, .12);
+}
+
+/* 02. Vagas abertas: mural com contorno de pasta e aprovação. */
+body.nf-home-v4 .nf-career-panel-vacancies {
+  background: linear-gradient(140deg, #fff 18%, #f4fbf7 100%);
+  border-color: #d1e7dc;
+  box-shadow: 0 20px 50px rgba(10, 71, 54, .07);
+}
+body.nf-home-v4 .nf-career-panel-vacancies::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("../images/backgrounds/card-vagas.svg") right -115px bottom -62px / min(88%, 670px) auto no-repeat,
+    radial-gradient(circle at 93% 15%, rgba(73, 188, 137, .10), transparent 47%);
+  opacity: .75;
+}
+/* Mensagem dinâmica de "sem vagas" também ganha uma textura leve. */
+body.nf-home-v4 .nf-career-panel-vacancies .nf-job-empty {
+  background:
+    linear-gradient(120deg, rgba(248, 252, 249, .97), rgba(232, 247, 238, .85)),
+    url("../images/backgrounds/card-vagas.svg") right -125px center / 78% auto no-repeat;
+  border-color: #bedfcf;
+}
+
+/* 03. Fretes: caminhão e faixa rodoviária em segundo plano. */
+body.nf-home-v4 .nf-home-access-card:nth-child(1) {
+  background: linear-gradient(128deg, #082e3c 7%, #075244 67%, #0b6b4e 100%);
+  border-color: #126b58;
+  box-shadow: 0 17px 42px rgba(4, 58, 51, .11);
+}
+body.nf-home-v4 .nf-home-access-card:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("../images/backgrounds/card-fretes.svg") right -80px bottom -20px / min(82%, 620px) auto no-repeat,
+    radial-gradient(ellipse at 93% 95%, rgba(43, 224, 156, .16), transparent 55%),
+    linear-gradient(112deg, rgba(0, 0, 0, .03), transparent 60%);
+  opacity: .94;
+}
+body.nf-home-v4 .nf-home-access-card:nth-child(1) strong,
+body.nf-home-v4 .nf-home-access-card:nth-child(1) .nf-home-access-tag,
+body.nf-home-v4 .nf-home-access-card:nth-child(1) b {
+  text-shadow: 0 1px 12px rgba(3, 34, 38, .18);
+}
+
+/* 04. Postos: traçado de rede, pontos e ícone de apoio rodoviário. */
+body.nf-home-v4 .nf-home-access-card:nth-child(2) {
+  background: linear-gradient(129deg, #fff 9%, #f1faf5 100%);
+  border-color: #cde5d9;
+  box-shadow: 0 17px 42px rgba(6, 69, 52, .055);
+}
+body.nf-home-v4 .nf-home-access-card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("../images/backgrounds/card-postos.svg") right -72px bottom -30px / min(83%, 660px) auto no-repeat,
+    radial-gradient(ellipse at 92% 72%, rgba(60, 169, 115, .09), transparent 58%);
+  opacity: .88;
+}
+
+/* Efeito de elevação quase imperceptível e foco de teclado visível. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  body.nf-home-v4 .nf-career-panel-join:hover,
+  body.nf-home-v4 .nf-career-panel-vacancies:hover,
+  body.nf-home-v4 .nf-home-access-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 54px rgba(4, 51, 48, .13);
+  }
+}
+body.nf-home-v4 .nf-home-access-card:focus-visible {
+  outline: 3px solid #4abf89;
+  outline-offset: 4px;
+}
+
+/* No celular, os desenhos ficam na extremidade inferior, liberando a leitura. */
+@media (max-width: 720px) {
+  body.nf-home-v4 .nf-career-panel-join::before {
+    background-position: right -94px bottom -58px, center, center;
+    background-size: 95% auto, auto, auto;
+  }
+  body.nf-home-v4 .nf-career-panel-vacancies::before {
+    background-position: right -125px bottom -48px, center;
+    background-size: 100% auto, auto;
+    opacity: .55;
+  }
+  body.nf-home-v4 .nf-home-access-card:nth-child(1)::before,
+  body.nf-home-v4 .nf-home-access-card:nth-child(2)::before {
+    background-position: right -135px bottom -35px, center, center;
+    background-size: 95% auto, auto, auto;
+    opacity: .74;
+  }
+  body.nf-home-v4 .nf-home-access-card:nth-child(2)::before {
+    background-position: right -130px bottom -35px, center;
+    background-size: 95% auto, auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.nf-home-v4 .nf-career-panel-join,
+  body.nf-home-v4 .nf-career-panel-vacancies,
+  body.nf-home-v4 .nf-home-access-card {
+    transition: none;
+  }
+}
