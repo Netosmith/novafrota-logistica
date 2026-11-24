@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" fill="none" aria-hidden="true">
+<defs><linearGradient id="truck" x1="335" y1="118" x2="748" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#d1fff0" stop-opacity=".12"/><stop offset=".54" stop-color="#bcffe0" stop-opacity=".46"/><stop offset="1" stop-color="#80e3d5" stop-opacity=".16"/></linearGradient></defs>
+<g stroke="url(#truck)" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M355 267h234V147H355z" stroke-width="4"/>
+ <path d="M589 195h65l50 50v70h-54" stroke-width="4"/>
+ <path d="M355 315h44M468 315h143" stroke-width="4"/>
+ <path d="M615 315h35" stroke-width="4"/>
+ <path d="M602 206h44l35 36h-79z" stroke-width="3"/>
+ <path d="M355 164h234M382 185h184M382 203h184" stroke-width="2" opacity=".55"/>
+ <circle cx="433" cy="315" r="30" stroke-width="5"/>
+ <circle cx="651" cy="315" r="30" stroke-width="5"/>
+ <circle cx="433" cy="315" r="11" stroke-width="2.4"/>
+ <circle cx="651" cy="315" r="11" stroke-width="2.4"/>
+ <path d="M389 367h301" stroke-width="2" stroke-dasharray="26 16" opacity=".75"/>
+</g>
+<g stroke="#b8ffe0" stroke-opacity=".34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M393 83c83-62 174-59 268 13l-10-31"/><path d="m661 96-30 4"/>
+ <circle cx="386" cy="89" r="7"/>
+</g>
+<g stroke="#a8ffe2" stroke-opacity=".16" stroke-width="1.6"><path d="M252 413c104-57 215-44 335 8"/><path d="M286 442c102-43 208-32 308 8"/></g>
+</svg>
