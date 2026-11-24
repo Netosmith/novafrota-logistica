@@ -7,7 +7,7 @@
   const skip = document.getElementById("nf-intro-skip");
   const replay = document.querySelector("[data-nf-intro-replay]");
   const hero = document.getElementById("nf-hero-title");
-  const KEY = "nf-cinematic-opening-2026-v9-gva";
+  const KEY = "nf-cinematic-opening-2026-v10-gva-pdf";
   const DURATION = 5250;
   const FADE_DURATION = 830;
   const reducedMotion = window.matchMedia &&
@@ -85,7 +85,8 @@
   // Se qualquer recurso falhar, não bloquear a navegação.
   const requiredImages = [
     intro.querySelector(".nf-agro-landscape"),
-    intro.querySelector(".nf-agro-logo-image")
+    intro.querySelector(".nf-agro-logo-image"),
+    intro.querySelector(".nf-agro-gva-logo")
   ].filter(Boolean);
 
   const ready = (image) => new Promise((resolve) => {
